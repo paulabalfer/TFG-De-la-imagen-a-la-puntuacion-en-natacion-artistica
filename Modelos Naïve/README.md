@@ -93,4 +93,4 @@ pip install -r requirements.txt
 jupyter notebook "Modelos Naïve/Automatización Natación Artistica_Paula Ballesteros.ipynb"
 ```
 
-> El notebook carga los datos desde `../Data/synchronized_swimming_aug.csv` por defecto. Asegúrese de que el directorio `Data/` está correctamente estructurado antes de ejecutar.
+> El notebook carga los datos desde `../Data/synchronized_swimming_aug.csv` por defecto. Asegúrese de que el directorio `Data/` está correctamente estructurado antes de ejecutar. La generación del dataset aumentado se realiza mediante el notebook `Data/Data_process.ipynb`.

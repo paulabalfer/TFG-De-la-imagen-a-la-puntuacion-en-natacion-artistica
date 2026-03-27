@@ -10,6 +10,9 @@ Directorio que centraliza el dataset de natación artística utilizado en el pro
 Data/
 ├── synchronized_swimming.csv       # Índice del dataset original
 ├── synchronized_swimming_aug.csv   # Índice del dataset aumentado
+├── Data_process.ipynb              # Notebook de preprocesado y data augmentation
+├── Figures-Manual-2022-2025-ALL.pdf          # Manual oficial de figuras de World Aquatics
+├── JUDGES SUPPORT_Height Chart Jan 2025.pdf  # Material de apoyo para jueces
 ├── Fotos/                          # Imágenes originales por clase (no versionadas en el repo)
 │   ├── Bent Knee Surface Arch Position/
 │   ├── Bent Knee Vertical/
@@ -67,6 +70,16 @@ Estos índices son consumidos directamente por los notebooks del proyecto para c
 
 ---
 
+## Notebook de preprocesado: `Data_process.ipynb`
+
+Notebook que implementa la exploración inicial del dataset y la generación del conjunto aumentado. Sus etapas principales son:
+
+1. **Carga y verificación** — lectura del CSV original, comprobación de rutas y distribución de clases.
+2. **Data augmentation** — aplicación de transformaciones geométricas y fotométricas a cada imagen original para generar 25 variantes derivadas.
+3. **Exportación** — escritura de las imágenes aumentadas en `Augmented/` y generación de `synchronized_swimming_aug.csv`.
+
+---
+
 ## Data Augmentation
 
 Para compensar el tamaño reducido del dataset original (~264 imágenes), se aplicaron transformaciones geométricas y fotométricas que generan **25 versiones derivadas por cada imagen original**, multiplicando el conjunto de entrenamiento por un factor de 25.
@@ -80,4 +93,9 @@ Las transformaciones aplicadas incluyen:
 
 Las imágenes aumentadas se nombran siguiendo el patrón `IMG_<id>_aug<n>.jpg`, donde `<n>` va de 1 a 25.
 
-> La lógica de generación del dataset aumentado se encuentra en el notebook principal de `Modelos Naïve/`.
+---
+
+## Documentación de referencia
+
+- **`Figures-Manual-2022-2025-ALL.pdf`** — Manual oficial de figuras de World Aquatics (2022-2025). Define las especificaciones biomecánicas de cada posición y es la fuente primaria de los criterios de clasificación.
+- **`JUDGES SUPPORT_Height Chart Jan 2025.pdf`** — Material de apoyo para jueces con la tabla de alturas y referencia visual de posiciones.

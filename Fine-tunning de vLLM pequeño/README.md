@@ -12,9 +12,11 @@ Fine-tunning de vLLM pequeño/
 └── smolvlm_lora_natacion/             # Artefactos generados tras el entrenamiento
     ├── mejor_checkpoint/              # Pesos LoRA del mejor epoch según val_acc
     ├── adaptador_lora_final/          # Adaptador LoRA + procesador al final del entrenamiento
-    ├── curvas_entrenamiento.png
-    ├── confusion_matrix.png
-    └── predicciones_muestra.png
+    ├── distribucion_clases.png        # Distribución de clases del dataset (barras + tarta)
+    ├── curvas_entrenamiento.png       # Curvas de loss y accuracy por época
+    ├── confusion_matrix.png           # Matriz de confusión sobre el conjunto de test
+    ├── classification_report.png      # Informe de clasificación (precisión, recall, F1) como imagen
+    └── predicciones_muestra.png       # Predicciones de muestra con confianza por clase
 ```
 
 ---
@@ -92,8 +94,9 @@ La **función de pérdida** es `cross_entropy` sobre los 5 logits de elección, 
 
 ### Etapa 4: Evaluación
 
+- **Distribución de clases** del dataset aumentado (barras + tarta).
 - **Accuracy** sobre el conjunto de test con el mejor checkpoint de validación.
-- **Informe de clasificación** (precisión, recall, F1 por clase).
+- **Informe de clasificación** (precisión, recall, F1 por clase) renderizado como imagen.
 - **Matriz de confusión** y **predicciones de muestra** con confianza (softmax sobre logits de elección).
 
 ---
@@ -124,6 +127,20 @@ jupyter notebook "Fine-tunning de vLLM pequeño/Fine_tuning_SmolVLM_500M.ipynb"
 > El notebook descarga automáticamente el modelo `HuggingFaceTB/SmolVLM-500M-Instruct` (~1 GB) desde HuggingFace Hub en la primera ejecución. Es necesaria conexión a internet para este paso.
 
 > Para entrenar con el dataset completo (~5 200 imágenes), cambiar `SUBSET_*_PER_CLASS = None` en la celda de configuración global (sección 1).
+
+---
+
+## Evaluación sin reentrenar
+
+El notebook incluye una celda dedicada a **cargar el mejor checkpoint** directamente desde `smolvlm_lora_natacion/mejor_checkpoint/`, lo que permite ejecutar la evaluación completa (test accuracy, informe de clasificación, matriz de confusión, predicciones de muestra) sin necesidad de repetir el entrenamiento:
+
+```python
+from peft import PeftModel
+
+base  = AutoModelForImageTextToText.from_pretrained(MODEL_ID, torch_dtype=DTYPE)
+model = PeftModel.from_pretrained(base, str(MODEL_SAVE / 'mejor_checkpoint'))
+model.eval()
+```
 
 ---
 

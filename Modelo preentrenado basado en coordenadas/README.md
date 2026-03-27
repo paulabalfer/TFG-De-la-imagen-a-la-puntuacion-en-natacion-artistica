@@ -8,7 +8,12 @@ Directorio que implementa un pipeline de clasificación alternativo fundamentado
 
 ```
 Modelo preentrenado basado en coordenadas/
-└── MediaPipe_Pose_Classifier.ipynb    # Pipeline completo de extracción y clasificación
+├── MediaPipe_Pose_Classifier.ipynb    # Pipeline completo de extracción y clasificación
+├── pose_landmarker_heavy.task         # Modelo MediaPipe PoseLandmarker Heavy (~25 MB)
+├── pose_classifier_model.pkl          # Random Forest entrenado
+├── pose_classifier_scaler.pkl         # StandardScaler ajustado al conjunto de entrenamiento
+├── label_encoder.pkl                  # LabelEncoder con las 5 clases
+└── classification_results.pkl         # Métricas y matriz de confusión serializadas
 ```
 
 ---
