@@ -4,7 +4,7 @@ import json
 from collections import defaultdict
 from datetime import datetime
 
-BASE = "/home/kike/Documents/VS Projects/natacion_paula"
+BASE = "C:/paula/OTROS/TFG_repo/vLLM con skills de anthropic"
 
 # Load predictions
 with open(f"{BASE}/results/v2_opus_predictions.json") as f:

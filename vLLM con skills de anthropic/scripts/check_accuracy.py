@@ -1,8 +1,8 @@
 
 import json
 
-TRACES_FILE = '/home/kike/Documents/VS Projects/natacion_paula/data/all_evaluation_traces.json'
-LABELS_FILE = '/home/kike/Documents/VS Projects/natacion_paula/data/image_labels.json'
+TRACES_FILE = 'C:/paula/OTROS/TFG_repo/vLLM con skills de anthropic/data/all_evaluation_traces.json'
+LABELS_FILE = 'C:/paula/OTROS/TFG_repo/vLLM con skills de anthropic/data/image_labels.json'
 
 with open(TRACES_FILE, 'r') as f:
     traces = json.load(f)
