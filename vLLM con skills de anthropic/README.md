@@ -134,3 +134,9 @@ La skill maestra puntúa la imagen contra las **5 posiciones** y aplica reglas d
 - **Método de evaluación**: cada imagen se lee con la herramienta `Read` de Claude (visión) y se clasifica con la skill orquestadora.
 - **Paralelización**: 5 subagentes concurrentes (uno por clase) para evaluación eficiente en lote.
 - **Entorno**: Claude Code CLI / SDK de Anthropic.
+
+
+## Ejecución 
+
+>> use @.claude\skills\natacion-classifier\ to classify all images in @all_files.txt
+>> run @scripts\check_accuracy.py and @scripts\compute_accuracy

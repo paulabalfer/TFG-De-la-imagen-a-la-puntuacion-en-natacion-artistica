@@ -6,17 +6,16 @@ from datetime import datetime
 
 BASE = "C:/paula/OTROS/TFG_repo/vLLM con skills de anthropic"
 
-# Load predictions
-with open(f"{BASE}/results/v2_opus_predictions.json") as f:
+# Load predictions  (formato: [{filename, classification, confidence?}, ...])
+with open(f"{BASE}/results/predictions.json") as f:
     pred_list = json.load(f)
 
-# Combine all predictions into a dict: filename -> predicted_class
 predictions = {}
 for item in pred_list:
     predictions[item["filename"]] = item["classification"]
 
-# Load ground truth from eval_batches.json
-with open(f"{BASE}/data/eval_batches.json") as f:
+# Load ground truth from eval_batches_generated.json
+with open(f"{BASE}/data/eval_batches_generated.json") as f:
     eval_batches = json.load(f)
 
 ground_truth = {}
@@ -25,10 +24,17 @@ for batch in eval_batches:
         ground_truth[item["filename"]] = item["label"]
 
 # Verify coverage
-assert len(predictions) == 263, f"Expected 263 predictions, got {len(predictions)}"
-assert len(ground_truth) == 263, f"Expected 263 ground truth, got {len(ground_truth)}"
+n_pred = len(predictions)
+n_gt = len(ground_truth)
 missing = set(ground_truth.keys()) - set(predictions.keys())
-assert len(missing) == 0, f"Missing predictions for: {missing}"
+extra   = set(predictions.keys()) - set(ground_truth.keys())
+assert len(missing) == 0, f"Faltan predicciones para: {missing}"
+if extra:
+    print(f"AVISO: {len(extra)} predicciones sin ground truth (se ignoraran): {extra}")
+    for k in extra:
+        del predictions[k]
+
+print(f"Imagenes a evaluar: {len(ground_truth)}  |  Predicciones cargadas: {n_pred}")
 
 # Class names in display order
 CLASSES = ["Double Leg Vertical", "Fishtail", "Bent Knee Vertical",
@@ -72,7 +78,6 @@ for cls in CLASSES:
 
 # Save results JSON
 results = {
-    "model": "claude-opus-4-6",
     "date": datetime.now().isoformat(),
     "total_images": total,
     "correct": correct,
@@ -89,7 +94,7 @@ results = {
     ]
 }
 
-with open(f"{BASE}/results/v2_opus_results.json", "w") as f:
+with open(f"{BASE}/results/results.json", "w") as f:
     json.dump(results, f, indent=2)
 
 # Confusion pair analysis
@@ -100,7 +105,7 @@ for e in errors:
 top_pairs = sorted(confusion_pairs.items(), key=lambda x: -x[1])
 
 # Print summary
-print(f"Overall Accuracy: {overall_accuracy:.1%} ({correct}/{total})")
+print(f"\nOverall Accuracy: {overall_accuracy:.1%} ({correct}/{total})")
 print(f"\nPer-class metrics:")
 for cls in CLASSES:
     m = class_metrics[cls]
@@ -125,14 +130,12 @@ for true_cls in CLASSES:
     cells += f'<td style="text-align:center;padding:8px;font-weight:bold">{acc:.1%}</td>'
     confusion_rows += f'<tr><td style="padding:8px;font-weight:bold">{SHORT[true_cls]} ({CODES[true_cls]})</td>{cells}</tr>\n'
 
-# Column totals
 col_totals = ""
 for pred_cls in CLASSES:
     t = sum(confusion[true_cls][pred_cls] for true_cls in CLASSES)
     col_totals += f'<td style="text-align:center;padding:8px;font-weight:bold;border-top:2px solid #444">{t}</td>'
 col_totals_row = f'<tr><td style="padding:8px;font-weight:bold">Total</td>{col_totals}<td style="text-align:center;padding:8px;font-weight:bold;border-top:2px solid #444">{total}</td><td style="text-align:center;padding:8px;font-weight:bold;border-top:2px solid #444">{overall_accuracy:.1%}</td></tr>'
 
-# Per-class metrics table
 metrics_rows = ""
 for cls in CLASSES:
     m = class_metrics[cls]
@@ -147,7 +150,6 @@ for cls in CLASSES:
         <td style="text-align:center;padding:8px">{m['f1']:.3f}</td>
     </tr>\n'''
 
-# Error details table
 error_rows = ""
 for e in sorted(errors, key=lambda x: x['filename']):
     error_rows += f'''<tr>
@@ -156,13 +158,11 @@ for e in sorted(errors, key=lambda x: x['filename']):
         <td style="padding:6px">{SHORT[e['predicted']]} ({e['predicted']})</td>
     </tr>\n'''
 
-# Confusion pairs summary
 pairs_rows = ""
 for pair, count in top_pairs:
     pairs_rows += f'<tr><td style="padding:6px">{pair}</td><td style="text-align:center;padding:6px">{count}</td></tr>\n'
 
-# Class distribution chart (simple bar)
-max_support = max(m["support"] for m in class_metrics.values())
+max_support = max(m["support"] for m in class_metrics.values()) or 1
 dist_bars = ""
 for cls in CLASSES:
     m = class_metrics[cls]
@@ -179,12 +179,14 @@ for cls in CLASSES:
         </div>
     </div>'''
 
+badge_class = "badge-high" if overall_accuracy >= 0.9 else "badge-mid" if overall_accuracy >= 0.7 else "badge-low"
+
 html = f'''<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Artistic Swimming Position Classifier - Full Database Evaluation Report</title>
+<title>Artistic Swimming Position Classifier - Evaluation Report</title>
 <style>
     * {{ margin: 0; padding: 0; box-sizing: border-box; }}
     body {{ font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; background: #0f0f1a; color: #e0e0e0; line-height: 1.6; }}
@@ -207,17 +209,14 @@ html = f'''<!DOCTYPE html>
     .badge-mid {{ background: #5a4a27; color: #ffb74d; }}
     .badge-low {{ background: #5a2727; color: #ef5350; }}
     p {{ margin: 8px 0; font-size: 14px; }}
-    ul {{ margin: 8px 0 8px 20px; font-size: 14px; }}
-    li {{ margin: 4px 0; }}
     .footer {{ margin-top: 40px; padding-top: 20px; border-top: 1px solid #333; color: #666; font-size: 12px; text-align: center; }}
-    code {{ background: #16213e; padding: 2px 6px; border-radius: 3px; font-size: 13px; }}
 </style>
 </head>
 <body>
 <div class="container">
 
 <h1>Artistic Swimming Position Classifier</h1>
-<p class="subtitle">Full Database Evaluation Report &mdash; {datetime.now().strftime('%B %d, %Y')}</p>
+<p class="subtitle">Evaluation Report &mdash; {datetime.now().strftime('%B %d, %Y')}</p>
 
 <div class="metric-grid">
     <div class="metric-box">
@@ -238,68 +237,13 @@ html = f'''<!DOCTYPE html>
     </div>
 </div>
 
-<h2>1. Introduction</h2>
+<h2>1. Class Distribution</h2>
 <div class="card">
-    <p>This report presents the evaluation of a vision-based classifier for artistic (synchronized) swimming body positions. The classifier identifies five compulsory positions from pool photographs:</p>
-    <ul>
-        <li><strong>Double Leg Vertical (DLV / BP6)</strong> &mdash; Both legs extended vertically, body perpendicular to water surface</li>
-        <li><strong>Fishtail (FT / BP8)</strong> &mdash; One leg vertical, the other extended horizontally at water surface</li>
-        <li><strong>Bent Knee Vertical (BKV / BP14c)</strong> &mdash; Vertical position with one knee bent, foot touching inner knee</li>
-        <li><strong>Bent Knee Surface Arch (BKSA / BP14d)</strong> &mdash; Arched back position with one knee bent at the water surface</li>
-        <li><strong>Knight (KN / BP17)</strong> &mdash; One leg vertical, the other bent forward at 90&deg; creating an &ldquo;L&rdquo; shape</li>
-    </ul>
-    <p>Accurate classification is critical for training feedback, competition judging support, and biomechanical analysis in artistic swimming programs.</p>
-</div>
-
-<h2>2. System Description</h2>
-<div class="card">
-    <h3>Model</h3>
-    <p>The classifier uses <code>claude-opus-4-6</code> (Claude Opus 4.6), Anthropic&rsquo;s most capable multimodal large language model with advanced vision and reasoning capabilities.</p>
-
-    <h3>Classification Method (v2 &mdash; 4-Phase Architecture)</h3>
-    <p>The system employs a structured <strong>4-phase classification pipeline</strong>:</p>
-    <ul>
-        <li><strong>Phase 1: Binary Feature Detection</strong> &mdash; Detect 4 mandatory features: Leg Split (TOGETHER/SPLIT), Back Arch (STRAIGHT/ARCHED with 5 sub-tests), Knee Bend (STRAIGHT/BENT with 4 sub-tests), Leg Direction (FORWARD/BACKWARD)</li>
-        <li><strong>Phase 2: Feature-Derived Classification</strong> &mdash; Deterministic decision tree maps feature combinations to positions (e.g., SPLIT+ARCHED+STRAIGHT&rarr;Knight)</li>
-        <li><strong>Phase 3: Confirmation Scoring</strong> &mdash; Score the derived class + 2 most confusable alternatives (0&ndash;5 each) using position-specific criteria and exclusion rules</li>
-        <li><strong>Phase 4: Aggregation &amp; Sanity Checks</strong> &mdash; Anti-DLV bias, feature-score consistency, and sanity checks for final decision</li>
-    </ul>
-    <p>This v2 architecture addresses confusion pairs identified in v1: Knight&harr;Fishtail (arch detection), BKV&harr;DLV (knee bend detection), and DLV over-prediction (anti-DLV bias).</p>
-</div>
-
-<h2>3. Dataset</h2>
-<div class="card">
-    <h3>Database Overview</h3>
-    <p>The evaluation database comprises <strong>263 unique photographs</strong> of artistic swimmers performing the five compulsory positions. Each original photograph was augmented 25&times; (rotation, brightness, contrast, noise), producing 6,575 total images.</p>
-    <p>For this evaluation, <strong>one augmentation per original</strong> (<code>_aug1</code> suffix) was selected, ensuring every unique photograph is evaluated exactly once.</p>
-
-    <h3>Class Distribution</h3>
     {dist_bars}
 </div>
 
-<h2>4. Methodology</h2>
+<h2>2. Per-Class Metrics</h2>
 <div class="card">
-    <h3>Evaluation Protocol</h3>
-    <ul>
-        <li><strong>Sampling</strong>: 263 images (1 per original photograph, <code>_aug1</code> augmentation)</li>
-        <li><strong>Parallelization</strong>: 10 concurrent classification agents, ~26 images each</li>
-        <li><strong>Model</strong>: <code>claude-opus-4-6</code></li>
-        <li><strong>Classifier Prompt</strong>: Structured skill with decision tree, scratchpad scoring (0&ndash;5), and aggregation rules</li>
-    </ul>
-
-    <h3>Model Selection</h3>
-    <p>Claude Opus 4.6 was selected for this v2 evaluation to maximize classification accuracy with the most capable vision-reasoning model available. The v1 evaluation used Sonnet 4.5, achieving 47.9% accuracy with the original skill prompts.</p>
-
-    <h3>Ground Truth</h3>
-    <p>Labels were derived from the folder structure of the original database, where each position has a dedicated directory. No relabeling or manual verification was performed.</p>
-</div>
-
-<h2>5. Results</h2>
-<div class="card">
-    <h3>Overall Performance</h3>
-    <p>The classifier achieved <span class="accuracy-badge {"badge-high" if overall_accuracy >= 0.9 else "badge-mid" if overall_accuracy >= 0.7 else "badge-low"}">{overall_accuracy:.1%} accuracy</span> on the full database of {total} images, correctly classifying {correct} out of {total} photographs.</p>
-
-    <h3>Per-Class Metrics</h3>
     <table>
         <thead>
             <tr>
@@ -317,8 +261,10 @@ html = f'''<!DOCTYPE html>
             {metrics_rows}
         </tbody>
     </table>
+</div>
 
-    <h3>Confusion Matrix</h3>
+<h2>3. Confusion Matrix</h2>
+<div class="card">
     <table>
         <thead>
             <tr>
@@ -335,9 +281,9 @@ html = f'''<!DOCTYPE html>
     </table>
 </div>
 
-<h2>6. Error Analysis</h2>
+<h2>4. Error Analysis</h2>
 <div class="card">
-    <h3>Confusion Pair Summary</h3>
+    <h3>Top Confusion Pairs</h3>
     <table>
         <thead>
             <tr><th style="text-align:left">True &rarr; Predicted</th><th>Count</th></tr>
@@ -347,7 +293,7 @@ html = f'''<!DOCTYPE html>
         </tbody>
     </table>
 
-    <h3>All Misclassified Images ({len(errors)} total)</h3>
+    <h3 style="margin-top:20px">All Misclassified Images ({len(errors)} total)</h3>
     <table>
         <thead>
             <tr>
@@ -362,49 +308,16 @@ html = f'''<!DOCTYPE html>
     </table>
 </div>
 
-<h2>7. Discussion</h2>
-<div class="card">
-    <h3>Strengths</h3>
-    <ul>
-        <li>High overall accuracy across a diverse set of pool photographs</li>
-        <li>Zero-shot classification using a multimodal LLM with no task-specific fine-tuning</li>
-        <li>Structured decision-tree prompt mitigates common confusion pairs</li>
-        <li>Scalable architecture: 10 parallel agents process 263 images efficiently</li>
-    </ul>
-
-    <h3>Limitations</h3>
-    <ul>
-        <li>Ground truth labels derived from folder structure were not independently verified by expert judges</li>
-        <li>Evaluation used a single augmentation per original; robustness to augmentation not assessed</li>
-        <li>Some confusion pairs (especially Knight &harr; BKSA) remain challenging due to subtle postural differences</li>
-        <li>LLM-based classification has higher per-image cost and latency than traditional CV models</li>
-    </ul>
-
-    <h3>Future Work</h3>
-    <ul>
-        <li>Expert re-labeling of misclassified images to distinguish model errors from label noise</li>
-        <li>Fine-tuning a lightweight vision model (e.g., CLIP, ViT) on this dataset for faster inference</li>
-        <li>Augmentation robustness study: evaluate all 25 augmentations per original</li>
-        <li>Confidence calibration: use scratchpad scores as probability estimates</li>
-    </ul>
-</div>
-
-<h2>8. Conclusion</h2>
-<div class="card">
-    <p>The Claude Sonnet 4.5-based classifier demonstrates strong performance on the artistic swimming position classification task, achieving <strong>{overall_accuracy:.1%} accuracy</strong> on a comprehensive evaluation of all {total} unique photographs in the database. The structured decision-tree prompt with scratchpad scoring effectively discriminates between the five target positions, with per-class performance varying based on the visual similarity between positions.</p>
-    <p>These results validate the viability of multimodal LLMs for sports biomechanics applications, offering a flexible, zero-shot alternative to traditional computer vision pipelines that require large labeled training sets.</p>
-</div>
-
 <div class="footer">
-    <p>Generated on {datetime.now().strftime('%Y-%m-%d %H:%M:%S')} | Model: claude-opus-4-6 | 263 images evaluated</p>
+    <p>Generated on {datetime.now().strftime('%Y-%m-%d %H:%M:%S')} &mdash; {total} images evaluated</p>
 </div>
 
 </div>
 </body>
 </html>'''
 
-with open(f"{BASE}/results/v2_opus_report.html", "w") as f:
+with open(f"{BASE}/results/report.html", "w") as f:
     f.write(html)
 
-print(f"\nResults saved to: results/v2_opus_results.json")
-print(f"Report saved to: results/v2_opus_report.html")
+print(f"\nResults saved to: results/results.json")
+print(f"Report saved to:  results/report.html")

@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Artistic Swimming Position Classifier - Evaluation Report</title>
+<style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; background: #0f0f1a; color: #e0e0e0; line-height: 1.6; }
+    .container { max-width: 1100px; margin: 0 auto; padding: 20px 30px; }
+    h1 { font-size: 28px; color: #64b5f6; margin-bottom: 8px; }
+    h2 { font-size: 22px; color: #81c784; margin: 30px 0 15px; border-bottom: 2px solid #333; padding-bottom: 8px; }
+    h3 { font-size: 18px; color: #ffb74d; margin: 20px 0 10px; }
+    .subtitle { color: #aaa; font-size: 14px; margin-bottom: 20px; }
+    .card { background: #1a1a2e; border-radius: 8px; padding: 20px; margin: 15px 0; border: 1px solid #333; }
+    .metric-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; margin: 15px 0; }
+    .metric-box { background: #16213e; border-radius: 8px; padding: 20px; text-align: center; border: 1px solid #333; }
+    .metric-box .value { font-size: 36px; font-weight: bold; color: #64b5f6; }
+    .metric-box .label { font-size: 13px; color: #aaa; margin-top: 5px; }
+    table { width: 100%; border-collapse: collapse; margin: 10px 0; }
+    th { background: #16213e; padding: 10px 8px; text-align: center; font-size: 13px; color: #81c784; border-bottom: 2px solid #444; }
+    td { border-bottom: 1px solid #222; font-size: 13px; }
+    tr:hover { background: rgba(100,181,246,0.05); }
+    .accuracy-badge { display: inline-block; padding: 4px 12px; border-radius: 20px; font-weight: bold; font-size: 14px; }
+    .badge-high { background: #2d5a27; color: #81c784; }
+    .badge-mid { background: #5a4a27; color: #ffb74d; }
+    .badge-low { background: #5a2727; color: #ef5350; }
+    p { margin: 8px 0; font-size: 14px; }
+    .footer { margin-top: 40px; padding-top: 20px; border-top: 1px solid #333; color: #666; font-size: 12px; text-align: center; }
+</style>
+</head>
+<body>
+<div class="container">
+
+<h1>Artistic Swimming Position Classifier</h1>
+<p class="subtitle">Evaluation Report &mdash; March 31, 2026</p>
+
+<div class="metric-grid">
+    <div class="metric-box">
+        <div class="value">96.0%</div>
+        <div class="label">Overall Accuracy</div>
+    </div>
+    <div class="metric-box">
+        <div class="value">192/200</div>
+        <div class="label">Correct / Total</div>
+    </div>
+    <div class="metric-box">
+        <div class="value">8</div>
+        <div class="label">Misclassifications</div>
+    </div>
+    <div class="metric-box">
+        <div class="value">5</div>
+        <div class="label">Position Classes</div>
+    </div>
+</div>
+
+<h2>1. Class Distribution</h2>
+<div class="card">
+    <div style="margin:8px 0">
+        <div style="display:flex;align-items:center;gap:10px">
+            <span style="width:60px;text-align:right;font-weight:bold">DLV</span>
+            <div style="flex:1;background:#1a1a2e;border-radius:4px;overflow:hidden">
+                <div style="width:100.0%;background:#FF9800;padding:4px 8px;color:white;font-size:13px;white-space:nowrap">
+                    45 images (89% acc)
+                </div>
+            </div>
+        </div>
+    </div><div style="margin:8px 0">
+        <div style="display:flex;align-items:center;gap:10px">
+            <span style="width:60px;text-align:right;font-weight:bold">FT</span>
+            <div style="flex:1;background:#1a1a2e;border-radius:4px;overflow:hidden">
+                <div style="width:91.11111111111111%;background:#4CAF50;padding:4px 8px;color:white;font-size:13px;white-space:nowrap">
+                    41 images (100% acc)
+                </div>
+            </div>
+        </div>
+    </div><div style="margin:8px 0">
+        <div style="display:flex;align-items:center;gap:10px">
+            <span style="width:60px;text-align:right;font-weight:bold">BKV</span>
+            <div style="flex:1;background:#1a1a2e;border-radius:4px;overflow:hidden">
+                <div style="width:97.77777777777777%;background:#4CAF50;padding:4px 8px;color:white;font-size:13px;white-space:nowrap">
+                    44 images (93% acc)
+                </div>
+            </div>
+        </div>
+    </div><div style="margin:8px 0">
+        <div style="display:flex;align-items:center;gap:10px">
+            <span style="width:60px;text-align:right;font-weight:bold">BKSA</span>
+            <div style="flex:1;background:#1a1a2e;border-radius:4px;overflow:hidden">
+                <div style="width:57.77777777777777%;background:#4CAF50;padding:4px 8px;color:white;font-size:13px;white-space:nowrap">
+                    26 images (100% acc)
+                </div>
+            </div>
+        </div>
+    </div><div style="margin:8px 0">
+        <div style="display:flex;align-items:center;gap:10px">
+            <span style="width:60px;text-align:right;font-weight:bold">KN</span>
+            <div style="flex:1;background:#1a1a2e;border-radius:4px;overflow:hidden">
+                <div style="width:97.77777777777777%;background:#4CAF50;padding:4px 8px;color:white;font-size:13px;white-space:nowrap">
+                    44 images (100% acc)
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<h2>2. Per-Class Metrics</h2>
+<div class="card">
+    <table>
+        <thead>
+            <tr>
+                <th style="text-align:left">Class</th>
+                <th style="text-align:left">Full Name</th>
+                <th>Support</th>
+                <th>Correct</th>
+                <th>Errors</th>
+                <th>Recall</th>
+                <th>Precision</th>
+                <th>F1 Score</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+        <td style="padding:8px;font-weight:bold">DLV (BP6)</td>
+        <td style="padding:8px">Double Leg Vertical</td>
+        <td style="text-align:center;padding:8px">45</td>
+        <td style="text-align:center;padding:8px">40</td>
+        <td style="text-align:center;padding:8px">5</td>
+        <td style="text-align:center;padding:8px;font-weight:bold">88.9%</td>
+        <td style="text-align:center;padding:8px">1.000</td>
+        <td style="text-align:center;padding:8px">0.941</td>
+    </tr>
+<tr>
+        <td style="padding:8px;font-weight:bold">FT (BP8)</td>
+        <td style="padding:8px">Fishtail</td>
+        <td style="text-align:center;padding:8px">41</td>
+        <td style="text-align:center;padding:8px">41</td>
+        <td style="text-align:center;padding:8px">0</td>
+        <td style="text-align:center;padding:8px;font-weight:bold">100.0%</td>
+        <td style="text-align:center;padding:8px">0.932</td>
+        <td style="text-align:center;padding:8px">0.965</td>
+    </tr>
+<tr>
+        <td style="padding:8px;font-weight:bold">BKV (BP14c)</td>
+        <td style="padding:8px">Bent Knee Vertical</td>
+        <td style="text-align:center;padding:8px">44</td>
+        <td style="text-align:center;padding:8px">41</td>
+        <td style="text-align:center;padding:8px">3</td>
+        <td style="text-align:center;padding:8px;font-weight:bold">93.2%</td>
+        <td style="text-align:center;padding:8px">1.000</td>
+        <td style="text-align:center;padding:8px">0.965</td>
+    </tr>
+<tr>
+        <td style="padding:8px;font-weight:bold">BKSA (BP14d)</td>
+        <td style="padding:8px">Bent Knee Surface Arch</td>
+        <td style="text-align:center;padding:8px">26</td>
+        <td style="text-align:center;padding:8px">26</td>
+        <td style="text-align:center;padding:8px">0</td>
+        <td style="text-align:center;padding:8px;font-weight:bold">100.0%</td>
+        <td style="text-align:center;padding:8px">0.897</td>
+        <td style="text-align:center;padding:8px">0.945</td>
+    </tr>
+<tr>
+        <td style="padding:8px;font-weight:bold">KN (BP17)</td>
+        <td style="padding:8px">Knight</td>
+        <td style="text-align:center;padding:8px">44</td>
+        <td style="text-align:center;padding:8px">44</td>
+        <td style="text-align:center;padding:8px">0</td>
+        <td style="text-align:center;padding:8px;font-weight:bold">100.0%</td>
+        <td style="text-align:center;padding:8px">0.957</td>
+        <td style="text-align:center;padding:8px">0.978</td>
+    </tr>
+
+        </tbody>
+    </table>
+</div>
+
+<h2>3. Confusion Matrix</h2>
+<div class="card">
+    <table>
+        <thead>
+            <tr>
+                <th style="text-align:left">True \ Pred</th>
+                <th>DLV</th><th>FT</th><th>BKV</th><th>BKSA</th><th>KN</th>
+                <th>Total</th>
+                <th>Recall</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr><td style="padding:8px;font-weight:bold">DLV (BP6)</td><td style="background:#2d5a27;text-align:center;padding:8px;font-weight:bold">40</td><td style="background:#5a2727;text-align:center;padding:8px;font-weight:normal">3</td><td style="background:#1a1a2e;text-align:center;padding:8px;font-weight:normal">0</td><td style="background:#1a1a2e;text-align:center;padding:8px;font-weight:normal">0</td><td style="background:#5a2727;text-align:center;padding:8px;font-weight:normal">2</td><td style="text-align:center;padding:8px;font-weight:bold">45</td><td style="text-align:center;padding:8px;font-weight:bold">88.9%</td></tr>
+<tr><td style="padding:8px;font-weight:bold">FT (BP8)</td><td style="background:#1a1a2e;text-align:center;padding:8px;font-weight:normal">0</td><td style="background:#2d5a27;text-align:center;padding:8px;font-weight:bold">41</td><td style="background:#1a1a2e;text-align:center;padding:8px;font-weight:normal">0</td><td style="background:#1a1a2e;text-align:center;padding:8px;font-weight:normal">0</td><td style="background:#1a1a2e;text-align:center;padding:8px;font-weight:normal">0</td><td style="text-align:center;padding:8px;font-weight:bold">41</td><td style="text-align:center;padding:8px;font-weight:bold">100.0%</td></tr>
+<tr><td style="padding:8px;font-weight:bold">BKV (BP14c)</td><td style="background:#1a1a2e;text-align:center;padding:8px;font-weight:normal">0</td><td style="background:#1a1a2e;text-align:center;padding:8px;font-weight:normal">0</td><td style="background:#2d5a27;text-align:center;padding:8px;font-weight:bold">41</td><td style="background:#5a2727;text-align:center;padding:8px;font-weight:normal">3</td><td style="background:#1a1a2e;text-align:center;padding:8px;font-weight:normal">0</td><td style="text-align:center;padding:8px;font-weight:bold">44</td><td style="text-align:center;padding:8px;font-weight:bold">93.2%</td></tr>
+<tr><td style="padding:8px;font-weight:bold">BKSA (BP14d)</td><td style="background:#1a1a2e;text-align:center;padding:8px;font-weight:normal">0</td><td style="background:#1a1a2e;text-align:center;padding:8px;font-weight:normal">0</td><td style="background:#1a1a2e;text-align:center;padding:8px;font-weight:normal">0</td><td style="background:#2d5a27;text-align:center;padding:8px;font-weight:bold">26</td><td style="background:#1a1a2e;text-align:center;padding:8px;font-weight:normal">0</td><td style="text-align:center;padding:8px;font-weight:bold">26</td><td style="text-align:center;padding:8px;font-weight:bold">100.0%</td></tr>
+<tr><td style="padding:8px;font-weight:bold">KN (BP17)</td><td style="background:#1a1a2e;text-align:center;padding:8px;font-weight:normal">0</td><td style="background:#1a1a2e;text-align:center;padding:8px;font-weight:normal">0</td><td style="background:#1a1a2e;text-align:center;padding:8px;font-weight:normal">0</td><td style="background:#1a1a2e;text-align:center;padding:8px;font-weight:normal">0</td><td style="background:#2d5a27;text-align:center;padding:8px;font-weight:bold">44</td><td style="text-align:center;padding:8px;font-weight:bold">44</td><td style="text-align:center;padding:8px;font-weight:bold">100.0%</td></tr>
+
+            <tr><td style="padding:8px;font-weight:bold">Total</td><td style="text-align:center;padding:8px;font-weight:bold;border-top:2px solid #444">40</td><td style="text-align:center;padding:8px;font-weight:bold;border-top:2px solid #444">44</td><td style="text-align:center;padding:8px;font-weight:bold;border-top:2px solid #444">41</td><td style="text-align:center;padding:8px;font-weight:bold;border-top:2px solid #444">29</td><td style="text-align:center;padding:8px;font-weight:bold;border-top:2px solid #444">46</td><td style="text-align:center;padding:8px;font-weight:bold;border-top:2px solid #444">200</td><td style="text-align:center;padding:8px;font-weight:bold;border-top:2px solid #444">96.0%</td></tr>
+        </tbody>
+    </table>
+</div>
+
+<h2>4. Error Analysis</h2>
+<div class="card">
+    <h3>Top Confusion Pairs</h3>
+    <table>
+        <thead>
+            <tr><th style="text-align:left">True &rarr; Predicted</th><th>Count</th></tr>
+        </thead>
+        <tbody>
+            <tr><td style="padding:6px">BKV -> BKSA</td><td style="text-align:center;padding:6px">3</td></tr>
+<tr><td style="padding:6px">DLV -> FT</td><td style="text-align:center;padding:6px">3</td></tr>
+<tr><td style="padding:6px">DLV -> KN</td><td style="text-align:center;padding:6px">2</td></tr>
+
+        </tbody>
+    </table>
+
+    <h3 style="margin-top:20px">All Misclassified Images (8 total)</h3>
+    <table>
+        <thead>
+            <tr>
+                <th style="text-align:left">Filename</th>
+                <th style="text-align:left">True Label</th>
+                <th style="text-align:left">Predicted</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+        <td style="padding:6px">IMG_1257_aug19.jpg</td>
+        <td style="padding:6px">DLV (Double Leg Vertical)</td>
+        <td style="padding:6px">KN (Knight)</td>
+    </tr>
+<tr>
+        <td style="padding:6px">IMG_1257_aug4.jpg</td>
+        <td style="padding:6px">DLV (Double Leg Vertical)</td>
+        <td style="padding:6px">KN (Knight)</td>
+    </tr>
+<tr>
+        <td style="padding:6px">IMG_1280_aug5.jpg</td>
+        <td style="padding:6px">BKV (Bent Knee Vertical)</td>
+        <td style="padding:6px">BKSA (Bent Knee Surface Arch)</td>
+    </tr>
+<tr>
+        <td style="padding:6px">IMG_1282_aug3.jpg</td>
+        <td style="padding:6px">BKV (Bent Knee Vertical)</td>
+        <td style="padding:6px">BKSA (Bent Knee Surface Arch)</td>
+    </tr>
+<tr>
+        <td style="padding:6px">IMG_1284_aug9.jpg</td>
+        <td style="padding:6px">BKV (Bent Knee Vertical)</td>
+        <td style="padding:6px">BKSA (Bent Knee Surface Arch)</td>
+    </tr>
+<tr>
+        <td style="padding:6px">IMG_1298_aug10.jpg</td>
+        <td style="padding:6px">DLV (Double Leg Vertical)</td>
+        <td style="padding:6px">FT (Fishtail)</td>
+    </tr>
+<tr>
+        <td style="padding:6px">IMG_1298_aug18.jpg</td>
+        <td style="padding:6px">DLV (Double Leg Vertical)</td>
+        <td style="padding:6px">FT (Fishtail)</td>
+    </tr>
+<tr>
+        <td style="padding:6px">IMG_1302_aug17.jpg</td>
+        <td style="padding:6px">DLV (Double Leg Vertical)</td>
+        <td style="padding:6px">FT (Fishtail)</td>
+    </tr>
+
+        </tbody>
+    </table>
+</div>
+
+<div class="footer">
+    <p>Generated on 2026-03-31 12:26:13 &mdash; 200 images evaluated</p>
+</div>
+
+</div>
+</body>
+</html>
