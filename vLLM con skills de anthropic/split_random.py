@@ -3,8 +3,8 @@ import os
 import math
 
 INPUT_FILE = "all_files.txt"
-IMAGES_PER_FILE = 30
-OUTPUT_DIR = "splits"
+IMAGES_PER_FILE = 250
+OUTPUT_DIR = "splits2"
 
 os.makedirs(OUTPUT_DIR, exist_ok=True)
 
