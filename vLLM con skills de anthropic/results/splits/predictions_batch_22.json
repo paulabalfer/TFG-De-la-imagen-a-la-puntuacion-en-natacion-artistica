@@ -1,0 +1,1252 @@
+[
+  {
+    "filename": "IMG_1252_aug19.jpg",
+    "classification": "Double Leg Vertical",
+    "confidence": "HIGH"
+  },
+  {
+    "filename": "IMG_1443_aug7.jpg",
+    "classification": "Double Leg Vertical",
+    "confidence": "HIGH"
+  },
+  {
+    "filename": "IMG_1306_aug6.jpg",
+    "classification": "Bent Knee Vertical",
+    "confidence": "HIGH"
+  },
+  {
+    "filename": "IMG_1304_aug4.jpg",
+    "classification": "Bent Knee Vertical",
+    "confidence": "HIGH"
+  },
+  {
+    "filename": "IMG_1353_aug23.jpg",
+    "classification": "Fishtail",
+    "confidence": "HIGH"
+  },
+  {
+    "filename": "IMG_1386_aug14.jpg",
+    "classification": "Knight",
+    "confidence": "HIGH"
+  },
+  {
+    "filename": "IMG_1294_aug13.jpg",
+    "classification": "Double Leg Vertical",
+    "confidence": "HIGH"
+  },
+  {
+    "filename": "IMG_1468_aug19.jpg",
+    "classification": "Bent Knee Vertical",
+    "confidence": "HIGH"
+  },
+  {
+    "filename": "IMG_1519_aug13.jpg",
+    "classification": "Bent Knee Surface Arch Position",
+    "confidence": "HIGH"
+  },
+  {
+    "filename": "IMG_1503_aug10.jpg",
+    "classification": "Knight",
+    "confidence": "HIGH"
+  },
+  {
+    "filename": "IMG_1281_aug3.jpg",
+    "classification": "Bent Knee Vertical",
+    "confidence": "HIGH"
+  },
+  {
+    "filename": "IMG_1447_aug20.jpg",
+    "classification": "Double Leg Vertical",
+    "confidence": "HIGH"
+  },
+  {
+    "filename": "IMG_1411_aug25.jpg",
+    "classification": "Knight",
+    "confidence": "HIGH"
+  },
+  {
+    "filename": "IMG_1460_aug5.jpg",
+    "classification": "Bent Knee Vertical",
+    "confidence": "HIGH"
+  },
+  {
+    "filename": "IMG_1332_aug17.jpg",
+    "classification": "Fishtail",
+    "confidence": "HIGH"
+  },
+  {
+    "filename": "IMG_1374_aug9.jpg",
+    "classification": "Knight",
+    "confidence": "HIGH"
+  },
+  {
+    "filename": "IMG_1256_aug15.jpg",
+    "classification": "Double Leg Vertical",
+    "confidence": "HIGH"
+  },
+  {
+    "filename": "IMG_1418_aug22.jpg",
+    "classification": "Knight",
+    "confidence": "HIGH"
+  },
+  {
+    "filename": "IMG_1385_aug22.jpg",
+    "classification": "Knight",
+    "confidence": "HIGH"
+  },
+  {
+    "filename": "IMG_1335_aug18.jpg",
+    "classification": "Fishtail",
+    "confidence": "HIGH"
+  },
+  {
+    "filename": "IMG_1468_aug22.jpg",
+    "classification": "Bent Knee Vertical",
+    "confidence": "HIGH"
+  },
+  {
+    "filename": "IMG_1275_aug21.jpg",
+    "classification": "Bent Knee Vertical",
+    "confidence": "HIGH"
+  },
+  {
+    "filename": "IMG_1461_aug21.jpg",
+    "classification": "Bent Knee Vertical",
+    "confidence": "HIGH"
+  },
+  {
+    "filename": "IMG_1307_aug15.jpg",
+    "classification": "Bent Knee Vertical",
+    "confidence": "HIGH"
+  },
+  {
+    "filename": "IMG_1392_aug3.jpg",
+    "classification": "Bent Knee Surface Arch Position",
+    "confidence": "HIGH"
+  },
+  {
+    "filename": "IMG_1485_aug7.jpg",
+    "classification": "Fishtail",
+    "confidence": "HIGH"
+  },
+  {
+    "filename": "IMG_1457_aug3.jpg",
+    "classification": "Double Leg Vertical",
+    "confidence": "HIGH"
+  },
+  {
+    "filename": "IMG_1522_aug4.jpg",
+    "classification": "Bent Knee Surface Arch Position",
+    "confidence": "HIGH"
+  },
+  {
+    "filename": "IMG_1494_aug4.jpg",
+    "classification": "Knight",
+    "confidence": "HIGH"
+  },
+  {
+    "filename": "IMG_1425_aug16.jpg",
+    "classification": "Bent Knee Surface Arch Position",
+    "confidence": "HIGH"
+  },
+  {
+    "filename": "IMG_1461_aug25.jpg",
+    "classification": "Bent Knee Vertical",
+    "confidence": "HIGH"
+  },
+  {
+    "filename": "IMG_1374_aug6.jpg",
+    "classification": "Knight",
+    "confidence": "HIGH"
+  },
+  {
+    "filename": "IMG_1395_aug15.jpg",
+    "classification": "Bent Knee Surface Arch Position",
+    "confidence": "HIGH"
+  },
+  {
+    "filename": "IMG_1269_aug19.jpg",
+    "classification": "Bent Knee Vertical",
+    "confidence": "HIGH"
+  },
+  {
+    "filename": "IMG_1358_aug1.jpg",
+    "classification": "Fishtail",
+    "confidence": "HIGH"
+  },
+  {
+    "filename": "IMG_1507_aug12.jpg",
+    "classification": "Knight",
+    "confidence": "HIGH"
+  },
+  {
+    "filename": "IMG_1414_aug17.jpg",
+    "classification": "Knight",
+    "confidence": "HIGH"
+  },
+  {
+    "filename": "IMG_1270_aug25.jpg",
+    "classification": "Bent Knee Vertical",
+    "confidence": "HIGH"
+  },
+  {
+    "filename": "IMG_1445_aug4.jpg",
+    "classification": "Double Leg Vertical",
+    "confidence": "HIGH"
+  },
+  {
+    "filename": "IMG_1340_aug14.jpg",
+    "classification": "Fishtail",
+    "confidence": "HIGH"
+  },
+  {
+    "filename": "IMG_1455_aug4.jpg",
+    "classification": "Double Leg Vertical",
+    "confidence": "HIGH"
+  },
+  {
+    "filename": "IMG_1526_aug23.jpg",
+    "classification": "Bent Knee Surface Arch Position",
+    "confidence": "HIGH"
+  },
+  {
+    "filename": "IMG_1346_aug2.jpg",
+    "classification": "Fishtail",
+    "confidence": "HIGH"
+  },
+  {
+    "filename": "IMG_1442_aug15.jpg",
+    "classification": "Double Leg Vertical",
+    "confidence": "HIGH"
+  },
+  {
+    "filename": "IMG_1467_aug2.jpg",
+    "classification": "Bent Knee Vertical",
+    "confidence": "HIGH"
+  },
+  {
+    "filename": "IMG_1501_aug9.jpg",
+    "classification": "Knight",
+    "confidence": "HIGH"
+  },
+  {
+    "filename": "IMG_1266_aug25.jpg",
+    "classification": "Bent Knee Vertical",
+    "confidence": "HIGH"
+  },
+  {
+    "filename": "IMG_1375_aug7.jpg",
+    "classification": "Knight",
+    "confidence": "HIGH"
+  },
+  {
+    "filename": "IMG_1313_aug21.jpg",
+    "classification": "Bent Knee Vertical",
+    "confidence": "HIGH"
+  },
+  {
+    "filename": "IMG_1318_aug22.jpg",
+    "classification": "Bent Knee Vertical",
+    "confidence": "HIGH"
+  },
+  {
+    "filename": "IMG_1256_aug5.jpg",
+    "classification": "Double Leg Vertical",
+    "confidence": "HIGH"
+  },
+  {
+    "filename": "IMG_1283_aug7.jpg",
+    "classification": "Bent Knee Vertical",
+    "confidence": "HIGH"
+  },
+  {
+    "filename": "IMG_1464_aug8.jpg",
+    "classification": "Bent Knee Vertical",
+    "confidence": "HIGH"
+  },
+  {
+    "filename": "IMG_1513_aug10.jpg",
+    "classification": "Bent Knee Surface Arch Position",
+    "confidence": "HIGH"
+  },
+  {
+    "filename": "IMG_1264_aug1.jpg",
+    "classification": "Double Leg Vertical",
+    "confidence": "HIGH"
+  },
+  {
+    "filename": "IMG_1401_aug18.jpg",
+    "classification": "Knight",
+    "confidence": "HIGH"
+  },
+  {
+    "filename": "IMG_1385_aug19.jpg",
+    "classification": "Knight",
+    "confidence": "HIGH"
+  },
+  {
+    "filename": "IMG_1474_aug21.jpg",
+    "classification": "Bent Knee Vertical",
+    "confidence": "HIGH"
+  },
+  {
+    "filename": "IMG_1260_aug3.jpg",
+    "classification": "Double Leg Vertical",
+    "confidence": "HIGH"
+  },
+  {
+    "filename": "IMG_1345_aug8.jpg",
+    "classification": "Fishtail",
+    "confidence": "HIGH"
+  },
+  {
+    "filename": "IMG_1491_aug18.jpg",
+    "classification": "Fishtail",
+    "confidence": "HIGH"
+  },
+  {
+    "filename": "IMG_1313_aug18.jpg",
+    "classification": "Bent Knee Vertical",
+    "confidence": "HIGH"
+  },
+  {
+    "filename": "IMG_1488_aug22.jpg",
+    "classification": "Fishtail",
+    "confidence": "HIGH"
+  },
+  {
+    "filename": "IMG_1509_aug21.jpg",
+    "classification": "Knight",
+    "confidence": "HIGH"
+  },
+  {
+    "filename": "IMG_1392_aug6.jpg",
+    "classification": "Bent Knee Surface Arch Position",
+    "confidence": "HIGH"
+  },
+  {
+    "filename": "IMG_1278_aug14.jpg",
+    "classification": "Bent Knee Vertical",
+    "confidence": "HIGH"
+  },
+  {
+    "filename": "IMG_1522_aug16.jpg",
+    "classification": "Bent Knee Surface Arch Position",
+    "confidence": "HIGH"
+  },
+  {
+    "filename": "IMG_1354_aug9.jpg",
+    "classification": "Fishtail",
+    "confidence": "HIGH"
+  },
+  {
+    "filename": "IMG_1371_aug6.jpg",
+    "classification": "Knight",
+    "confidence": "HIGH"
+  },
+  {
+    "filename": "IMG_1304_aug9.jpg",
+    "classification": "Bent Knee Vertical",
+    "confidence": "HIGH"
+  },
+  {
+    "filename": "IMG_1258_aug23.jpg",
+    "classification": "Double Leg Vertical",
+    "confidence": "HIGH"
+  },
+  {
+    "filename": "IMG_1490_aug15.jpg",
+    "classification": "Fishtail",
+    "confidence": "HIGH"
+  },
+  {
+    "filename": "IMG_1256_aug14.jpg",
+    "classification": "Double Leg Vertical",
+    "confidence": "HIGH"
+  },
+  {
+    "filename": "IMG_1362_aug14.jpg",
+    "classification": "Fishtail",
+    "confidence": "HIGH"
+  },
+  {
+    "filename": "IMG_1309_aug23.jpg",
+    "classification": "Bent Knee Vertical",
+    "confidence": "HIGH"
+  },
+  {
+    "filename": "IMG_1291_aug8.jpg",
+    "classification": "Double Leg Vertical",
+    "confidence": "HIGH"
+  },
+  {
+    "filename": "IMG_1420_aug4.jpg",
+    "classification": "Knight",
+    "confidence": "HIGH"
+  },
+  {
+    "filename": "IMG_1496_aug7.jpg",
+    "classification": "Knight",
+    "confidence": "HIGH"
+  },
+  {
+    "filename": "IMG_1506_aug19.jpg",
+    "classification": "Knight",
+    "confidence": "HIGH"
+  },
+  {
+    "filename": "IMG_1373_aug24.jpg",
+    "classification": "Knight",
+    "confidence": "HIGH"
+  },
+  {
+    "filename": "IMG_1367_aug6.jpg",
+    "classification": "Knight",
+    "confidence": "HIGH"
+  },
+  {
+    "filename": "IMG_1301_aug7.jpg",
+    "classification": "Double Leg Vertical",
+    "confidence": "HIGH"
+  },
+  {
+    "filename": "IMG_1445_aug19.jpg",
+    "classification": "Double Leg Vertical",
+    "confidence": "HIGH"
+  },
+  {
+    "filename": "IMG_1449_aug4.jpg",
+    "classification": "Double Leg Vertical",
+    "confidence": "HIGH"
+  },
+  {
+    "filename": "IMG_1407_aug4.jpg",
+    "classification": "Knight",
+    "confidence": "HIGH"
+  },
+  {
+    "filename": "IMG_1466_aug16.jpg",
+    "classification": "Bent Knee Vertical",
+    "confidence": "HIGH"
+  },
+  {
+    "filename": "IMG_1338_aug25.jpg",
+    "classification": "Fishtail",
+    "confidence": "HIGH"
+  },
+  {
+    "filename": "IMG_1468_aug12.jpg",
+    "classification": "Bent Knee Vertical",
+    "confidence": "HIGH"
+  },
+  {
+    "filename": "IMG_1401_aug16.jpg",
+    "classification": "Knight",
+    "confidence": "HIGH"
+  },
+  {
+    "filename": "IMG_1495_aug12.jpg",
+    "classification": "Knight",
+    "confidence": "HIGH"
+  },
+  {
+    "filename": "IMG_1437_aug9.jpg",
+    "classification": "Bent Knee Surface Arch Position",
+    "confidence": "HIGH"
+  },
+  {
+    "filename": "IMG_1271_aug13.jpg",
+    "classification": "Bent Knee Vertical",
+    "confidence": "HIGH"
+  },
+  {
+    "filename": "IMG_1418_aug7.jpg",
+    "classification": "Knight",
+    "confidence": "HIGH"
+  },
+  {
+    "filename": "IMG_1293_aug21.jpg",
+    "classification": "Double Leg Vertical",
+    "confidence": "HIGH"
+  },
+  {
+    "filename": "IMG_1430_aug25.jpg",
+    "classification": "Bent Knee Surface Arch Position",
+    "confidence": "HIGH"
+  },
+  {
+    "filename": "IMG_1423_aug23.jpg",
+    "classification": "Knight",
+    "confidence": "HIGH"
+  },
+  {
+    "filename": "IMG_1495_aug2.jpg",
+    "classification": "Knight",
+    "confidence": "HIGH"
+  },
+  {
+    "filename": "IMG_1483_aug3.jpg",
+    "classification": "Fishtail",
+    "confidence": "HIGH"
+  },
+  {
+    "filename": "IMG_1337_aug23.jpg",
+    "classification": "Fishtail",
+    "confidence": "HIGH"
+  },
+  {
+    "filename": "IMG_1325_aug17.jpg",
+    "classification": "Fishtail",
+    "confidence": "HIGH"
+  },
+  {
+    "filename": "IMG_1274_aug20.jpg",
+    "classification": "Bent Knee Vertical",
+    "confidence": "HIGH"
+  },
+  {
+    "filename": "IMG_1424_aug22.jpg",
+    "classification": "Bent Knee Surface Arch Position",
+    "confidence": "HIGH"
+  },
+  {
+    "filename": "IMG_1525_aug5.jpg",
+    "classification": "Bent Knee Surface Arch Position",
+    "confidence": "HIGH"
+  },
+  {
+    "filename": "IMG_1376_aug13.jpg",
+    "classification": "Knight",
+    "confidence": "HIGH"
+  },
+  {
+    "filename": "IMG_1348_aug13.jpg",
+    "classification": "Fishtail",
+    "confidence": "HIGH"
+  },
+  {
+    "filename": "IMG_1487_aug23.jpg",
+    "classification": "Fishtail",
+    "confidence": "HIGH"
+  },
+  {
+    "filename": "IMG_1349_aug14.jpg",
+    "classification": "Fishtail",
+    "confidence": "HIGH"
+  },
+  {
+    "filename": "IMG_1288_aug15.jpg",
+    "classification": "Double Leg Vertical",
+    "confidence": "HIGH"
+  },
+  {
+    "filename": "IMG_1373_aug13.jpg",
+    "classification": "Knight",
+    "confidence": "HIGH"
+  },
+  {
+    "filename": "IMG_1308_aug3.jpg",
+    "classification": "Bent Knee Vertical",
+    "confidence": "HIGH"
+  },
+  {
+    "filename": "IMG_1512_aug20.jpg",
+    "classification": "Bent Knee Surface Arch Position",
+    "confidence": "HIGH"
+  },
+  {
+    "filename": "IMG_1304_aug18.jpg",
+    "classification": "Bent Knee Vertical",
+    "confidence": "HIGH"
+  },
+  {
+    "filename": "IMG_1288_aug7.jpg",
+    "classification": "Double Leg Vertical",
+    "confidence": "HIGH"
+  },
+  {
+    "filename": "IMG_1391_aug3.jpg",
+    "classification": "Bent Knee Surface Arch Position",
+    "confidence": "HIGH"
+  },
+  {
+    "filename": "IMG_1384_aug15.jpg",
+    "classification": "Knight",
+    "confidence": "HIGH"
+  },
+  {
+    "filename": "IMG_1503_aug13.jpg",
+    "classification": "Knight",
+    "confidence": "HIGH"
+  },
+  {
+    "filename": "IMG_1465_aug6.jpg",
+    "classification": "Bent Knee Vertical",
+    "confidence": "HIGH"
+  },
+  {
+    "filename": "IMG_1526_aug14.jpg",
+    "classification": "Bent Knee Surface Arch Position",
+    "confidence": "HIGH"
+  },
+  {
+    "filename": "IMG_1514_aug9.jpg",
+    "classification": "Bent Knee Surface Arch Position",
+    "confidence": "HIGH"
+  },
+  {
+    "filename": "IMG_1369_aug6.jpg",
+    "classification": "Knight",
+    "confidence": "HIGH"
+  },
+  {
+    "filename": "IMG_1324_aug7.jpg",
+    "classification": "Fishtail",
+    "confidence": "HIGH"
+  },
+  {
+    "filename": "IMG_1279_aug25.jpg",
+    "classification": "Bent Knee Vertical",
+    "confidence": "HIGH"
+  },
+  {
+    "filename": "IMG_1382_aug13.jpg",
+    "classification": "Knight",
+    "confidence": "HIGH"
+  },
+  {
+    "filename": "IMG_1256_aug2.jpg",
+    "classification": "Double Leg Vertical",
+    "confidence": "HIGH"
+  },
+  {
+    "filename": "IMG_1486_aug12.jpg",
+    "classification": "Fishtail",
+    "confidence": "HIGH"
+  },
+  {
+    "filename": "IMG_1311_aug2.jpg",
+    "classification": "Bent Knee Vertical",
+    "confidence": "HIGH"
+  },
+  {
+    "filename": "IMG_1403_aug10.jpg",
+    "classification": "Knight",
+    "confidence": "HIGH"
+  },
+  {
+    "filename": "IMG_1321_aug17.jpg",
+    "classification": "Fishtail",
+    "confidence": "HIGH"
+  },
+  {
+    "filename": "IMG_1364_aug25.jpg",
+    "classification": "Knight",
+    "confidence": "HIGH"
+  },
+  {
+    "filename": "IMG_1467_aug17.jpg",
+    "classification": "Bent Knee Vertical",
+    "confidence": "HIGH"
+  },
+  {
+    "filename": "IMG_1269_aug23.jpg",
+    "classification": "Bent Knee Vertical",
+    "confidence": "HIGH"
+  },
+  {
+    "filename": "IMG_1459_aug5.jpg",
+    "classification": "Bent Knee Vertical",
+    "confidence": "HIGH"
+  },
+  {
+    "filename": "IMG_1339_aug12.jpg",
+    "classification": "Fishtail",
+    "confidence": "HIGH"
+  },
+  {
+    "filename": "IMG_1342_aug24.jpg",
+    "classification": "Fishtail",
+    "confidence": "HIGH"
+  },
+  {
+    "filename": "IMG_1437_aug14.jpg",
+    "classification": "Bent Knee Surface Arch Position",
+    "confidence": "HIGH"
+  },
+  {
+    "filename": "IMG_1404_aug16.jpg",
+    "classification": "Knight",
+    "confidence": "HIGH"
+  },
+  {
+    "filename": "IMG_1345_aug22.jpg",
+    "classification": "Fishtail",
+    "confidence": "HIGH"
+  },
+  {
+    "filename": "IMG_1345_aug7.jpg",
+    "classification": "Fishtail",
+    "confidence": "HIGH"
+  },
+  {
+    "filename": "IMG_1459_aug17.jpg",
+    "classification": "Bent Knee Vertical",
+    "confidence": "HIGH"
+  },
+  {
+    "filename": "IMG_1275_aug1.jpg",
+    "classification": "Bent Knee Vertical",
+    "confidence": "HIGH"
+  },
+  {
+    "filename": "IMG_1349_aug8.jpg",
+    "classification": "Fishtail",
+    "confidence": "HIGH"
+  },
+  {
+    "filename": "IMG_1389_aug19.jpg",
+    "classification": "Bent Knee Surface Arch Position",
+    "confidence": "HIGH"
+  },
+  {
+    "filename": "IMG_1455_aug19.jpg",
+    "classification": "Double Leg Vertical",
+    "confidence": "HIGH"
+  },
+  {
+    "filename": "IMG_1355_aug2.jpg",
+    "classification": "Fishtail",
+    "confidence": "HIGH"
+  },
+  {
+    "filename": "IMG_1336_aug14.jpg",
+    "classification": "Fishtail",
+    "confidence": "HIGH"
+  },
+  {
+    "filename": "IMG_1476_aug25.jpg",
+    "classification": "Fishtail",
+    "confidence": "HIGH"
+  },
+  {
+    "filename": "IMG_1256_aug8.jpg",
+    "classification": "Double Leg Vertical",
+    "confidence": "HIGH"
+  },
+  {
+    "filename": "IMG_1494_aug9.jpg",
+    "classification": "Knight",
+    "confidence": "HIGH"
+  },
+  {
+    "filename": "IMG_1437_aug5.jpg",
+    "classification": "Bent Knee Surface Arch Position",
+    "confidence": "HIGH"
+  },
+  {
+    "filename": "IMG_1446_aug18.jpg",
+    "classification": "Double Leg Vertical",
+    "confidence": "HIGH"
+  },
+  {
+    "filename": "IMG_1375_aug9.jpg",
+    "classification": "Knight",
+    "confidence": "HIGH"
+  },
+  {
+    "filename": "IMG_1410_aug2.jpg",
+    "classification": "Knight",
+    "confidence": "HIGH"
+  },
+  {
+    "filename": "IMG_1476_aug7.jpg",
+    "classification": "Fishtail",
+    "confidence": "HIGH"
+  },
+  {
+    "filename": "IMG_1526_aug6.jpg",
+    "classification": "Bent Knee Surface Arch Position",
+    "confidence": "HIGH"
+  },
+  {
+    "filename": "IMG_1420_aug6.jpg",
+    "classification": "Knight",
+    "confidence": "HIGH"
+  },
+  {
+    "filename": "IMG_1295_aug2.jpg",
+    "classification": "Double Leg Vertical",
+    "confidence": "HIGH"
+  },
+  {
+    "filename": "IMG_1346_aug22.jpg",
+    "classification": "Fishtail",
+    "confidence": "HIGH"
+  },
+  {
+    "filename": "IMG_1512_aug6.jpg",
+    "classification": "Bent Knee Surface Arch Position",
+    "confidence": "HIGH"
+  },
+  {
+    "filename": "IMG_1391_aug4.jpg",
+    "classification": "Bent Knee Surface Arch Position",
+    "confidence": "HIGH"
+  },
+  {
+    "filename": "IMG_1437_aug1.jpg",
+    "classification": "Bent Knee Surface Arch Position",
+    "confidence": "HIGH"
+  },
+  {
+    "filename": "IMG_1300_aug5.jpg",
+    "classification": "Double Leg Vertical",
+    "confidence": "HIGH"
+  },
+  {
+    "filename": "IMG_1294_aug23.jpg",
+    "classification": "Double Leg Vertical",
+    "confidence": "HIGH"
+  },
+  {
+    "filename": "IMG_1357_aug24.jpg",
+    "classification": "Fishtail",
+    "confidence": "HIGH"
+  },
+  {
+    "filename": "IMG_1340_aug16.jpg",
+    "classification": "Fishtail",
+    "confidence": "HIGH"
+  },
+  {
+    "filename": "IMG_1293_aug8.jpg",
+    "classification": "Double Leg Vertical",
+    "confidence": "HIGH"
+  },
+  {
+    "filename": "IMG_1299_aug21.jpg",
+    "classification": "Double Leg Vertical",
+    "confidence": "HIGH"
+  },
+  {
+    "filename": "IMG_1261_aug19.jpg",
+    "classification": "Double Leg Vertical",
+    "confidence": "HIGH"
+  },
+  {
+    "filename": "IMG_1477_aug9.jpg",
+    "classification": "Fishtail",
+    "confidence": "HIGH"
+  },
+  {
+    "filename": "IMG_1484_aug9.jpg",
+    "classification": "Fishtail",
+    "confidence": "HIGH"
+  },
+  {
+    "filename": "IMG_1445_aug20.jpg",
+    "classification": "Double Leg Vertical",
+    "confidence": "HIGH"
+  },
+  {
+    "filename": "IMG_1352_aug17.jpg",
+    "classification": "Fishtail",
+    "confidence": "HIGH"
+  },
+  {
+    "filename": "IMG_1268_aug24.jpg",
+    "classification": "Bent Knee Vertical",
+    "confidence": "HIGH"
+  },
+  {
+    "filename": "IMG_1260_aug11.jpg",
+    "classification": "Double Leg Vertical",
+    "confidence": "HIGH"
+  },
+  {
+    "filename": "IMG_1436_aug2.jpg",
+    "classification": "Bent Knee Surface Arch Position",
+    "confidence": "HIGH"
+  },
+  {
+    "filename": "IMG_1347_aug5.jpg",
+    "classification": "Fishtail",
+    "confidence": "HIGH"
+  },
+  {
+    "filename": "IMG_1525_aug21.jpg",
+    "classification": "Bent Knee Surface Arch Position",
+    "confidence": "HIGH"
+  },
+  {
+    "filename": "IMG_1256_aug17.jpg",
+    "classification": "Double Leg Vertical",
+    "confidence": "HIGH"
+  },
+  {
+    "filename": "IMG_1322_aug1.jpg",
+    "classification": "Fishtail",
+    "confidence": "HIGH"
+  },
+  {
+    "filename": "IMG_1446_aug11.jpg",
+    "classification": "Double Leg Vertical",
+    "confidence": "HIGH"
+  },
+  {
+    "filename": "IMG_1486_aug9.jpg",
+    "classification": "Fishtail",
+    "confidence": "HIGH"
+  },
+  {
+    "filename": "IMG_1464_aug1.jpg",
+    "classification": "Bent Knee Vertical",
+    "confidence": "HIGH"
+  },
+  {
+    "filename": "IMG_1320_aug10.jpg",
+    "classification": "Bent Knee Vertical",
+    "confidence": "HIGH"
+  },
+  {
+    "filename": "IMG_1417_aug21.jpg",
+    "classification": "Knight",
+    "confidence": "HIGH"
+  },
+  {
+    "filename": "IMG_1267_aug11.jpg",
+    "classification": "Bent Knee Vertical",
+    "confidence": "HIGH"
+  },
+  {
+    "filename": "IMG_1319_aug8.jpg",
+    "classification": "Bent Knee Vertical",
+    "confidence": "HIGH"
+  },
+  {
+    "filename": "IMG_1515_aug21.jpg",
+    "classification": "Bent Knee Surface Arch Position",
+    "confidence": "HIGH"
+  },
+  {
+    "filename": "IMG_1459_aug21.jpg",
+    "classification": "Bent Knee Vertical",
+    "confidence": "HIGH"
+  },
+  {
+    "filename": "IMG_1431_aug14.jpg",
+    "classification": "Bent Knee Surface Arch Position",
+    "confidence": "HIGH"
+  },
+  {
+    "filename": "IMG_1426_aug14.jpg",
+    "classification": "Bent Knee Surface Arch Position",
+    "confidence": "HIGH"
+  },
+  {
+    "filename": "IMG_1404_aug15.jpg",
+    "classification": "Knight",
+    "confidence": "HIGH"
+  },
+  {
+    "filename": "IMG_1321_aug3.jpg",
+    "classification": "Fishtail",
+    "confidence": "HIGH"
+  },
+  {
+    "filename": "IMG_1313_aug6.jpg",
+    "classification": "Bent Knee Vertical",
+    "confidence": "HIGH"
+  },
+  {
+    "filename": "IMG_1367_aug25.jpg",
+    "classification": "Knight",
+    "confidence": "HIGH"
+  },
+  {
+    "filename": "IMG_1453_aug17.jpg",
+    "classification": "Double Leg Vertical",
+    "confidence": "HIGH"
+  },
+  {
+    "filename": "IMG_1364_aug13.jpg",
+    "classification": "Knight",
+    "confidence": "HIGH"
+  },
+  {
+    "filename": "IMG_1480_aug22.jpg",
+    "classification": "Fishtail",
+    "confidence": "HIGH"
+  },
+  {
+    "filename": "IMG_1297_aug20.jpg",
+    "classification": "Double Leg Vertical",
+    "confidence": "HIGH"
+  },
+  {
+    "filename": "IMG_1257_aug11.jpg",
+    "classification": "Double Leg Vertical",
+    "confidence": "HIGH"
+  },
+  {
+    "filename": "IMG_1297_aug10.jpg",
+    "classification": "Double Leg Vertical",
+    "confidence": "HIGH"
+  },
+  {
+    "filename": "IMG_1518_aug24.jpg",
+    "classification": "Bent Knee Surface Arch Position",
+    "confidence": "HIGH"
+  },
+  {
+    "filename": "IMG_1362_aug1.jpg",
+    "classification": "Fishtail",
+    "confidence": "HIGH"
+  },
+  {
+    "filename": "IMG_1505_aug22.jpg",
+    "classification": "Fishtail",
+    "confidence": "HIGH"
+  },
+  {
+    "filename": "IMG_1513_aug17.jpg",
+    "classification": "Bent Knee Vertical",
+    "confidence": "HIGH"
+  },
+  {
+    "filename": "IMG_1300_aug12.jpg",
+    "classification": "Double Leg Vertical",
+    "confidence": "HIGH"
+  },
+  {
+    "filename": "IMG_1311_aug21.jpg",
+    "classification": "Bent Knee Vertical",
+    "confidence": "HIGH"
+  },
+  {
+    "filename": "IMG_1486_aug11.jpg",
+    "classification": "Fishtail",
+    "confidence": "HIGH"
+  },
+  {
+    "filename": "IMG_1413_aug9.jpg",
+    "classification": "Fishtail",
+    "confidence": "HIGH"
+  },
+  {
+    "filename": "IMG_1426_aug1.jpg",
+    "classification": "Knight",
+    "confidence": "HIGH"
+  },
+  {
+    "filename": "IMG_1311_aug9.jpg",
+    "classification": "Fishtail",
+    "confidence": "HIGH"
+  },
+  {
+    "filename": "IMG_1470_aug16.jpg",
+    "classification": "Bent Knee Vertical",
+    "confidence": "HIGH"
+  },
+  {
+    "filename": "IMG_1374_aug25.jpg",
+    "classification": "Fishtail",
+    "confidence": "HIGH"
+  },
+  {
+    "filename": "IMG_1323_aug16.jpg",
+    "classification": "Fishtail",
+    "confidence": "HIGH"
+  },
+  {
+    "filename": "IMG_1468_aug4.jpg",
+    "classification": "Fishtail",
+    "confidence": "HIGH"
+  },
+  {
+    "filename": "IMG_1304_aug10.jpg",
+    "classification": "Fishtail",
+    "confidence": "HIGH"
+  },
+  {
+    "filename": "IMG_1453_aug6.jpg",
+    "classification": "Double Leg Vertical",
+    "confidence": "HIGH"
+  },
+  {
+    "filename": "IMG_1314_aug14.jpg",
+    "classification": "Fishtail",
+    "confidence": "HIGH"
+  },
+  {
+    "filename": "IMG_1349_aug9.jpg",
+    "classification": "Fishtail",
+    "confidence": "HIGH"
+  },
+  {
+    "filename": "IMG_1520_aug8.jpg",
+    "classification": "Bent Knee Vertical",
+    "confidence": "HIGH"
+  },
+  {
+    "filename": "IMG_1255_aug9.jpg",
+    "classification": "Double Leg Vertical",
+    "confidence": "HIGH"
+  },
+  {
+    "filename": "IMG_1340_aug4.jpg",
+    "classification": "Fishtail",
+    "confidence": "HIGH"
+  },
+  {
+    "filename": "IMG_1276_aug20.jpg",
+    "classification": "Bent Knee Vertical",
+    "confidence": "HIGH"
+  },
+  {
+    "filename": "IMG_1260_aug25.jpg",
+    "classification": "Double Leg Vertical",
+    "confidence": "HIGH"
+  },
+  {
+    "filename": "IMG_1320_aug25.jpg",
+    "classification": "Bent Knee Vertical",
+    "confidence": "HIGH"
+  },
+  {
+    "filename": "IMG_1368_aug11.jpg",
+    "classification": "Knight",
+    "confidence": "HIGH"
+  },
+  {
+    "filename": "IMG_1462_aug7.jpg",
+    "classification": "Bent Knee Vertical",
+    "confidence": "HIGH"
+  },
+  {
+    "filename": "IMG_1510_aug21.jpg",
+    "classification": "Bent Knee Surface Arch Position",
+    "confidence": "HIGH"
+  },
+  {
+    "filename": "IMG_1413_aug5.jpg",
+    "classification": "Knight",
+    "confidence": "HIGH"
+  },
+  {
+    "filename": "IMG_1290_aug2.jpg",
+    "classification": "Double Leg Vertical",
+    "confidence": "HIGH"
+  },
+  {
+    "filename": "IMG_1518_aug21.jpg",
+    "classification": "Bent Knee Surface Arch Position",
+    "confidence": "HIGH"
+  },
+  {
+    "filename": "IMG_1305_aug14.jpg",
+    "classification": "Bent Knee Vertical",
+    "confidence": "HIGH"
+  },
+  {
+    "filename": "IMG_1506_aug18.jpg",
+    "classification": "Knight",
+    "confidence": "HIGH"
+  },
+  {
+    "filename": "IMG_1276_aug23.jpg",
+    "classification": "Bent Knee Vertical",
+    "confidence": "HIGH"
+  },
+  {
+    "filename": "IMG_1526_aug13.jpg",
+    "classification": "Bent Knee Surface Arch Position",
+    "confidence": "HIGH"
+  },
+  {
+    "filename": "IMG_1332_aug25.jpg",
+    "classification": "Fishtail",
+    "confidence": "HIGH"
+  },
+  {
+    "filename": "IMG_1510_aug3.jpg",
+    "classification": "Bent Knee Surface Arch Position",
+    "confidence": "HIGH"
+  },
+  {
+    "filename": "IMG_1368_aug2.jpg",
+    "classification": "Knight",
+    "confidence": "HIGH"
+  },
+  {
+    "filename": "IMG_1266_aug14.jpg",
+    "classification": "Bent Knee Vertical",
+    "confidence": "HIGH"
+  },
+  {
+    "filename": "IMG_1331_aug4.jpg",
+    "classification": "Fishtail",
+    "confidence": "HIGH"
+  },
+  {
+    "filename": "IMG_1453_aug8.jpg",
+    "classification": "Double Leg Vertical",
+    "confidence": "HIGH"
+  },
+  {
+    "filename": "IMG_1332_aug12.jpg",
+    "classification": "Fishtail",
+    "confidence": "HIGH"
+  },
+  {
+    "filename": "IMG_1319_aug4.jpg",
+    "classification": "Bent Knee Vertical",
+    "confidence": "HIGH"
+  },
+  {
+    "filename": "IMG_1425_aug18.jpg",
+    "classification": "Bent Knee Surface Arch Position",
+    "confidence": "HIGH"
+  },
+  {
+    "filename": "IMG_1262_aug23.jpg",
+    "classification": "Double Leg Vertical",
+    "confidence": "HIGH"
+  },
+  {
+    "filename": "IMG_1415_aug20.jpg",
+    "classification": "Knight",
+    "confidence": "HIGH"
+  },
+  {
+    "filename": "IMG_1316_aug7.jpg",
+    "classification": "Bent Knee Vertical",
+    "confidence": "HIGH"
+  },
+  {
+    "filename": "IMG_1337_aug10.jpg",
+    "classification": "Fishtail",
+    "confidence": "HIGH"
+  },
+  {
+    "filename": "IMG_1381_aug20.jpg",
+    "classification": "Knight",
+    "confidence": "HIGH"
+  },
+  {
+    "filename": "IMG_1487_aug9.jpg",
+    "classification": "Fishtail",
+    "confidence": "HIGH"
+  },
+  {
+    "filename": "IMG_1284_aug21.jpg",
+    "classification": "Bent Knee Vertical",
+    "confidence": "HIGH"
+  },
+  {
+    "filename": "IMG_1286_aug24.jpg",
+    "classification": "Double Leg Vertical",
+    "confidence": "HIGH"
+  }
+]
