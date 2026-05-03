@@ -1,27 +1,34 @@
 #!/usr/bin/env python3
 """Compute accuracy metrics and generate comprehensive HTML report."""
 import json
+import os
 from collections import defaultdict
 from datetime import datetime
 
-BASE = "C:/paula/OTROS/TFG_repo/vLLM con skills de anthropic"
+BASE = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
 
 # Load predictions  (formato: [{filename, classification, confidence?}, ...])
-with open(f"{BASE}/results/predictions.json") as f:
+with open(os.path.join(BASE, "results", "predictions.json")) as f:
     pred_list = json.load(f)
+
+LABEL_ALIASES = {
+    "Bent Knee Surface Arch Position": "Bent Knee Surface Arch",
+}
 
 predictions = {}
 for item in pred_list:
-    predictions[item["filename"]] = item["classification"]
+    label = item["classification"]
+    predictions[item["filename"]] = LABEL_ALIASES.get(label, label)
 
-# Load ground truth from eval_batches_generated.json
-with open(f"{BASE}/data/eval_batches_generated.json") as f:
+# Load ground truth from ground_truth_for_predictions.json
+with open(os.path.join(BASE, "data", "ground_truth_for_predictions.json")) as f:
     eval_batches = json.load(f)
 
 ground_truth = {}
 for batch in eval_batches:
     for item in batch:
-        ground_truth[item["filename"]] = item["label"]
+        label = item["label"]
+        ground_truth[item["filename"]] = LABEL_ALIASES.get(label, label)
 
 # Verify coverage
 n_pred = len(predictions)
@@ -94,7 +101,7 @@ results = {
     ]
 }
 
-with open(f"{BASE}/results/results.json", "w") as f:
+with open(os.path.join(BASE, "results", "results.json"), "w") as f:
     json.dump(results, f, indent=2)
 
 # Confusion pair analysis
@@ -316,7 +323,7 @@ html = f'''<!DOCTYPE html>
 </body>
 </html>'''
 
-with open(f"{BASE}/results/report.html", "w") as f:
+with open(os.path.join(BASE, "results", "report.html"), "w") as f:
     f.write(html)
 
 print(f"\nResults saved to: results/results.json")
