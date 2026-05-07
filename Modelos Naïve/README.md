@@ -19,38 +19,30 @@ Modelos Naïve/
 
 ### 1. CNN con Transfer Learning
 
-Red neuronal convolucional basada en **EfficientNetB3** preentrenada en ImageNet, con fine-tuning supervisado sobre el dataset etiquetado de natación artística.
+Red neuronal convolucional basada en **EfficientNetB3** preentrenada en ImageNet, con fine-tuning supervisado sobre el dataset etiquetado.
 
 - **Paradigma**: aprendizaje supervisado con datos aumentados.
 - **Entrada**: imagen RGB redimensionada a 300×300 px.
 - **Salida**: distribución de probabilidad sobre las 5 clases.
 - **Dataset**: 6 575 imágenes aumentadas — train 4 749 / val 839 / test 987.
-- **Resultado**: ~100 % de precisión en test (alta similaridad inter-imagen por aumentación).
 - **Motivación**: establecer una línea base sólida de aprendizaje profundo con la que comparar el resto de enfoques.
 
 ---
 
 ### 2. CLIP Zero-Shot
 
-Clasificación mediante el modelo visión-lenguaje **CLIP** (OpenAI) sin ningún entrenamiento adicional. Las imágenes se comparan con descripciones textuales de cada posición extraídas directamente del reglamento oficial de World Aquatics.
+Clasificación mediante el modelo visión-lenguaje **CLIP** (*OpenAI*) sin ningún entrenamiento adicional. Las imágenes se comparan con descripciones textuales de cada posición extraídas directamente del reglamento oficial de *World Aquatics*.
 
 - **Paradigma**: zero-shot, sin ajuste de parámetros.
 - **Entrada**: imagen + texto descriptivo por clase (una definición reglamentaria por posición).
 - **Salida**: clase con mayor similitud coseno entre embedding visual y textual.
-- **Resultado**: 22,45 % de precisión en test.
 - **Motivación**: evaluar hasta qué punto el conocimiento previo de un modelo multimodal generalista es suficiente para la tarea.
 
 ---
 
 ### 3. CLIP Multi-Prompt
 
-Extensión del enfoque anterior que combina **múltiples descripciones por clase** (7 variantes por posición: definición reglamentaria + descripción coloquial), explorando tres estrategias de agregación:
-
-| Estrategia | Descripción | Precisión |
-|---|---|---|
-| **Ensemble Mean** | Media de los embeddings textuales de cada prompt | 22,05 % |
-| **Ensemble Max** | Similitud máxima entre todos los prompts | 8,06 % |
-| **Concatenación** | Texto unificado por clase | 10,49 % |
+Extensión del enfoque anterior que combina **múltiples descripciones por clase** (definición reglamentaria + descripción coloquial), explorando tres estrategias de agregación: ***Ensemble Mean***, ***Ensemble Max***, ***Concatenación***.
 
 - **Motivación**: reducir la sensibilidad a la formulación exacta del prompt y mejorar la robustez de la clasificación zero-shot.
 
@@ -62,8 +54,6 @@ Enriquece las descripciones textuales de CLIP con **imágenes de referencia** ve
 
 - **Paradigma**: few-shot visual, sin reentrenamiento del modelo base.
 - **Entrada**: imagen a clasificar + imágenes de referencia por clase + definiciones textuales.
-- **Resultado**: 27,70 % de precisión global (variación notable por clase: Fishtail 97,5 %, Double Leg Vertical 0,1 %).
-- **Confianza media**: 0,6385.
 - **Motivación**: estudiar si añadir ejemplos visuales explícitos mejora la discriminación en clases confusas.
 
 ---
