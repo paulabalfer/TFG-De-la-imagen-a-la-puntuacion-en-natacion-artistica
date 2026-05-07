@@ -47,16 +47,6 @@ En lugar de usar las coordenadas brutas de los 33 landmarks, se calculan **17 ca
 
 ---
 
-### Etapa 2b — Análisis exploratorio de la matriz de características
-
-Antes del entrenamiento se generan tres visualizaciones:
-
-- **Boxplots** — distribución de cada característica por clase (sin outliers extremos).
-- **Heatmap de correlación** — correlación de Pearson entre las 17 características.
-- **PCA 2D** — proyección de todas las muestras en dos componentes principales para evaluar la separabilidad visual de las clases.
-
----
-
 ### Etapa 3 — Clasificación con Random Forest
 
 El clasificador principal es un **Random Forest** (200 árboles, `max_depth=20`) entrenado sobre el conjunto de entrenamiento (80 %) y evaluado en el conjunto de test (20 %) con accuracy, reporte de clasificación y matriz de confusión.
@@ -122,8 +112,8 @@ El notebook es autocontenido. Ejecutar las celdas **en orden de arriba a abajo**
 2. Carga del dataset (`synchronized_swimming_aug.csv`)
 3. **Etapa 1** — Extracción de 33 landmarks 3D con MediaPipe PoseLandmarker Heavy
 4. **Etapa 2** — Cálculo de las 17 características geométricas
-5. **Etapa 2b** — Análisis exploratorio (boxplots, heatmap de correlación, PCA 2D)
-6. **Etapa 3** — Entrenamiento del Random Forest y evaluación (accuracy, matriz de confusión, F1)
-7. Serialización del modelo, scaler, encoder y resultados en ficheros `.pkl`
+5. **Etapa 3** — Entrenamiento del Random Forest y evaluación (accuracy, matriz de confusión, F1)
+6. Serialización del modelo, scaler, encoder y resultados en ficheros `.pkl`
+
 
 > **Nota**: en la primera ejecución, el notebook descarga automáticamente `pose_landmarker_heavy.task` (~25 MB) desde los servidores de Google si no está presente en el directorio. Es necesaria conexión a internet para este paso.
