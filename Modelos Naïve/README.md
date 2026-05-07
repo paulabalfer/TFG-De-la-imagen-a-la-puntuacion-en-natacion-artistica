@@ -1,8 +1,8 @@
 # Modelos Naïve
 
-Directorio que agrupa los experimentos de clasificación que operan directamente sobre la **imagen completa** de la nadadora. Se denominan *naïve* en el sentido de que no extraen ninguna representación intermedia del cuerpo (como esqueletos o coordenadas); el modelo recibe la imagen en bruto y aprende —o infiere— la clase a partir de los píxeles.
+Directorio que agrupa los experimentos de clasificación que operan directamente sobre la **imagen completa** de la nadadora. Se denominan *naïve* en el sentido de que no extraen ninguna representación intermedia del cuerpo (los modelos se presentan en su forma básica/elemental); el modelo recibe la imagen en bruto y aprende —o infiere— la clase a partir de los píxeles.
 
-Se implementan cinco enfoques de complejidad creciente dentro del notebook principal, más un notebook complementario de análisis por clase.
+Se implementan cinco enfoques de complejidad creciente dentro de un único notebook.
 
 ---
 
@@ -10,8 +10,7 @@ Se implementan cinco enfoques de complejidad creciente dentro del notebook princ
 
 ```
 Modelos Naïve/
-├── Automatización Natación Artistica_Paula Ballesteros.ipynb   # Notebook principal
-└── Modelos_por_análisis_visual_completo.ipynb                  # Análisis visual por clase
+└── Modelos_por_análisis_visual_completo.ipynb   # Notebook con los 5 enfoques
 ```
 
 ---
@@ -23,8 +22,10 @@ Modelos Naïve/
 Red neuronal convolucional basada en **EfficientNetB3** preentrenada en ImageNet, con fine-tuning supervisado sobre el dataset etiquetado de natación artística.
 
 - **Paradigma**: aprendizaje supervisado con datos aumentados.
-- **Entrada**: imagen RGB redimensionada.
+- **Entrada**: imagen RGB redimensionada a 300×300 px.
 - **Salida**: distribución de probabilidad sobre las 5 clases.
+- **Dataset**: 6 575 imágenes aumentadas — train 4 749 / val 839 / test 987.
+- **Resultado**: ~100 % de precisión en test (alta similaridad inter-imagen por aumentación).
 - **Motivación**: establecer una línea base sólida de aprendizaje profundo con la que comparar el resto de enfoques.
 
 ---
@@ -34,19 +35,22 @@ Red neuronal convolucional basada en **EfficientNetB3** preentrenada en ImageNet
 Clasificación mediante el modelo visión-lenguaje **CLIP** (OpenAI) sin ningún entrenamiento adicional. Las imágenes se comparan con descripciones textuales de cada posición extraídas directamente del reglamento oficial de World Aquatics.
 
 - **Paradigma**: zero-shot, sin ajuste de parámetros.
-- **Entrada**: imagen + texto descriptivo por clase.
+- **Entrada**: imagen + texto descriptivo por clase (una definición reglamentaria por posición).
 - **Salida**: clase con mayor similitud coseno entre embedding visual y textual.
+- **Resultado**: 22,45 % de precisión en test.
 - **Motivación**: evaluar hasta qué punto el conocimiento previo de un modelo multimodal generalista es suficiente para la tarea.
 
 ---
 
 ### 3. CLIP Multi-Prompt
 
-Extensión del enfoque anterior que combina **múltiples descripciones por clase** (definiciones reglamentarias + descripción coloquial), explorando tres estrategias distintas de agregación de embeddings:
+Extensión del enfoque anterior que combina **múltiples descripciones por clase** (7 variantes por posición: definición reglamentaria + descripción coloquial), explorando tres estrategias de agregación:
 
-1. **Promedio de embeddings** — media de los vectores textuales de cada prompt.
-2. **Suma de probabilidades** — promedia las probabilidades finales de cada prompt.
-3. **Votación** — elige la clase que obtiene más votos individuales.
+| Estrategia | Descripción | Precisión |
+|---|---|---|
+| **Ensemble Mean** | Media de los embeddings textuales de cada prompt | 22,05 % |
+| **Ensemble Max** | Similitud máxima entre todos los prompts | 8,06 % |
+| **Concatenación** | Texto unificado por clase | 10,49 % |
 
 - **Motivación**: reducir la sensibilidad a la formulación exacta del prompt y mejorar la robustez de la clasificación zero-shot.
 
@@ -54,10 +58,12 @@ Extensión del enfoque anterior que combina **múltiples descripciones por clase
 
 ### 4. CLIP + Few-Shot con Imágenes de Referencia
 
-Enriquece las descripciones textuales de CLIP con **imágenes de referencia** verificadas de cada clase, incorporando información visual directa como ejemplos (few-shot).
+Enriquece las descripciones textuales de CLIP con **imágenes de referencia** verificadas de cada clase (extraídas del reglamento), incorporando información visual directa como ejemplos few-shot.
 
 - **Paradigma**: few-shot visual, sin reentrenamiento del modelo base.
-- **Entrada**: imagen a clasificar + imágenes de referencia por clase.
+- **Entrada**: imagen a clasificar + imágenes de referencia por clase + definiciones textuales.
+- **Resultado**: 27,70 % de precisión global (variación notable por clase: Fishtail 97,5 %, Double Leg Vertical 0,1 %).
+- **Confianza media**: 0,6385.
 - **Motivación**: estudiar si añadir ejemplos visuales explícitos mejora la discriminación en clases confusas.
 
 ---
@@ -66,31 +72,57 @@ Enriquece las descripciones textuales de CLIP con **imágenes de referencia** ve
 
 Aplicación de **Gradient-weighted Class Activation Mapping (Grad-CAM)** sobre el modelo CLIP para visualizar las regiones de la imagen que mayor influencia tienen en cada predicción.
 
-- **Salida**: mapas de calor superpuestos sobre las imágenes originales (exportados a `Images para redacción/`).
-- **Motivación**: aportar explicabilidad al sistema, identificar si el modelo atiende a las regiones corporales relevantes (posición de piernas, arco de espalda) o a artefactos del fondo.
+- **Entrada**: imágenes originales (no aumentadas) — 5 muestras representativas por posición.
+- **Salida**: mapas de calor superpuestos sobre las imágenes originales.
+- **Motivación**: aportar explicabilidad al sistema e identificar si el modelo atiende a las regiones corporales relevantes (posición de piernas, arco de espalda) o a artefactos del fondo.
 
 ---
 
-## Tecnologías
+## Requisitos de datos
 
-| Componente | Librería / Herramienta |
-|---|---|
-| Transfer Learning (CNN) | TensorFlow / Keras, EfficientNetB3 |
-| Modelo visión-lenguaje | CLIP (`transformers`, HuggingFace) |
-| Procesamiento de imagen | OpenCV, Pillow |
-| Cálculo numérico | NumPy, PyTorch |
-| Visualización | matplotlib |
-| Entorno de ejecución | Jupyter Notebook |
+El notebook espera la siguiente estructura relativa a la raíz del repositorio:
 
----
-
-## Ejecución
-
-Los notebooks son autocontenidos. Ejecutar las celdas en orden desde la raíz del repositorio con el entorno instalado (`requirements.txt`):
-
-```bash
-pip install -r requirements.txt
-jupyter notebook "Modelos Naïve/Automatización Natación Artistica_Paula Ballesteros.ipynb"
+```
+TFG_repo/
+├── Data/
+│   └── synchronized_swimming_aug.csv   # 6 575 imágenes aumentadas con etiquetas
+├── Fotos/                               # Imágenes originales organizadas por clase
+│   ├── double_leg_vertical/
+│   ├── fishtail/
+│   ├── bent_knee_vertical/
+│   ├── bent_knee_surface_arch/
+│   └── knight/
+└── references/                          # Imágenes de referencia del reglamento (1 por clase)
 ```
 
-> El notebook carga los datos desde `../Data/synchronized_swimming_aug.csv` por defecto. Asegúrese de que el directorio `Data/` está correctamente estructurado antes de ejecutar. La generación del dataset aumentado se realiza mediante el notebook `Data/Data_process.ipynb`.
+---
+
+## Cómo ejecutar
+
+### Lanzar el notebook
+
+Desde la raíz del repositorio:
+
+```bash
+jupyter notebook "Modelos Naïve/Modelos_por_análisis_visual_completo.ipynb"
+```
+
+O con JupyterLab:
+
+```bash
+jupyter lab "Modelos Naïve/Modelos_por_análisis_visual_completo.ipynb"
+```
+
+### Orden de ejecución
+
+El notebook es autocontenido. Ejecutar las celdas **en orden de arriba a abajo**. Las secciones están organizadas por enfoque:
+
+1. Imports y configuración global
+2. Carga del dataset (`synchronized_swimming_aug.csv`)
+3. **Enfoque 1** — CNN EfficientNetB3 (entrenamiento + evaluación)
+4. **Enfoque 2** — CLIP Zero-Shot (una definición por clase)
+5. **Enfoque 3** — CLIP Multi-Prompt (7 definiciones por clase, 3 estrategias)
+6. **Enfoque 4** — CLIP Few-Shot con imágenes de referencia
+7. **Enfoque 5** — Grad-CAM sobre imágenes de ejemplo
+
+> **Nota**: el entrenamiento de la CNN (Enfoque 1) puede tardar varios minutos si se ejecuta en CPU. Se recomienda disponer de GPU o reducir `NUM_EPOCHS` para pruebas rápidas.
