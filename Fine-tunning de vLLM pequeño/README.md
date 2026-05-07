@@ -8,40 +8,35 @@ Directorio que implementa la clasificación de posiciones de natación artístic
 
 ```
 Fine-tunning de vLLM pequeño/
-├── Fine_tuning_SmolVLM_500M.ipynb     # Pipeline completo de fine-tuning y evaluación
+├── Fine_tuning_SmolVLM_500M.ipynb     # Notebook con el pipeline completo
 └── smolvlm_lora_natacion/             # Artefactos generados tras el entrenamiento
     ├── mejor_checkpoint/              # Pesos LoRA del mejor epoch según val_acc
-    ├── adaptador_lora_final/          # Adaptador LoRA + procesador al final del entrenamiento
-    ├── distribucion_clases.png        # Distribución de clases del dataset (barras + tarta)
-    ├── curvas_entrenamiento.png       # Curvas de loss y accuracy por época
-    ├── confusion_matrix.png           # Matriz de confusión sobre el conjunto de test
-    ├── classification_report.png      # Informe de clasificación (precisión, recall, F1) como imagen
-    └── predicciones_muestra.png       # Predicciones de muestra con confianza por clase
+    │   ├── adapter_config.json
+    │   ├── adapter_model.safetensors
+    │   └── README.md
+    └── adaptador_lora_final/          # Adaptador LoRA + procesador al final del entrenamiento
+        ├── adapter_config.json
+        ├── adapter_model.safetensors  # ~4.3 MB — solo los pesos LoRA
+        ├── chat_template.jinja
+        ├── processor_config.json
+        ├── tokenizer.json
+        ├── tokenizer_config.json
+        └── README.md
 ```
 
 ---
 
-## Motivación
-
-Los enfoques previos (CNN, CLIP, MediaPipe) requieren o bien un dataset grande para generalizar bien (CNN), o bien son incapaces de adaptarse a la tarea específica (CLIP zero-shot). Este enfoque explora una vía intermedia:
-
-- **Capacidad visual-semántica** de un modelo preentrenado en millones de pares imagen-texto.
-- **Adaptación eficiente** al dominio de natación artística con pocos ejemplos por clase.
-- **Sin generación libre de texto**: la clasificación se resuelve extrayendo logits sobre tokens de elección múltiple, lo que elimina el problema de coincidencia de cadenas y hace la inferencia determinista y rápida.
-
----
-
-## Modelo elegido: SmolVLM-500M-Instruct
+## Modelo: SmolVLM-500M-Instruct
 
 | Característica | BLIP base | BLIP-2 | **SmolVLM-500M** |
 |---|---|---|---|
-| Parámetros totales | ~224 M | ~2.7 B | **~500 M** |
+| Parámetros totales | ~224 M | ~2,7 B | **~500 M** |
 | Tamaño en disco | ~990 MB | ~3 GB | **~1 GB (fp16)** |
 | Modelo de lenguaje acoplado | BERT decoder | OPT-2.7B | SmolLM2-360M |
 | Instruction following | Limitado | Moderado | **Bueno** |
 | Cuantización necesaria | No | Sí (8-bit) | **No** |
 
-**SmolVLM-500M-Instruct** (`HuggingFaceTB/SmolVLM-500M-Instruct`) combina:
+**`HuggingFaceTB/SmolVLM-500M-Instruct`** combina:
 - **SigLIP-400M** como encoder visual (ViT-So400M).
 - **SmolLM2-360M** como modelo de lenguaje decoder (arquitectura LLaMA).
 - Un **conector MLP** que proyecta los tokens visuales al espacio del LM.
@@ -50,113 +45,125 @@ Los enfoques previos (CNN, CLIP, MediaPipe) requieren o bien un dataset grande p
 
 ## Pipeline
 
-### Etapa 1: Preparación del dataset
+### Etapa 1 — Preparación del dataset
 
-Se carga el CSV del dataset aumentado (`synchronized_swimming_aug.csv`), se resuelven las rutas absolutas y se realiza una **partición estratificada 70 / 15 / 15** (train / val / test).
+Se carga `synchronized_swimming_aug.csv`, se resuelven las rutas absolutas y se realiza una **partición estratificada 70 / 15 / 15** (train / val / test).
 
-Para la **primera prueba** se extrae un **subconjunto pequeño y balanceado**:
+Por defecto se extrae un **subconjunto balanceado** para agilizar el entrenamiento:
 
 | Partición | Imágenes por clase | Total |
 |---|---|---|
-| Train | 20 | 100 |
-| Validación | 10 | 50 |
-| Test | 15 | 75 |
+| Train | 60 | 300 |
+| Validación | 20 | 100 |
+| Test | 30 | 150 |
 
-> Cambiar `SUBSET_*_PER_CLASS = None` en la celda de configuración para entrenar con el dataset completo.
+> Cambiar `SUBSET_*_PER_CLASS = None` en la celda de configuración para entrenar con el dataset completo (4 601 / 987 / 987).
 
-### Etapa 2: Clasificación por logits (multiple-choice)
+---
 
-En lugar de generación libre, se utiliza un enfoque de **elección múltiple por logits**:
+### Etapa 2 — Clasificación por logits (multiple-choice)
+
+En lugar de generación libre de texto, se utiliza un enfoque de **elección múltiple por logits**:
 
 1. El prompt pregunta `¿Cuál es la posición? (A) ... (E) ...` adjuntando la imagen.
-2. Se obtienen los **logits del modelo en la última posición** (primer token de respuesta esperado).
+2. Se extraen los **logits del modelo en la última posición** (primer token de respuesta esperado).
 3. Se comparan únicamente los logits de los tokens `A`, `B`, `C`, `D`, `E`.
-4. El `argmax` determina la clase — sin generación, sin coincidencia de texto.
+4. El `argmax` determina la clase — sin generación, sin coincidencia de cadenas.
 
-Este enfoque es más rápido, completamente determinista y no depende de que el modelo genere exactamente la cadena esperada.
+Este enfoque es determinista, más rápido que la generación y no depende de que el modelo produzca exactamente la cadena esperada.
 
-### Etapa 3: Fine-tuning con LoRA
+---
 
-Se aplica **Low-Rank Adaptation (LoRA)** sobre las proyecciones `q_proj` y `v_proj` de todas las capas de atención del modelo (tanto el encoder visual como el LM decoder), actualizando solo **~1 %** de los parámetros totales.
+### Etapa 3 — Fine-tuning con LoRA
 
-| Hiperparámetro | Valor por defecto |
+Se aplica **Low-Rank Adaptation (LoRA)** sobre las proyecciones `q_proj` y `v_proj` de todas las capas de atención (encoder visual + LM decoder), actualizando solo **~0,22 %** de los parámetros totales.
+
+| Hiperparámetro | Valor |
 |---|---|
 | LoRA rank (`r`) | 8 |
 | LoRA alpha | 16 |
-| Dropout | 0.05 |
+| Dropout | 0,05 |
 | Módulos objetivo | `q_proj`, `v_proj` |
 | Learning rate | 2 × 10⁻⁴ |
 | Scheduler | Cosine Annealing |
 | Épocas | 5 |
 | Batch size | 2 |
+| Parámetros entrenables | 1 114 112 (0,22 % del total) |
 
-La **función de pérdida** es `cross_entropy` sobre los 5 logits de elección, no sobre el vocabulario completo (~32 000 tokens). Esto acelera el entrenamiento y estabiliza la convergencia.
-
-### Etapa 4: Evaluación
-
-- **Distribución de clases** del dataset aumentado (barras + tarta).
-- **Accuracy** sobre el conjunto de test con el mejor checkpoint de validación.
-- **Informe de clasificación** (precisión, recall, F1 por clase) renderizado como imagen.
-- **Matriz de confusión** y **predicciones de muestra** con confianza (softmax sobre logits de elección).
+La función de pérdida es `cross_entropy` sobre los 5 logits de elección, no sobre el vocabulario completo (~49 000 tokens).
 
 ---
 
-## Tecnologías
+### Etapa 4 — Evaluación
 
-| Componente | Librería / Herramienta |
+- **Informe de clasificación** (precisión, recall, F1 por clase).
+- **Matriz de confusión** sobre el conjunto de test.
+- **Predicciones de muestra** con confianza (softmax sobre logits de elección).
+- **Distribución de clases** del dataset (barras + tarta).
+
+---
+
+## Artefactos guardados
+
+| Fichero / Carpeta | Contenido |
 |---|---|
-| Modelo base (vLLM) | SmolVLM-500M-Instruct (`transformers` 5.x, HuggingFace) |
-| Fine-tuning eficiente | PEFT / LoRA (`peft`) |
-| Aceleración | `accelerate` |
-| Deep Learning | PyTorch |
-| Procesamiento de imagen | Pillow |
-| Cálculo numérico | NumPy, pandas |
-| Evaluación | scikit-learn |
-| Visualización | matplotlib |
-| Entorno de ejecución | Jupyter Notebook |
+| `mejor_checkpoint/adapter_model.safetensors` | Pesos LoRA del epoch con mayor val_acc (epoch 5) |
+| `adaptador_lora_final/adapter_model.safetensors` | Pesos LoRA del último epoch (~4,3 MB) |
+| `adaptador_lora_final/processor_config.json` | Configuración del procesador de imagen (512×512) |
+| `adaptador_lora_final/tokenizer.json` | Vocabulario y reglas BPE del tokenizador |
+| `adaptador_lora_final/chat_template.jinja` | Plantilla de formato de mensajes (user / assistant) |
+
+Solo se guardan los **pesos LoRA** (pocos MB), no el modelo base completo (~1 GB).
 
 ---
 
-## Ejecución
+## Motivación
+
+Los enfoques previos (CNN, CLIP, MediaPipe) requieren o bien un dataset grande para generalizar (CNN), o bien son incapaces de adaptarse a la tarea específica (CLIP zero-shot). Este enfoque explora una vía intermedia:
+
+- **Capacidad visual-semántica** de un modelo preentrenado en millones de pares imagen-texto.
+- **Adaptación eficiente** al dominio de natación artística con pocos ejemplos por clase.
+- **Sin generación libre**: la clasificación se resuelve por logits, lo que hace la inferencia determinista y rápida.
+
+---
+
+## Cómo ejecutar
+
+### Lanzar el notebook
+
+Desde la raíz del repositorio:
 
 ```bash
-pip install -r requirements.txt
 jupyter notebook "Fine-tunning de vLLM pequeño/Fine_tuning_SmolVLM_500M.ipynb"
 ```
 
-> El notebook descarga automáticamente el modelo `HuggingFaceTB/SmolVLM-500M-Instruct` (~1 GB) desde HuggingFace Hub en la primera ejecución. Es necesaria conexión a internet para este paso.
+O con JupyterLab:
 
-> Para entrenar con el dataset completo (~5 200 imágenes), cambiar `SUBSET_*_PER_CLASS = None` en la celda de configuración global (sección 1).
+```bash
+jupyter lab "Fine-tunning de vLLM pequeño/Fine_tuning_SmolVLM_500M.ipynb"
+```
 
----
+### Orden de ejecución
 
-## Evaluación sin reentrenar
+El notebook es autocontenido. Ejecutar las celdas **en orden de arriba a abajo**:
 
-El notebook incluye una celda dedicada a **cargar el mejor checkpoint** directamente desde `smolvlm_lora_natacion/mejor_checkpoint/`, lo que permite ejecutar la evaluación completa (test accuracy, informe de clasificación, matriz de confusión, predicciones de muestra) sin necesidad de repetir el entrenamiento:
+1. Imports y configuración global (`SEED=42`, hiperparámetros LoRA, tamaños de subconjunto)
+2. **Etapa 1** — Carga del CSV, resolución de rutas y partición estratificada
+3. **Etapa 2** — Diseño del prompt de elección múltiple y extracción de token IDs
+4. **Etapa 3** — Carga del modelo base + aplicación de LoRA + definición de DataLoaders
+5. Bucle de entrenamiento (5 épocas con guardado del mejor checkpoint por val_acc)
+6. **Etapa 4** — Evaluación en test (accuracy, F1, matriz de confusión, predicciones de muestra)
+7. Guardado del adaptador final en `smolvlm_lora_natacion/adaptador_lora_final/`
+
+> **Nota**: en la primera ejecución el notebook descarga `HuggingFaceTB/SmolVLM-500M-Instruct` (~1 GB) desde HuggingFace Hub. Es necesaria conexión a internet.
+
+### Evaluación sin reentrenar
+
+El notebook incluye una celda para **cargar el mejor checkpoint** y ejecutar la evaluación completa sin repetir el entrenamiento:
 
 ```python
 from peft import PeftModel
-
 base  = AutoModelForImageTextToText.from_pretrained(MODEL_ID, torch_dtype=DTYPE)
 model = PeftModel.from_pretrained(base, str(MODEL_SAVE / 'mejor_checkpoint'))
 model.eval()
-```
-
----
-
-## Guardado y reutilización del adaptador
-
-Al finalizar el entrenamiento se guardan únicamente los **pesos LoRA** (pocos MB), no el modelo base completo. Para cargar el modelo fine-tuned en otra sesión:
-
-```python
-from transformers import AutoProcessor, AutoModelForImageTextToText
-from peft import PeftModel
-import torch
-
-base  = AutoModelForImageTextToText.from_pretrained(
-    'HuggingFaceTB/SmolVLM-500M-Instruct',
-    torch_dtype=torch.bfloat16,
-)
-model = PeftModel.from_pretrained(base, 'smolvlm_lora_natacion/adaptador_lora_final')
-proc  = AutoProcessor.from_pretrained('smolvlm_lora_natacion/adaptador_lora_final')
 ```
