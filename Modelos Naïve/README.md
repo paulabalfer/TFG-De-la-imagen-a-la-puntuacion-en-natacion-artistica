@@ -68,25 +68,6 @@ Aplicación de **Gradient-weighted Class Activation Mapping (Grad-CAM)** sobre e
 
 ---
 
-## Requisitos de datos
-
-El notebook espera la siguiente estructura relativa a la raíz del repositorio:
-
-```
-TFG_repo/
-├── Data/
-│   └── synchronized_swimming_aug.csv   # 6 575 imágenes aumentadas con etiquetas
-├── Fotos/                               # Imágenes originales organizadas por clase
-│   ├── double_leg_vertical/
-│   ├── fishtail/
-│   ├── bent_knee_vertical/
-│   ├── bent_knee_surface_arch/
-│   └── knight/
-└── references/                          # Imágenes de referencia del reglamento (1 por clase)
-```
-
----
-
 ## Cómo ejecutar
 
 ### Lanzar el notebook
