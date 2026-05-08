@@ -1,118 +1,93 @@
-# TFG: Automatización de la Identificación de Posiciones de Natación Artística (CAMBIAR TITULO CUANDO SE DECIDA)
+# TFG: Automatización de la Identificación de Posiciones de Natación Artística
 
-> Trabajo de Fin de Grado — Paula Ballesteros
+> Trabajo de Fin de Grado — Paula Ballesteros  
+> Grado en Ciencia de Datos e Inteligencia Artificial · Universidad Politécnica de Madrid
 
-## Descripción y objetivo
+Este proyecto compara distintos enfoques de clasificación automática de **5 posiciones corporales reglamentarias de natación artística (sincronizada)**, desde modelos de aprendizaje profundo hasta sistemas basados en estimación de pose y prompts estructurados con LLMs de visión. El dataset es propio, recogido manualmente; los experimentos cubren aprendizaje supervisado, zero-shot, few-shot, fine-tuning eficiente con LoRA y clasificación por skills sin entrenamiento.
 
-*primera versión, cambiar cuando proyecto entero*
+> Cada directorio dispone de su propio `README.md` con la descripción detallada del enfoque, el pipeline y las instrucciones de ejecución.
 
-Este proyecto explora la automatización del reconocimiento y clasificación de posiciones corporales reglamentarias en **natación artística (sincronizada)** mediante técnicas de visión por computador e inteligencia artificial.
+---
 
-El objetivo principal es comparar distintos enfoques de clasificación de imágenes, desde modelos de aprendizaje profundo hasta sistemas basados en coordenadas de pose y modelos de lenguaje visual con fine-tuning eficiente, evaluando su viabilidad para identificar automáticamente figuras de natación artística a partir de fotografías. Se incluye además un análisis de interpretabilidad mediante **Grad-CAM** para entender qué regiones de la imagen son determinantes en la clasificación.
+## Contenido
+
+```
+TFG_repo/
+├── README.md
+├── requirements.txt                                       # Dependencias pip del entorno
+├── Data/                                                  # Dataset, referencias e índices de imágenes
+│   ├── Data_process.ipynb                                 
+│   ├── synchronized_swimming.csv                          
+│   ├── synchronized_swimming_aug.csv                     
+│   ├── Images/                                            
+│   ├── Augmented/                                         
+│   └── references/                                        # Material de referencia visual
+├── Modelos Naïve/                                         # Enfoque Clasificación 1: modelos sobre imagen completa
+│   └── Modelos_por_análisis_visual_completo.ipynb
+├── Modelo preentrenado basado en coordenadas/             # Enfoque Clasificación 2: clasificación por keypoints
+│   ├── MediaPipe_Pose_Classifier.ipynb
+│   ├── pose_landmarker_heavy.task                         
+│   ├── pose_classifier_model.pkl                          
+│   ├── pose_classifier_scaler.pkl                         
+│   ├── label_encoder.pkl                                  
+│   └── classification_results.pkl                         
+├── Fine-tunning de vLLM pequeño/                          # Enfoque Clasificación 3: fine-tuning LoRA de vLLM
+│   ├── Fine_tuning_SmolVLM_500M.ipynb
+│   └── smolvlm_lora_natacion/                             
+└── Sistema basado en skills con vLLMs/                    # Enfoque Clasificación 4: clasificación por skills sin entrenamiento
+    ├── data/
+    ├── splits/
+    ├── results/
+    ├── scripts/
+    └── .agents/skills/
+```
 
 ---
 
 ## Dataset y sus clases
 
-El sistema utiliza un conjunto de datos como imágenes original, recogido a mano y que clasifica **5 posiciones násicas de la disciplina**:
+El dataset recoge **5 posiciones corporales reglamentarias** de natación artística definidas por el manual oficial de figuras de World Aquatics (2022–2025):
 
-*Incluir en la columna definición algo más explicativo*
+| Clase | Código BP | Características principales |
+|---|---|---|
+| `Double Leg Vertical` | BP6 | Ambas piernas juntas, rectas y verticales; tronco sumergido |
+| `Fishtail` | BP8 | Una pierna vertical + una pierna recta hacia adelante; espalda recta |
+| `Bent Knee Vertical` | BP14c | Una pierna vertical + rodilla contraria flexionada, muslo horizontal |
+| `Bent Knee Surface Arch` | BP14d | Espalda arqueada + rodilla flexionada, muslo perpendicular; posición en superficie |
+| `Knight` | BP17 | Espalda arqueada + una pierna vertical + una pierna recta hacia atrás |
 
-| Clase | Descripción |
-|---|---|
-| `Bent Knee Surface Arch Position` | Posición de arco en superficie con rodilla flexionada |
-| `Bent Knee Vertical` | Posición vertical con rodilla flexionada |
-| `Double Leg Vertical` | Posición vertical con ambas piernas |
-| `Fishtail` | Posición de cola de pez |
-| `Knight` | Posición de caballero |
-
----
-
-## Estructura del repositorio
-
-```
-TFG_repo/
-│
-├── Data/                                          # Dataset e índices de imágenes
-│   ├── synchronized_swimming.csv                 # Índice del dataset original (ruta → etiqueta)
-│   ├── synchronized_swimming_aug.csv             # Índice del dataset aumentado
-│   ├── Fotos/                                    # Imágenes originales por clase (no incluidas en el repo)
-│   │   ├── Bent Knee Surface Arch Position/
-│   │   ├── Bent Knee Vertical/
-│   │   ├── Double Leg Vertical/
-│   │   ├── Fishtail/
-│   │   └── Knight/
-│   └── Augmented/                                # Imágenes generadas por data augmentation
-│       └── <Clase>/
-│           └── IMG_*_aug[1-25].jpg               # 25 versiones aumentadas por imagen original
-│
-├── Modelos Naïve/                                # Enfoque 1: modelos sobre imagen completa
-│   └── Automatización Natación Artistica_Paula Ballesteros.ipynb
-│
-├── Modelo preentrenado basado en coordenadas/    # Enfoque 2: clasificación por keypoints
-│   └── MediaPipe_Pose_Classifier.ipynb
-│
-├── Fine-tunning de vLLM pequeño/                 # Enfoque 3: fine-tuning de modelo visión-lenguaje
-│   └── Fine_tuning_SmolVLM_500M.ipynb
-│
-├── requirements.txt                              # Toda librería requerida para la ejecución del proyecto
-└── README.md
-```
-
-### `Data/`
-
-Contiene los metadatos del dataset en formato CSV y las imágenes organizadas por clase. El directorio `Augmented/` almacena las versiones generadas mediante técnicas de data augmentation (rotaciones, volteos, ajustes de brillo y contraste), produciendo **25 imágenes derivadas por cada imagen original**.
-
-- Dataset original: ~264 imágenes
-- Dataset aumentado: ~6 600 imágenes
-
-### `Modelos Naïve/`
-
-Notebook de experimentación con modelos que operan directamente sobre la imagen completa. Contiene tres enfoques progresivos:
-
-1. **CNN con *transfer learning*** — red convolucional preentrenada con fine-tuning supervisado sobre el dataset etiquetado.
-2. **CLIP (zero-shot)** — modelo visión-lenguaje CLIP que clasifica imágenes comparando sus embeddings con descripciones textuales de cada posición extraídas del reglamento oficial.
-3. **CLIP multi-prompt** — extensión del anterior que combina múltiples definiciones por clase (reglamentarias y coloquiales) usando tres estrategias de agregación de embeddings.
-4. **CLIP + imágenes de referencia (few-shot)** — enriquece las definiciones textuales con ejemplos visuales de referencia.
-5. **Grad-CAM** — análisis de interpretabilidad aplicado sobre CLIP para visualizar qué regiones de la imagen influyen en cada clasificación.
-
-### `Modelo preentrenado basado en coordenadas/`
-
-Notebook que implementa un pipeline alternativo basado en **estimación de poses**:
-
-1. **Extracción de keypoints** con MediaPipe PoseLandmarker (`pose_landmarker_heavy.task`), obteniendo las coordenadas 3D de los 33 puntos de referencia del cuerpo humano.
-2. **Clasificación** sobre los vectores de coordenadas con modelos clásicos de ML:
-   - Random Forest
-   - SVM (Support Vector Machine)
-
-Este enfoque es más ligero computacionalmente y agnóstico al fondo o iluminación de la imagen.
-
-### `Fine-tunning de vLLM pequeño/`
-
-Notebook que adapta un **modelo de lenguaje visual pequeño (vLLM)** a la tarea de clasificación mediante fine-tuning eficiente con LoRA:
-
-- **Modelo base**: `HuggingFaceTB/SmolVLM-500M-Instruct` (~500 M parámetros), que combina un encoder visual SigLIP-400M con el LM decoder SmolLM2-360M.
-- **Estrategia de clasificación**: elección múltiple por logits — se extraen los logits del modelo sobre los tokens `A`–`E` en la posición de respuesta, sin generación libre de texto.
-- **Fine-tuning**: LoRA aplicado sobre las proyecciones de atención (`q_proj`, `v_proj`), actualizando solo ~1 % de los parámetros totales.
-- **Primera prueba**: subconjunto de 20 imágenes por clase (100 en total) para validar el pipeline antes de escalar al dataset completo.
+- **Dataset original**: 263 imágenes recogidas manualmente.
+- **Dataset aumentado**: 6 575 imágenes (25 variantes por imagen original mediante rotaciones, volteos y ajustes fotométricos).
 
 ---
 
-## Tecnologías y dependencias principales
+## Enfoques de Clasificación
 
-| Área | Librería / Herramienta |
-|---|---|
-| Entorno | Python 3, Jupyter Notebook |
-| Deep Learning | TensorFlow / Keras, PyTorch |
-| Visión-Lenguaje | CLIP (`transformers`, HuggingFace) |
-| Estimación de pose | MediaPipe |
-| Fine-tuning eficiente (vLLM) | SmolVLM-500M-Instruct, PEFT / LoRA |
-| Procesamiento de imagen | OpenCV, Pillow |
-| ML clásico | scikit-learn (Random Forest, SVM) |
-| Datos | pandas, NumPy, SciPy |
-| Visualización | matplotlib |
+### `Modelos Naïve/` — Cinco enfoques sobre imagen completa
 
-### Instalación del entorno
+Notebook único que implementa cinco enfoques de complejidad creciente. El modelo recibe la imagen en bruto sin representaciones intermedias, desde transfer learning supervisado (EfficientNetB3) hasta clasificación zero-shot y few-shot con CLIP. Se incluye también un análisis de interpretabilidad con Grad-CAM.
+
+---
+
+### `Modelo preentrenado basado en coordenadas/` — Clasificación por keypoints
+
+Pipeline alternativo basado en **estimación de poses**: extracción de 33 landmarks 3D con MediaPipe PoseLandmarker Heavy, cálculo de 17 características geométricas y clasificación con Random Forest y SVM. Enfoque invariante al fondo e iluminación.
+
+---
+
+### `Fine-tunning de vLLM pequeño/` — Fine-tuning LoRA de SmolVLM-500M
+
+Adaptación de **`HuggingFaceTB/SmolVLM-500M-Instruct`** a la tarea mediante LoRA, actualizando solo ~0,22 % de los parámetros. La clasificación se resuelve por logits de elección múltiple, sin generación libre de texto.
+
+---
+
+### `Sistema basado en skills con vLLMs/` — Clasificación por skills sin entrenamiento
+
+Sistema basado en **prompts estructurados como skills** para LLMs de visión, sin ningún entrenamiento ni fine-tuning. Alcanza un **99,38 % de accuracy** sobre 6 000 imágenes. La skill orquestadora evalúa cada imagen contra las 5 posiciones en paralelo y aplica reglas de agregación para emitir la clase.
+
+---
+
+## Instalación
 
 ```bash
 # 1. Clonar el repositorio
@@ -123,22 +98,13 @@ cd TFG_repo
 pip install -r requirements.txt
 ```
 
-> **Nota:** `torch` y `tensorflow` se descargan desde sus índices oficiales. Si se dispone de GPU, consultar las instrucciones de instalación de [PyTorch con CUDA](https://pytorch.org/get-started/locally/) y [TensorFlow con GPU](https://www.tensorflow.org/install/pip) para sustituir los paquetes CPU por sus versiones aceleradas.
+> **Nota:** Si se dispone de GPU, consultar las instrucciones de instalación de [PyTorch con CUDA](https://pytorch.org/get-started/locally/) y [TensorFlow con GPU](https://www.tensorflow.org/install/pip) para sustituir los paquetes CPU por sus versiones aceleradas.
 
-```bash
-# 3. Ejecución de cada notebook
-
-```
-
----
-
-Ejecutar las celdas en orden. Cada notebook es autocontenido e incluye la carga de datos, preprocesado, entrenamiento/evaluación y visualización de resultados.
-
-> Para el notebook de MediaPipe, el modelo `pose_landmarker_heavy.task` se descarga automáticamente en la primera ejecución si no está presente.
+Cada directorio es independiente y autocontenido; consultar su `README.md` para las instrucciones de ejecución específicas.
 
 ---
 
 ## Autor
 
-**Paula Ballesteros**
-Grado en Ciencia de Datos e Inteligencia Artíficial. Universidad Politécnica de Madrid. 
+**Paula Ballesteros**  
+Grado en Ciencia de Datos e Inteligencia Artificial · Universidad Politécnica de Madrid
