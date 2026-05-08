@@ -30,14 +30,14 @@ Sistema basado en skills con vLLMs/
 │   ├── merge_results.py                                 # Une las predicciones de todos los lotes
 │   ├── generate_ground_truth.py                         # Genera el ground truth para las imágenes evaluadas
 │   └── compute_accuracy_and_report.py                   # Calcula métricas y genera el informe HTML
-└── .claude/
+└── .agents/
     └── skills/
-        ├── natacion-classifier/                         # Orquestador — evalúa las 5 posiciones y decide la clase
-        ├── natacion-bp06-double-leg-vertical/
-        ├── natacion-bp08-fishtail/
-        ├── natacion-bp14c-bent-knee-vertical/
-        ├── natacion-bp14d-bent-knee-surface-arch/
-        └── natacion-bp17-knight/
+        ├── natacion-classifier/SKILL.md                 # Orquestador — evalúa las 5 posiciones y decide la clase
+        ├── natacion-bp06-double-leg-vertical/SKILL.md
+        ├── natacion-bp08-fishtail/SKILL.md
+        ├── natacion-bp14c-bent-knee-vertical/SKILL.md
+        ├── natacion-bp14d-bent-knee-surface-arch/SKILL.md
+        └── natacion-bp17-knight/SKILL.md
 ```
 
 ---
