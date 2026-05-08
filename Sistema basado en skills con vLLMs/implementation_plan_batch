@@ -14,7 +14,7 @@ This plan outlines the systematic classification of 250 images from `splits/batc
 #### [NEW] [task_batch_02.md](file:///C:/Users/Paula/.gemini/antigravity/brain/2644f03f-eeea-47d5-be5d-fbf03a00d75b/task_batch_02.md)
 A TODO list to track the classification of all 13 blocks (250 images total).
 
-#### [NEW] [predictions_batch_02.json](file:///c:/paula/UPM/1 - CURSOS/TFG/TFG_repo/vLLM con skills de anthropic/results/predictions_batch_02.json)
+#### [NEW] [predictions_batch_02.json](file:///c:/paula/UPM/1 - CURSOS/TFG/TFG_repo/vLLM con skills de anthropic/results/splits/predictions_batch_02.json)
 The master JSON file to store classification results (filename, predicted class, and confidence).
 
 ---
@@ -30,11 +30,3 @@ The master JSON file to store classification results (filename, predicted class,
     *   Leg Direction (Forward vs. Backward)
 4.  **Logging**: Results will be manually appended to the JSON results file after visual verification of each block.
 
-## Verification Plan
-
-### Manual Verification
-- Visual check of representative images from each block to ensure the classifier is following the rules correctly.
-- Verification that all 250 images are present in the final JSON file.
-
-### Automated metrics
-- Run the `compute_accuracy_and_report.py` script specifically for Batch 02 to generate a performance report.

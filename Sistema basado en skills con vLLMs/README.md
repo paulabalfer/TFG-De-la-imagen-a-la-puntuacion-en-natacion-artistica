@@ -1,41 +1,46 @@
-# vLLM con Skills de Anthropic
+# Sistema Basado en Skills con vLLMs
 
-Directorio que implementa la clasificación de posiciones de natación artística mediante **Claude Sonnet como modelo de visión**, sin ningún entrenamiento ni fine-tuning. La clasificación se realiza a través de prompts estructurados implementados como *skills* de Claude Code, que codifican el conocimiento experto de los árbitros de World Aquatics.
+Directorio que implementa la clasificación de posiciones de natación artística mediante **LLM como modelo de visión**, sin ningún entrenamiento ni fine-tuning. La clasificación se realiza a través de prompts estructurados implementados como *skills*, que codifican el conocimiento experto de los árbitros de *World Aquatics*. El sistema escala a datasets completos mediante un pipeline de procesamiento por lotes.
 
 ---
 
 ## Contenido
 
 ```
-vLLM con skills de anthropic/
-├── README.md              # Este fichero
-├── all_files.txt          # Lista completa de imágenes del dataset aumentado a clasificar
-└── processed_files.txt    # Registro de imágenes ya procesadas (para reanudar ejecuciones)
-```
-
-Las *skills* de clasificación se encuentran en el directorio raíz del repositorio, bajo `.claude/skills/`:
-
-```
-.claude/skills/
-├── natacion-classifier/              # Orquestador — evalúa las 5 posiciones y decide la clase
-├── natacion-bp06-double-leg-vertical/   # Scorer específico para BP6
-├── natacion-bp08-fishtail/              # Scorer específico para BP8
-├── natacion-bp14c-bent-knee-vertical/   # Scorer específico para BP14c
-├── natacion-bp14d-bent-knee-surface-arch/ # Scorer específico para BP14d
-└── natacion-bp17-knight/                # Scorer específico para BP17
+Sistema basado en skills con vLLMs/
+├── README.md
+├── data/
+|   ├── all_files.txt                                    # ORIGINAL. Lista completa de imágenes en el conjunto 
+│   ├── image_labels.json                                # ORIGINAL. Etiquetas reales de todo el dataset
+│   └── ground_truth_for_predictions.json                # GENERADO. Ground truth filtrado para las imágenes evaluadas
+├── splits/
+│   ├── batch_01.txt                                     # GENERADO. Lote 1 de imágenes (hasta 250 imágenes por lote)
+│   ├── ...
+│   └── batch_27.txt
+├── results/
+│   ├── splits/
+│   │   ├── predictions_batch_01.json                    # GENERADO. Predicciones del lote 1
+│   │   ├── ...
+│   │   └── predictions_batch_24.json
+│   ├── predictions.json                                 # GENERADO. Predicciones unificadas de todos los lotes
+│   ├── results.json                                     # GENERADO. Métricas finales y matriz de confusión
+│   └── report.html                                      # GENERADO. Informe de evaluación en HTML
+├── scripts/
+│   ├── split_random.py                                  # Divide all_files.txt en lotes aleatorios
+│   ├── merge_results.py                                 # Une las predicciones de todos los lotes
+│   ├── generate_ground_truth.py                         # Genera el ground truth para las imágenes evaluadas
+│   └── compute_accuracy_and_report.py                   # Calcula métricas y genera el informe HTML
+└── .claude/
+    └── skills/
+        ├── natacion-classifier/                         # Orquestador — evalúa las 5 posiciones y decide la clase
+        ├── natacion-bp06-double-leg-vertical/
+        ├── natacion-bp08-fishtail/
+        ├── natacion-bp14c-bent-knee-vertical/
+        ├── natacion-bp14d-bent-knee-surface-arch/
+        └── natacion-bp17-knight/
 ```
 
 ---
-
-## Las 5 Posiciones
-
-| # | Posición | Código BP | Rasgo diferenciador |
-|---|---|---|---|
-| 1 | Double Leg Vertical | BP6 | Ambas piernas juntas, rectas y verticales |
-| 2 | Fishtail | BP8 | Una pierna vertical + una pierna recta hacia ADELANTE, espalda recta |
-| 3 | Bent Knee Vertical | BP14c | Una pierna vertical + rodilla contraria FLEXIONADA, muslo horizontal, espalda recta |
-| 4 | Bent Knee Surface Arch | BP14d | Espalda ARQUEADA + rodilla flexionada, muslo perpendicular, en superficie |
-| 5 | Knight | BP17 | Espalda ARQUEADA + una pierna vertical + una pierna recta hacia ATRÁS |
 
 ### Árbol de decisión
 
@@ -81,62 +86,89 @@ La skill maestra puntúa la imagen contra las **5 posiciones** y aplica reglas d
 
 ---
 
-## Ficheros de seguimiento
+## Pipeline
 
-- **`all_files.txt`** — lista completa de nombres de imagen del dataset aumentado pendientes de clasificar. Permite lanzar la clasificación en lotes sobre el conjunto de datos completo.
-- **`processed_files.txt`** — registro acumulativo de imágenes ya clasificadas. Permite reanudar una ejecución interrumpida sin reprocesar imágenes.
+### Etapa 1 — División del dataset en lotes
 
----
+El script `split_random.py` lee `data/all_files.txt` y divide las imágenes en lotes de hasta 250 imágenes, escritos en `splits/batch_XX.txt`. La aleatorización garantiza distribución uniforme de clases por lote.
 
-## Resultados
-
-### Conjunto de desarrollo (train) — usado para refinar las skills
-
-| Clase | Correctas | Total | Accuracy |
-|---|---|---|---|
-| Double Leg Vertical | 3 | 3 | 100 % |
-| Fishtail | 3 | 3 | 100 % |
-| Bent Knee Vertical | 3 | 3 | 100 % |
-| Bent Knee Surface Arch | 3 | 3 | 100 % |
-| Knight | 3 | 3 | 100 % |
-| **Total** | **15** | **15** | **100 %** |
-
-### Conjunto de test (held-out) — evaluación final
-
-| Clase | Correctas | Total | Accuracy |
-|---|---|---|---|
-| Double Leg Vertical | 3 | 3 | 100 % |
-| Fishtail | 3 | 3 | 100 % |
-| Bent Knee Vertical | 3 | 3 | 100 % |
-| Bent Knee Surface Arch | 3 | 3 | 100 % |
-| Knight | 2 | 3 | 66.7 % |
-| **Total** | **14** | **15** | **93.3 %** |
-
-### Análisis del error
-
-**1 error de clasificación**: una imagen de Knight fue clasificada como Bent Knee Surface Arch. Ambas posiciones comparten espalda arqueada; el rasgo diferenciador es si la pierna no-vertical está **recta** (Knight) o **flexionada en la rodilla** (BKSA). El modelo percibió una flexión de rodilla donde la pierna era recta, activando la clasificación BKSA. La frontera Knight / BKSA es el par más difícil del dataset.
+- **Entrada**: `data/all_files.txt` con todos los nombres de imagen.
+- **Salida**: ficheros `splits/batch_01.txt` … `splits/batch_NN.txt`.
+- **Parámetro clave**: `IMAGES_PER_FILE = 250`.
 
 ---
 
-## Metodología
+### Etapa 2 — Clasificación por lotes con skills
 
-1. **Estudio de materiales de referencia** — lectura del Manual de Figuras de World Aquatics y material de jueces para entender la biomecánica de cada posición.
-2. **Creación de skills con text shots** — construcción de prompts estructurados con conocimiento experto, usando descripciones textuales de imágenes de entrenamiento como ejemplos few-shot.
-3. **Evaluación en el conjunto de desarrollo** — clasificación de las 15 imágenes de entrenamiento con agentes Claude Sonnet en paralelo.
-4. **Iteración sobre las skills** — refinamiento de prompts hasta alcanzar 100 % de accuracy en desarrollo.
-5. **Evaluación final en test** — clasificación del conjunto held-out una única vez, sin iteración posterior (93.3 %).
+Cada lote se procesa mediante la skill orquestadora `natacion-classifier`, que lanza 5 subagentes en paralelo (uno por clase) para cada imagen del lote. Los resultados de cada lote se guardan en `results/splits/predictions_batch_XX.json`.
+
+- **Entrada**: fichero de lote (`splits/batch_XX.txt`) con nombres de imagen.
+- **Salida**: `results/splits/predictions_batch_XX.json` con `[{filename, classification}, ...]`.
+- **Paralelización**: 5 subagentes concurrentes por imagen para evaluación eficiente.
 
 ---
 
-## Modelo y herramientas
+### Etapa 3 — Unión de predicciones
 
-- **Modelo de clasificación**: Claude Sonnet 4.5 (`claude-sonnet-4-5-20250929`) con capacidades de visión multimodal.
-- **Método de evaluación**: cada imagen se lee con la herramienta `Read` de Claude (visión) y se clasifica con la skill orquestadora.
-- **Paralelización**: 5 subagentes concurrentes (uno por clase) para evaluación eficiente en lote.
-- **Entorno**: Claude Code CLI / SDK de Anthropic.
+El script `merge_results.py` agrega todos los ficheros `predictions_batch_*.json` en un único `results/predictions.json`.
+
+- **Entrada**: todos los ficheros en `results/splits/`.
+- **Salida**: `results/predictions.json` con la lista completa de predicciones.
+
+---
+
+### Etapa 4 — Generación de ground truth y evaluación
+
+El script `generate_ground_truth.py` cruza las predicciones con `data/image_labels.json` para construir el ground truth alineado. A continuación, `compute_accuracy_and_report.py` calcula las métricas y genera el informe.
+
+- **Entrada**: `results/predictions.json` + `data/image_labels.json`.
+- **Salidas**: `results/results.json` (métricas y matriz de confusión) y `results/report.html` (informe HTML interactivo).
 
 
-## Ejecución 
+---
 
->> use @.claude\skills\natacion-classifier\ to classify all images in @all_files.txt
->> run @scripts\check_accuracy.py and @scripts\compute_accuracy
+## Cómo ejecutar
+
+### 1. Dividir el dataset en lotes
+
+```bash
+cd "Sistema basado en skills con vLLMs"
+python scripts/split_random.py
+```
+
+Genera los ficheros `splits/batch_XX.txt` (hasta 250 imágenes cada uno).
+
+### 2. Clasificar cada lote con la skill orquestadora
+
+Desde el directorio del proyecto, lanzar la skill para cada lote:
+
+```
+Classify all images in @splits/batch_01.txt based on the skill @.agents/skills/natacion-classifier/SKILL.md . 
+Save the images on @results/splits/ . Do not evaluate or modify any existing file; just classify the images.
+```
+
+Repetir para cada lote o paralelizar entre sesiones.
+
+### 3. Unir las predicciones
+
+```bash
+python scripts/merge_results.py
+```
+
+Genera `results/predictions.json` con todas las predicciones.
+
+### 4. Generar el ground truth
+
+```bash
+python scripts/generate_ground_truth.py
+```
+
+Genera `data/ground_truth_for_predictions.json` cruzando predicciones con etiquetas.
+
+### 5. Calcular métricas y generar el informe
+
+```bash
+python scripts/compute_accuracy_and_report.py
+```
+
+Genera `results/results.json` y `results/report.html`.

@@ -2,7 +2,7 @@ import random
 import os
 import math
 
-INPUT_FILE = "all_files.txt"
+INPUT_FILE = "data/all_files.txt"
 IMAGES_PER_FILE = 250
 OUTPUT_DIR = "splits2"
 
