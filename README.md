@@ -1,7 +1,6 @@
 # TFG: Automatización de la Identificación de Posiciones de Natación Artística
 
-> Trabajo de Fin de Grado — Paula Ballesteros  
-> Grado en Ciencia de Datos e Inteligencia Artificial · Universidad Politécnica de Madrid
+> Trabajo de Fin de Grado
 
 Este proyecto compara distintos enfoques de clasificación automática de **5 posiciones corporales reglamentarias de natación artística (sincronizada)**, desde modelos de aprendizaje profundo hasta sistemas basados en estimación de pose y prompts estructurados con LLMs de visión. El dataset es propio, recogido manualmente; los experimentos cubren aprendizaje supervisado, zero-shot, few-shot, fine-tuning eficiente con LoRA y clasificación por skills sin entrenamiento.
 
