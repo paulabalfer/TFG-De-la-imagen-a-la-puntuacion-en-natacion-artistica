@@ -9,8 +9,6 @@ Claude skills under `.claude/skills/`. This file:
   1. Validates inputs (image path + position label).
   2. Prints the canonical prompt to send to Claude so the orchestrator
      skill is invoked.
-  3. If a predictions JSON already exists in results/, updates it with
-     any new score the user pastes back.
 
 Usage:
     python score_image.py <image_path> <position>
@@ -27,14 +25,13 @@ Valid position labels:
 from __future__ import annotations
 
 import argparse
-import json
 import sys
 from pathlib import Path
 
 HERE = Path(__file__).resolve().parent
 ROOT = HERE.parent
-RESULTS = ROOT / "results"
 REFERENCES = ROOT / "references"
+AUGMENTED = ROOT.parent / "Data" / "Images"
 
 POSITION_LABELS = {
     "BP6":  ("Double Leg Vertical",            "scoring-bp06-double-leg-vertical",    "Double_leg_vertical_punctuation.png"),
@@ -75,15 +72,20 @@ def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     parser.add_argument("image", type=Path, help="Path to the pool photograph")
     parser.add_argument("position", type=str, help="Position label (BP6 / Fishtail / etc.)")
-    parser.add_argument("--out", type=Path, default=RESULTS / "predictions.json",
-                        help="Path to predictions JSON (appended)")
     args = parser.parse_args()
 
-    if not args.image.exists():
-        print(f"ERROR: image not found: {args.image}", file=sys.stderr)
-        return 2
-
     code = resolve_position(args.position)
+
+    if not args.image.exists():
+        position_name = POSITION_LABELS[code][0]
+        candidate = AUGMENTED / position_name / args.image.name
+        if candidate.exists():
+            args.image = candidate
+        else:
+            print(f"ERROR: image not found: {args.image}", file=sys.stderr)
+            print(f"       also tried:    {candidate}", file=sys.stderr)
+            return 2
+
     prompt = build_prompt(args.image.resolve(), code)
 
     print("=" * 72)
@@ -91,14 +93,6 @@ def main() -> int:
     print("=" * 72)
     print(prompt)
     print("=" * 72)
-
-    # Bootstrap an empty predictions file if none exists.
-    args.out.parent.mkdir(parents=True, exist_ok=True)
-    if not args.out.exists():
-        args.out.write_text("[]", encoding="utf-8")
-        print(f"\nInitialised empty predictions file at {args.out}")
-    else:
-        print(f"\nExisting predictions file: {args.out}")
 
     return 0
 
