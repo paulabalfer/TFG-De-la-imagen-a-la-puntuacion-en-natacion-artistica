@@ -1,0 +1,884 @@
+{
+  "date": "2026-05-18T11:39:11.716159",
+  "tolerance": 1.0,
+  "total": 92,
+  "correct": 40,
+  "overall_accuracy": 0.4348,
+  "per_position": {
+    "Double Leg Vertical": {
+      "n": 20,
+      "correct": 9,
+      "accuracy": 0.45,
+      "mae": 1.165,
+      "bias": -0.055,
+      "mean_excess_deviation": 0.6818,
+      "n_out_of_range": 11
+    },
+    "Fishtail": {
+      "n": 20,
+      "correct": 11,
+      "accuracy": 0.55,
+      "mae": 1.145,
+      "bias": 0.335,
+      "mean_excess_deviation": 0.7889,
+      "n_out_of_range": 9
+    },
+    "Bent Knee Vertical": {
+      "n": 19,
+      "correct": 3,
+      "accuracy": 0.1579,
+      "mae": 2.6684,
+      "bias": 2.6263,
+      "mean_excess_deviation": 2.0938,
+      "n_out_of_range": 16
+    },
+    "Bent Knee Surface Arch Position": {
+      "n": 14,
+      "correct": 8,
+      "accuracy": 0.5714,
+      "mae": 0.8214,
+      "bias": -0.7214,
+      "mean_excess_deviation": 0.4333,
+      "n_out_of_range": 6
+    },
+    "Knight": {
+      "n": 19,
+      "correct": 9,
+      "accuracy": 0.4737,
+      "mae": 1.5105,
+      "bias": 0.8684,
+      "mean_excess_deviation": 1.44,
+      "n_out_of_range": 10
+    }
+  },
+  "per_image": [
+    {
+      "image": "IMG_1388.JPG",
+      "position": "Bent Knee Surface Arch Position",
+      "judge_score": 6.8,
+      "generated_score": 6.2,
+      "diff": -0.6,
+      "abs_diff": 0.6,
+      "within_tolerance": true
+    },
+    {
+      "image": "IMG_1395.JPG",
+      "position": "Bent Knee Surface Arch Position",
+      "judge_score": 8.2,
+      "generated_score": 8.2,
+      "diff": 0.0,
+      "abs_diff": 0.0,
+      "within_tolerance": true
+    },
+    {
+      "image": "IMG_1398.JPG",
+      "position": "Bent Knee Surface Arch Position",
+      "judge_score": 8.9,
+      "generated_score": 7.2,
+      "diff": -1.7,
+      "abs_diff": 1.7,
+      "within_tolerance": false
+    },
+    {
+      "image": "IMG_1400.JPG",
+      "position": "Bent Knee Surface Arch Position",
+      "judge_score": 9.4,
+      "generated_score": 7.9,
+      "diff": -1.5,
+      "abs_diff": 1.5,
+      "within_tolerance": false
+    },
+    {
+      "image": "IMG_1425.JPG",
+      "position": "Bent Knee Surface Arch Position",
+      "judge_score": 5.2,
+      "generated_score": 4.9,
+      "diff": -0.3,
+      "abs_diff": 0.3,
+      "within_tolerance": true
+    },
+    {
+      "image": "IMG_1427.JPG",
+      "position": "Bent Knee Surface Arch Position",
+      "judge_score": 6.4,
+      "generated_score": 7.0,
+      "diff": 0.6,
+      "abs_diff": 0.6,
+      "within_tolerance": true
+    },
+    {
+      "image": "IMG_1430.JPG",
+      "position": "Bent Knee Surface Arch Position",
+      "judge_score": 7.0,
+      "generated_score": 5.7,
+      "diff": -1.3,
+      "abs_diff": 1.3,
+      "within_tolerance": false
+    },
+    {
+      "image": "IMG_1433.JPG",
+      "position": "Bent Knee Surface Arch Position",
+      "judge_score": 7.6,
+      "generated_score": 7.0,
+      "diff": -0.6,
+      "abs_diff": 0.6,
+      "within_tolerance": true
+    },
+    {
+      "image": "IMG_1434.JPG",
+      "position": "Bent Knee Surface Arch Position",
+      "judge_score": 8.2,
+      "generated_score": 6.7,
+      "diff": -1.5,
+      "abs_diff": 1.5,
+      "within_tolerance": false
+    },
+    {
+      "image": "IMG_1436.JPG",
+      "position": "Bent Knee Surface Arch Position",
+      "judge_score": 9.7,
+      "generated_score": 8.4,
+      "diff": -1.3,
+      "abs_diff": 1.3,
+      "within_tolerance": false
+    },
+    {
+      "image": "IMG_1514.JPG",
+      "position": "Bent Knee Surface Arch Position",
+      "judge_score": 6.5,
+      "generated_score": 6.0,
+      "diff": -0.5,
+      "abs_diff": 0.5,
+      "within_tolerance": true
+    },
+    {
+      "image": "IMG_1519.JPG",
+      "position": "Bent Knee Surface Arch Position",
+      "judge_score": 7.3,
+      "generated_score": 7.4,
+      "diff": 0.1,
+      "abs_diff": 0.1,
+      "within_tolerance": true
+    },
+    {
+      "image": "IMG_1520.JPG",
+      "position": "Bent Knee Surface Arch Position",
+      "judge_score": 9.0,
+      "generated_score": 7.7,
+      "diff": -1.3,
+      "abs_diff": 1.3,
+      "within_tolerance": false
+    },
+    {
+      "image": "IMG_1523.JPG",
+      "position": "Bent Knee Surface Arch Position",
+      "judge_score": 9.1,
+      "generated_score": 8.9,
+      "diff": -0.2,
+      "abs_diff": 0.2,
+      "within_tolerance": true
+    },
+    {
+      "image": "IMG_1266.JPG",
+      "position": "Bent Knee Vertical",
+      "judge_score": 3.2,
+      "generated_score": 7.1,
+      "diff": 3.9,
+      "abs_diff": 3.9,
+      "within_tolerance": false
+    },
+    {
+      "image": "IMG_1268.JPG",
+      "position": "Bent Knee Vertical",
+      "judge_score": 4.3,
+      "generated_score": 6.1,
+      "diff": 1.8,
+      "abs_diff": 1.8,
+      "within_tolerance": false
+    },
+    {
+      "image": "IMG_1269.JPG",
+      "position": "Bent Knee Vertical",
+      "judge_score": 4.0,
+      "generated_score": 9.3,
+      "diff": 5.3,
+      "abs_diff": 5.3,
+      "within_tolerance": false
+    },
+    {
+      "image": "IMG_1271.JPG",
+      "position": "Bent Knee Vertical",
+      "judge_score": 5.3,
+      "generated_score": 7.1,
+      "diff": 1.8,
+      "abs_diff": 1.8,
+      "within_tolerance": false
+    },
+    {
+      "image": "IMG_1274.JPG",
+      "position": "Bent Knee Vertical",
+      "judge_score": 6.2,
+      "generated_score": 9.3,
+      "diff": 3.1,
+      "abs_diff": 3.1,
+      "within_tolerance": false
+    },
+    {
+      "image": "IMG_1278.JPG",
+      "position": "Bent Knee Vertical",
+      "judge_score": 7.3,
+      "generated_score": 9.3,
+      "diff": 2.0,
+      "abs_diff": 2.0,
+      "within_tolerance": false
+    },
+    {
+      "image": "IMG_1279.JPG",
+      "position": "Bent Knee Vertical",
+      "judge_score": 8.3,
+      "generated_score": 9.1,
+      "diff": 0.8,
+      "abs_diff": 0.8,
+      "within_tolerance": true
+    },
+    {
+      "image": "IMG_1281.JPG",
+      "position": "Bent Knee Vertical",
+      "judge_score": 9.0,
+      "generated_score": 8.8,
+      "diff": -0.2,
+      "abs_diff": 0.2,
+      "within_tolerance": true
+    },
+    {
+      "image": "IMG_1304.JPG",
+      "position": "Bent Knee Vertical",
+      "judge_score": 4.3,
+      "generated_score": 7.1,
+      "diff": 2.8,
+      "abs_diff": 2.8,
+      "within_tolerance": false
+    },
+    {
+      "image": "IMG_1306.JPG",
+      "position": "Bent Knee Vertical",
+      "judge_score": 4.0,
+      "generated_score": 7.3,
+      "diff": 3.3,
+      "abs_diff": 3.3,
+      "within_tolerance": false
+    },
+    {
+      "image": "IMG_1311.JPG",
+      "position": "Bent Knee Vertical",
+      "judge_score": 5.7,
+      "generated_score": 9.3,
+      "diff": 3.6,
+      "abs_diff": 3.6,
+      "within_tolerance": false
+    },
+    {
+      "image": "IMG_1313.JPG",
+      "position": "Bent Knee Vertical",
+      "judge_score": 7.8,
+      "generated_score": 9.2,
+      "diff": 1.4,
+      "abs_diff": 1.4,
+      "within_tolerance": false
+    },
+    {
+      "image": "IMG_1316.JPG",
+      "position": "Bent Knee Vertical",
+      "judge_score": 8.0,
+      "generated_score": 9.3,
+      "diff": 1.3,
+      "abs_diff": 1.3,
+      "within_tolerance": false
+    },
+    {
+      "image": "IMG_1319.JPG",
+      "position": "Bent Knee Vertical",
+      "judge_score": 9.3,
+      "generated_score": 9.1,
+      "diff": -0.2,
+      "abs_diff": 0.2,
+      "within_tolerance": true
+    },
+    {
+      "image": "IMG_1458.JPG",
+      "position": "Bent Knee Vertical",
+      "judge_score": 3.6,
+      "generated_score": 8.2,
+      "diff": 4.6,
+      "abs_diff": 4.6,
+      "within_tolerance": false
+    },
+    {
+      "image": "IMG_1459.JPG",
+      "position": "Bent Knee Vertical",
+      "judge_score": 3.5,
+      "generated_score": 9.1,
+      "diff": 5.6,
+      "abs_diff": 5.6,
+      "within_tolerance": false
+    },
+    {
+      "image": "IMG_1463.JPG",
+      "position": "Bent Knee Vertical",
+      "judge_score": 5.3,
+      "generated_score": 9.0,
+      "diff": 3.7,
+      "abs_diff": 3.7,
+      "within_tolerance": false
+    },
+    {
+      "image": "IMG_1464.JPG",
+      "position": "Bent Knee Vertical",
+      "judge_score": 6.4,
+      "generated_score": 9.3,
+      "diff": 2.9,
+      "abs_diff": 2.9,
+      "within_tolerance": false
+    },
+    {
+      "image": "IMG_1467.JPG",
+      "position": "Bent Knee Vertical",
+      "judge_score": 6.9,
+      "generated_score": 9.3,
+      "diff": 2.4,
+      "abs_diff": 2.4,
+      "within_tolerance": false
+    },
+    {
+      "image": "IMG_1250.JPG",
+      "position": "Double Leg Vertical",
+      "judge_score": 4.5,
+      "generated_score": 7.0,
+      "diff": 2.5,
+      "abs_diff": 2.5,
+      "within_tolerance": false
+    },
+    {
+      "image": "IMG_1251.JPG",
+      "position": "Double Leg Vertical",
+      "judge_score": 2.9,
+      "generated_score": 3.8,
+      "diff": 0.9,
+      "abs_diff": 0.9,
+      "within_tolerance": true
+    },
+    {
+      "image": "IMG_1253.JPG",
+      "position": "Double Leg Vertical",
+      "judge_score": 5.5,
+      "generated_score": 6.2,
+      "diff": 0.7,
+      "abs_diff": 0.7,
+      "within_tolerance": true
+    },
+    {
+      "image": "IMG_1256.JPG",
+      "position": "Double Leg Vertical",
+      "judge_score": 6.0,
+      "generated_score": 7.4,
+      "diff": 1.4,
+      "abs_diff": 1.4,
+      "within_tolerance": false
+    },
+    {
+      "image": "IMG_1257.JPG",
+      "position": "Double Leg Vertical",
+      "judge_score": 6.1,
+      "generated_score": 6.2,
+      "diff": 0.1,
+      "abs_diff": 0.1,
+      "within_tolerance": true
+    },
+    {
+      "image": "IMG_1260.JPG",
+      "position": "Double Leg Vertical",
+      "judge_score": 7.2,
+      "generated_score": 8.4,
+      "diff": 1.2,
+      "abs_diff": 1.2,
+      "within_tolerance": false
+    },
+    {
+      "image": "IMG_1261.JPG",
+      "position": "Double Leg Vertical",
+      "judge_score": 9.8,
+      "generated_score": 6.1,
+      "diff": -3.7,
+      "abs_diff": 3.7,
+      "within_tolerance": false
+    },
+    {
+      "image": "IMG_1265.JPG",
+      "position": "Double Leg Vertical",
+      "judge_score": 9.6,
+      "generated_score": 8.2,
+      "diff": -1.4,
+      "abs_diff": 1.4,
+      "within_tolerance": false
+    },
+    {
+      "image": "IMG_1287.JPG",
+      "position": "Double Leg Vertical",
+      "judge_score": 3.2,
+      "generated_score": 5.3,
+      "diff": 2.1,
+      "abs_diff": 2.1,
+      "within_tolerance": false
+    },
+    {
+      "image": "IMG_1289.JPG",
+      "position": "Double Leg Vertical",
+      "judge_score": 4.4,
+      "generated_score": 5.1,
+      "diff": 0.7,
+      "abs_diff": 0.7,
+      "within_tolerance": true
+    },
+    {
+      "image": "IMG_1292.JPG",
+      "position": "Double Leg Vertical",
+      "judge_score": 6.8,
+      "generated_score": 5.5,
+      "diff": -1.3,
+      "abs_diff": 1.3,
+      "within_tolerance": false
+    },
+    {
+      "image": "IMG_1294.JPG",
+      "position": "Double Leg Vertical",
+      "judge_score": 6.0,
+      "generated_score": 6.2,
+      "diff": 0.2,
+      "abs_diff": 0.2,
+      "within_tolerance": true
+    },
+    {
+      "image": "IMG_1296.JPG",
+      "position": "Double Leg Vertical",
+      "judge_score": 5.8,
+      "generated_score": 5.2,
+      "diff": -0.6,
+      "abs_diff": 0.6,
+      "within_tolerance": true
+    },
+    {
+      "image": "IMG_1298.JPG",
+      "position": "Double Leg Vertical",
+      "judge_score": 7.8,
+      "generated_score": 6.3,
+      "diff": -1.5,
+      "abs_diff": 1.5,
+      "within_tolerance": false
+    },
+    {
+      "image": "IMG_1300.JPG",
+      "position": "Double Leg Vertical",
+      "judge_score": 7.6,
+      "generated_score": 6.5,
+      "diff": -1.1,
+      "abs_diff": 1.1,
+      "within_tolerance": false
+    },
+    {
+      "image": "IMG_1443.JPG",
+      "position": "Double Leg Vertical",
+      "judge_score": 3.2,
+      "generated_score": 4.2,
+      "diff": 1.0,
+      "abs_diff": 1.0,
+      "within_tolerance": true
+    },
+    {
+      "image": "IMG_1448.JPG",
+      "position": "Double Leg Vertical",
+      "judge_score": 5.7,
+      "generated_score": 5.4,
+      "diff": -0.3,
+      "abs_diff": 0.3,
+      "within_tolerance": true
+    },
+    {
+      "image": "IMG_1449.JPG",
+      "position": "Double Leg Vertical",
+      "judge_score": 5.9,
+      "generated_score": 4.8,
+      "diff": -1.1,
+      "abs_diff": 1.1,
+      "within_tolerance": false
+    },
+    {
+      "image": "IMG_1451.JPG",
+      "position": "Double Leg Vertical",
+      "judge_score": 6.1,
+      "generated_score": 6.4,
+      "diff": 0.3,
+      "abs_diff": 0.3,
+      "within_tolerance": true
+    },
+    {
+      "image": "IMG_1453.JPG",
+      "position": "Double Leg Vertical",
+      "judge_score": 8.4,
+      "generated_score": 7.2,
+      "diff": -1.2,
+      "abs_diff": 1.2,
+      "within_tolerance": false
+    },
+    {
+      "image": "IMG_1322.JPG",
+      "position": "Fishtail",
+      "judge_score": 3.2,
+      "generated_score": 7.0,
+      "diff": 3.8,
+      "abs_diff": 3.8,
+      "within_tolerance": false
+    },
+    {
+      "image": "IMG_1325.JPG",
+      "position": "Fishtail",
+      "judge_score": 4.0,
+      "generated_score": 4.9,
+      "diff": 0.9,
+      "abs_diff": 0.9,
+      "within_tolerance": true
+    },
+    {
+      "image": "IMG_1329.JPG",
+      "position": "Fishtail",
+      "judge_score": 4.3,
+      "generated_score": 6.0,
+      "diff": 1.7,
+      "abs_diff": 1.7,
+      "within_tolerance": false
+    },
+    {
+      "image": "IMG_1330.JPG",
+      "position": "Fishtail",
+      "judge_score": 6.0,
+      "generated_score": 5.7,
+      "diff": -0.3,
+      "abs_diff": 0.3,
+      "within_tolerance": true
+    },
+    {
+      "image": "IMG_1332.JPG",
+      "position": "Fishtail",
+      "judge_score": 6.3,
+      "generated_score": 6.0,
+      "diff": -0.3,
+      "abs_diff": 0.3,
+      "within_tolerance": true
+    },
+    {
+      "image": "IMG_1335.JPG",
+      "position": "Fishtail",
+      "judge_score": 7.3,
+      "generated_score": 6.1,
+      "diff": -1.2,
+      "abs_diff": 1.2,
+      "within_tolerance": false
+    },
+    {
+      "image": "IMG_1337.JPG",
+      "position": "Fishtail",
+      "judge_score": 8.2,
+      "generated_score": 6.7,
+      "diff": -1.5,
+      "abs_diff": 1.5,
+      "within_tolerance": false
+    },
+    {
+      "image": "IMG_1345.JPG",
+      "position": "Fishtail",
+      "judge_score": 4.3,
+      "generated_score": 5.3,
+      "diff": 1.0,
+      "abs_diff": 1.0,
+      "within_tolerance": true
+    },
+    {
+      "image": "IMG_1348.JPG",
+      "position": "Fishtail",
+      "judge_score": 5.0,
+      "generated_score": 5.9,
+      "diff": 0.9,
+      "abs_diff": 0.9,
+      "within_tolerance": true
+    },
+    {
+      "image": "IMG_1351.JPG",
+      "position": "Fishtail",
+      "judge_score": 6.2,
+      "generated_score": 6.3,
+      "diff": 0.1,
+      "abs_diff": 0.1,
+      "within_tolerance": true
+    },
+    {
+      "image": "IMG_1353.JPG",
+      "position": "Fishtail",
+      "judge_score": 7.3,
+      "generated_score": 7.0,
+      "diff": -0.3,
+      "abs_diff": 0.3,
+      "within_tolerance": true
+    },
+    {
+      "image": "IMG_1358.JPG",
+      "position": "Fishtail",
+      "judge_score": 8.0,
+      "generated_score": 7.2,
+      "diff": -0.8,
+      "abs_diff": 0.8,
+      "within_tolerance": true
+    },
+    {
+      "image": "IMG_1477.JPG",
+      "position": "Fishtail",
+      "judge_score": 3.6,
+      "generated_score": 5.7,
+      "diff": 2.1,
+      "abs_diff": 2.1,
+      "within_tolerance": false
+    },
+    {
+      "image": "IMG_1479.JPG",
+      "position": "Fishtail",
+      "judge_score": 4.7,
+      "generated_score": 6.2,
+      "diff": 1.5,
+      "abs_diff": 1.5,
+      "within_tolerance": false
+    },
+    {
+      "image": "IMG_1480.JPG",
+      "position": "Fishtail",
+      "judge_score": 5.4,
+      "generated_score": 7.0,
+      "diff": 1.6,
+      "abs_diff": 1.6,
+      "within_tolerance": false
+    },
+    {
+      "image": "IMG_1482.JPG",
+      "position": "Fishtail",
+      "judge_score": 6.3,
+      "generated_score": 7.0,
+      "diff": 0.7,
+      "abs_diff": 0.7,
+      "within_tolerance": true
+    },
+    {
+      "image": "IMG_1484.JPG",
+      "position": "Fishtail",
+      "judge_score": 6.7,
+      "generated_score": 7.2,
+      "diff": 0.5,
+      "abs_diff": 0.5,
+      "within_tolerance": true
+    },
+    {
+      "image": "IMG_1486.JPG",
+      "position": "Fishtail",
+      "judge_score": 7.2,
+      "generated_score": 5.7,
+      "diff": -1.5,
+      "abs_diff": 1.5,
+      "within_tolerance": false
+    },
+    {
+      "image": "IMG_1487.JPG",
+      "position": "Fishtail",
+      "judge_score": 8.0,
+      "generated_score": 7.0,
+      "diff": -1.0,
+      "abs_diff": 1.0,
+      "within_tolerance": true
+    },
+    {
+      "image": "IMG_1488.JPG",
+      "position": "Fishtail",
+      "judge_score": 8.2,
+      "generated_score": 7.0,
+      "diff": -1.2,
+      "abs_diff": 1.2,
+      "within_tolerance": false
+    },
+    {
+      "image": "IMG_1364.JPG",
+      "position": "Knight",
+      "judge_score": 3.5,
+      "generated_score": 9.1,
+      "diff": 5.6,
+      "abs_diff": 5.6,
+      "within_tolerance": false
+    },
+    {
+      "image": "IMG_1365.JPG",
+      "position": "Knight",
+      "judge_score": 3.2,
+      "generated_score": 7.8,
+      "diff": 4.6,
+      "abs_diff": 4.6,
+      "within_tolerance": false
+    },
+    {
+      "image": "IMG_1370.JPG",
+      "position": "Knight",
+      "judge_score": 5.5,
+      "generated_score": 7.1,
+      "diff": 1.6,
+      "abs_diff": 1.6,
+      "within_tolerance": false
+    },
+    {
+      "image": "IMG_1376.JPG",
+      "position": "Knight",
+      "judge_score": 6.2,
+      "generated_score": 7.1,
+      "diff": 0.9,
+      "abs_diff": 0.9,
+      "within_tolerance": true
+    },
+    {
+      "image": "IMG_1377.JPG",
+      "position": "Knight",
+      "judge_score": 6.3,
+      "generated_score": 8.1,
+      "diff": 1.8,
+      "abs_diff": 1.8,
+      "within_tolerance": false
+    },
+    {
+      "image": "IMG_1380.JPG",
+      "position": "Knight",
+      "judge_score": 8.4,
+      "generated_score": 8.1,
+      "diff": -0.3,
+      "abs_diff": 0.3,
+      "within_tolerance": true
+    },
+    {
+      "image": "IMG_1382.JPG",
+      "position": "Knight",
+      "judge_score": 9.0,
+      "generated_score": 7.1,
+      "diff": -1.9,
+      "abs_diff": 1.9,
+      "within_tolerance": false
+    },
+    {
+      "image": "IMG_1386.JPG",
+      "position": "Knight",
+      "judge_score": 9.2,
+      "generated_score": 8.1,
+      "diff": -1.1,
+      "abs_diff": 1.1,
+      "within_tolerance": false
+    },
+    {
+      "image": "IMG_1402.JPG",
+      "position": "Knight",
+      "judge_score": 3.2,
+      "generated_score": 5.7,
+      "diff": 2.5,
+      "abs_diff": 2.5,
+      "within_tolerance": false
+    },
+    {
+      "image": "IMG_1410.JPG",
+      "position": "Knight",
+      "judge_score": 5.2,
+      "generated_score": 7.1,
+      "diff": 1.9,
+      "abs_diff": 1.9,
+      "within_tolerance": false
+    },
+    {
+      "image": "IMG_1414.JPG",
+      "position": "Knight",
+      "judge_score": 4.8,
+      "generated_score": 7.1,
+      "diff": 2.3,
+      "abs_diff": 2.3,
+      "within_tolerance": false
+    },
+    {
+      "image": "IMG_1415.JPG",
+      "position": "Knight",
+      "judge_score": 7.3,
+      "generated_score": 7.0,
+      "diff": -0.3,
+      "abs_diff": 0.3,
+      "within_tolerance": true
+    },
+    {
+      "image": "IMG_1417.JPG",
+      "position": "Knight",
+      "judge_score": 7.6,
+      "generated_score": 8.1,
+      "diff": 0.5,
+      "abs_diff": 0.5,
+      "within_tolerance": true
+    },
+    {
+      "image": "IMG_1492.JPG",
+      "position": "Knight",
+      "judge_score": 4.5,
+      "generated_score": 4.8,
+      "diff": 0.3,
+      "abs_diff": 0.3,
+      "within_tolerance": true
+    },
+    {
+      "image": "IMG_1495.JPG",
+      "position": "Knight",
+      "judge_score": 4.8,
+      "generated_score": 5.1,
+      "diff": 0.3,
+      "abs_diff": 0.3,
+      "within_tolerance": true
+    },
+    {
+      "image": "IMG_1499.JPG",
+      "position": "Knight",
+      "judge_score": 5.9,
+      "generated_score": 4.8,
+      "diff": -1.1,
+      "abs_diff": 1.1,
+      "within_tolerance": false
+    },
+    {
+      "image": "IMG_1501.JPG",
+      "position": "Knight",
+      "judge_score": 6.8,
+      "generated_score": 7.1,
+      "diff": 0.3,
+      "abs_diff": 0.3,
+      "within_tolerance": true
+    },
+    {
+      "image": "IMG_1505.JPG",
+      "position": "Knight",
+      "judge_score": 7.8,
+      "generated_score": 7.1,
+      "diff": -0.7,
+      "abs_diff": 0.7,
+      "within_tolerance": true
+    },
+    {
+      "image": "IMG_1506.JPG",
+      "position": "Knight",
+      "judge_score": 8.8,
+      "generated_score": 8.1,
+      "diff": -0.7,
+      "abs_diff": 0.7,
+      "within_tolerance": true
+    }
+  ]
+}

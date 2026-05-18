@@ -1,0 +1,643 @@
+Score this image.
+
+Position: Bent Knee Surface Arch Position (BP14d)
+Image: @Data/Images/Bent Knee Surface Arch Position/IMG_1388.JPG
+
+Follow the orchestrator pipeline exactly: dispatch to the position scorer, apply common deductions, and return the final score using the output format specified in the orchestrator skill. Use the scoring orchestrator @.claude/skills/scoring-orchestrator/SKILL.md
+---
+Score this image.
+
+Position: Bent Knee Surface Arch Position (BP14d)
+Image: @Data/Images/Bent Knee Surface Arch Position/IMG_1395.JPG
+
+Follow the orchestrator pipeline exactly: dispatch to the position scorer, apply common deductions, and return the final score using the output format specified in the orchestrator skill. Use the scoring orchestrator @.claude/skills/scoring-orchestrator/SKILL.md
+---
+Score this image.
+
+Position: Bent Knee Surface Arch Position (BP14d)
+Image: @Data/Images/Bent Knee Surface Arch Position/IMG_1398.JPG
+
+Follow the orchestrator pipeline exactly: dispatch to the position scorer, apply common deductions, and return the final score using the output format specified in the orchestrator skill. Use the scoring orchestrator @.claude/skills/scoring-orchestrator/SKILL.md
+---
+Score this image.
+
+Position: Bent Knee Surface Arch Position (BP14d)
+Image: @Data/Images/Bent Knee Surface Arch Position/IMG_1400.JPG
+
+Follow the orchestrator pipeline exactly: dispatch to the position scorer, apply common deductions, and return the final score using the output format specified in the orchestrator skill. Use the scoring orchestrator @.claude/skills/scoring-orchestrator/SKILL.md
+---
+Score this image.
+
+Position: Bent Knee Surface Arch Position (BP14d)
+Image: @Data/Images/Bent Knee Surface Arch Position/IMG_1425.JPG
+
+Follow the orchestrator pipeline exactly: dispatch to the position scorer, apply common deductions, and return the final score using the output format specified in the orchestrator skill. Use the scoring orchestrator @.claude/skills/scoring-orchestrator/SKILL.md
+---
+Score this image.
+
+Position: Bent Knee Surface Arch Position (BP14d)
+Image: @Data/Images/Bent Knee Surface Arch Position/IMG_1427.JPG
+
+Follow the orchestrator pipeline exactly: dispatch to the position scorer, apply common deductions, and return the final score using the output format specified in the orchestrator skill. Use the scoring orchestrator @.claude/skills/scoring-orchestrator/SKILL.md
+---
+Score this image.
+
+Position: Bent Knee Surface Arch Position (BP14d)
+Image: @Data/Images/Bent Knee Surface Arch Position/IMG_1430.JPG
+
+Follow the orchestrator pipeline exactly: dispatch to the position scorer, apply common deductions, and return the final score using the output format specified in the orchestrator skill. Use the scoring orchestrator @.claude/skills/scoring-orchestrator/SKILL.md
+---
+Score this image.
+
+Position: Bent Knee Surface Arch Position (BP14d)
+Image: @Data/Images/Bent Knee Surface Arch Position/IMG_1433.JPG
+
+Follow the orchestrator pipeline exactly: dispatch to the position scorer, apply common deductions, and return the final score using the output format specified in the orchestrator skill. Use the scoring orchestrator @.claude/skills/scoring-orchestrator/SKILL.md
+---
+Score this image.
+
+Position: Bent Knee Surface Arch Position (BP14d)
+Image: @Data/Images/Bent Knee Surface Arch Position/IMG_1434.JPG
+
+Follow the orchestrator pipeline exactly: dispatch to the position scorer, apply common deductions, and return the final score using the output format specified in the orchestrator skill. Use the scoring orchestrator @.claude/skills/scoring-orchestrator/SKILL.md
+---
+Score this image.
+
+Position: Bent Knee Surface Arch Position (BP14d)
+Image: @Data/Images/Bent Knee Surface Arch Position/IMG_1436.JPG
+
+Follow the orchestrator pipeline exactly: dispatch to the position scorer, apply common deductions, and return the final score using the output format specified in the orchestrator skill. Use the scoring orchestrator @.claude/skills/scoring-orchestrator/SKILL.md
+---
+Score this image.
+
+Position: Bent Knee Surface Arch Position (BP14d)
+Image: @Data/Images/Bent Knee Surface Arch Position/IMG_1514.JPG
+
+Follow the orchestrator pipeline exactly: dispatch to the position scorer, apply common deductions, and return the final score using the output format specified in the orchestrator skill. Use the scoring orchestrator @.claude/skills/scoring-orchestrator/SKILL.md
+---
+Score this image.
+
+Position: Bent Knee Surface Arch Position (BP14d)
+Image: @Data/Images/Bent Knee Surface Arch Position/IMG_1519.JPG
+
+Follow the orchestrator pipeline exactly: dispatch to the position scorer, apply common deductions, and return the final score using the output format specified in the orchestrator skill. Use the scoring orchestrator @.claude/skills/scoring-orchestrator/SKILL.md
+---
+Score this image.
+
+Position: Bent Knee Surface Arch Position (BP14d)
+Image: @Data/Images/Bent Knee Surface Arch Position/IMG_1520.JPG
+
+Follow the orchestrator pipeline exactly: dispatch to the position scorer, apply common deductions, and return the final score using the output format specified in the orchestrator skill. Use the scoring orchestrator @.claude/skills/scoring-orchestrator/SKILL.md
+---
+Score this image.
+
+Position: Bent Knee Surface Arch Position (BP14d)
+Image: @Data/Images/Bent Knee Surface Arch Position/IMG_1523.JPG
+
+Follow the orchestrator pipeline exactly: dispatch to the position scorer, apply common deductions, and return the final score using the output format specified in the orchestrator skill. Use the scoring orchestrator @.claude/skills/scoring-orchestrator/SKILL.md
+---
+Score this image.
+
+Position: Bent Knee Vertical (BP14c)
+Image: @Data/Images/Bent Knee Vertical/IMG_1266.JPG
+
+Follow the orchestrator pipeline exactly: dispatch to the position scorer, apply common deductions, and return the final score using the output format specified in the orchestrator skill. Use the scoring orchestrator @.claude/skills/scoring-orchestrator/SKILL.md
+---
+Score this image.
+
+Position: Bent Knee Vertical (BP14c)
+Image: @Data/Images/Bent Knee Vertical/IMG_1268.JPG
+
+Follow the orchestrator pipeline exactly: dispatch to the position scorer, apply common deductions, and return the final score using the output format specified in the orchestrator skill. Use the scoring orchestrator @.claude/skills/scoring-orchestrator/SKILL.md
+---
+Score this image.
+
+Position: Bent Knee Vertical (BP14c)
+Image: @Data/Images/Bent Knee Vertical/IMG_1269.JPG
+
+Follow the orchestrator pipeline exactly: dispatch to the position scorer, apply common deductions, and return the final score using the output format specified in the orchestrator skill. Use the scoring orchestrator @.claude/skills/scoring-orchestrator/SKILL.md
+---
+Score this image.
+
+Position: Bent Knee Vertical (BP14c)
+Image: @Data/Images/Bent Knee Vertical/IMG_1271.JPG
+
+Follow the orchestrator pipeline exactly: dispatch to the position scorer, apply common deductions, and return the final score using the output format specified in the orchestrator skill. Use the scoring orchestrator @.claude/skills/scoring-orchestrator/SKILL.md
+---
+Score this image.
+
+Position: Bent Knee Vertical (BP14c)
+Image: @Data/Images/Bent Knee Vertical/IMG_1274.JPG
+
+Follow the orchestrator pipeline exactly: dispatch to the position scorer, apply common deductions, and return the final score using the output format specified in the orchestrator skill. Use the scoring orchestrator @.claude/skills/scoring-orchestrator/SKILL.md
+---
+Score this image.
+
+Position: Bent Knee Vertical (BP14c)
+Image: @Data/Images/Bent Knee Vertical/IMG_1278.JPG
+
+Follow the orchestrator pipeline exactly: dispatch to the position scorer, apply common deductions, and return the final score using the output format specified in the orchestrator skill. Use the scoring orchestrator @.claude/skills/scoring-orchestrator/SKILL.md
+---
+Score this image.
+
+Position: Bent Knee Vertical (BP14c)
+Image: @Data/Images/Bent Knee Vertical/IMG_1279.JPG
+
+Follow the orchestrator pipeline exactly: dispatch to the position scorer, apply common deductions, and return the final score using the output format specified in the orchestrator skill. Use the scoring orchestrator @.claude/skills/scoring-orchestrator/SKILL.md
+---
+Score this image.
+
+Position: Bent Knee Vertical (BP14c)
+Image: @Data/Images/Bent Knee Vertical/IMG_1281.JPG
+
+Follow the orchestrator pipeline exactly: dispatch to the position scorer, apply common deductions, and return the final score using the output format specified in the orchestrator skill. Use the scoring orchestrator @.claude/skills/scoring-orchestrator/SKILL.md
+---
+Score this image.
+
+Position: Bent Knee Vertical (BP14c)
+Image: @Data/Images/Bent Knee Vertical/IMG_1304.JPG
+
+Follow the orchestrator pipeline exactly: dispatch to the position scorer, apply common deductions, and return the final score using the output format specified in the orchestrator skill. Use the scoring orchestrator @.claude/skills/scoring-orchestrator/SKILL.md
+---
+Score this image.
+
+Position: Bent Knee Vertical (BP14c)
+Image: @Data/Images/Bent Knee Vertical/IMG_1306.JPG
+
+Follow the orchestrator pipeline exactly: dispatch to the position scorer, apply common deductions, and return the final score using the output format specified in the orchestrator skill. Use the scoring orchestrator @.claude/skills/scoring-orchestrator/SKILL.md
+---
+Score this image.
+
+Position: Bent Knee Vertical (BP14c)
+Image: @Data/Images/Bent Knee Vertical/IMG_1311.JPG
+
+Follow the orchestrator pipeline exactly: dispatch to the position scorer, apply common deductions, and return the final score using the output format specified in the orchestrator skill. Use the scoring orchestrator @.claude/skills/scoring-orchestrator/SKILL.md
+---
+Score this image.
+
+Position: Bent Knee Vertical (BP14c)
+Image: @Data/Images/Bent Knee Vertical/IMG_1313.JPG
+
+Follow the orchestrator pipeline exactly: dispatch to the position scorer, apply common deductions, and return the final score using the output format specified in the orchestrator skill. Use the scoring orchestrator @.claude/skills/scoring-orchestrator/SKILL.md
+---
+Score this image.
+
+Position: Bent Knee Vertical (BP14c)
+Image: @Data/Images/Bent Knee Vertical/IMG_1316.JPG
+
+Follow the orchestrator pipeline exactly: dispatch to the position scorer, apply common deductions, and return the final score using the output format specified in the orchestrator skill. Use the scoring orchestrator @.claude/skills/scoring-orchestrator/SKILL.md
+---
+Score this image.
+
+Position: Bent Knee Vertical (BP14c)
+Image: @Data/Images/Bent Knee Vertical/IMG_1319.JPG
+
+Follow the orchestrator pipeline exactly: dispatch to the position scorer, apply common deductions, and return the final score using the output format specified in the orchestrator skill. Use the scoring orchestrator @.claude/skills/scoring-orchestrator/SKILL.md
+---
+Score this image.
+
+Position: Bent Knee Vertical (BP14c)
+Image: @Data/Images/Bent Knee Vertical/IMG_1458.JPG
+
+Follow the orchestrator pipeline exactly: dispatch to the position scorer, apply common deductions, and return the final score using the output format specified in the orchestrator skill. Use the scoring orchestrator @.claude/skills/scoring-orchestrator/SKILL.md
+---
+Score this image.
+
+Position: Bent Knee Vertical (BP14c)
+Image: @Data/Images/Bent Knee Vertical/IMG_1459.JPG
+
+Follow the orchestrator pipeline exactly: dispatch to the position scorer, apply common deductions, and return the final score using the output format specified in the orchestrator skill. Use the scoring orchestrator @.claude/skills/scoring-orchestrator/SKILL.md
+---
+Score this image.
+
+Position: Bent Knee Vertical (BP14c)
+Image: @Data/Images/Bent Knee Vertical/IMG_1463.JPG
+
+Follow the orchestrator pipeline exactly: dispatch to the position scorer, apply common deductions, and return the final score using the output format specified in the orchestrator skill. Use the scoring orchestrator @.claude/skills/scoring-orchestrator/SKILL.md
+---
+Score this image.
+
+Position: Bent Knee Vertical (BP14c)
+Image: @Data/Images/Bent Knee Vertical/IMG_1464.JPG
+
+Follow the orchestrator pipeline exactly: dispatch to the position scorer, apply common deductions, and return the final score using the output format specified in the orchestrator skill. Use the scoring orchestrator @.claude/skills/scoring-orchestrator/SKILL.md
+---
+Score this image.
+
+Position: Bent Knee Vertical (BP14c)
+Image: @Data/Images/Bent Knee Vertical/IMG_1467.JPG
+
+Follow the orchestrator pipeline exactly: dispatch to the position scorer, apply common deductions, and return the final score using the output format specified in the orchestrator skill. Use the scoring orchestrator @.claude/skills/scoring-orchestrator/SKILL.md
+---
+Score this image.
+
+Position: Double Leg Vertical (BP6)
+Image: @Data/Images/Double Leg Vertical/IMG_1250.JPG
+
+Follow the orchestrator pipeline exactly: dispatch to the position scorer, apply common deductions, and return the final score using the output format specified in the orchestrator skill. Use the scoring orchestrator @.claude/skills/scoring-orchestrator/SKILL.md
+---
+Score this image.
+
+Position: Double Leg Vertical (BP6)
+Image: @Data/Images/Double Leg Vertical/IMG_1251.JPG
+
+Follow the orchestrator pipeline exactly: dispatch to the position scorer, apply common deductions, and return the final score using the output format specified in the orchestrator skill. Use the scoring orchestrator @.claude/skills/scoring-orchestrator/SKILL.md
+---
+Score this image.
+
+Position: Double Leg Vertical (BP6)
+Image: @Data/Images/Double Leg Vertical/IMG_1253.JPG
+
+Follow the orchestrator pipeline exactly: dispatch to the position scorer, apply common deductions, and return the final score using the output format specified in the orchestrator skill. Use the scoring orchestrator @.claude/skills/scoring-orchestrator/SKILL.md
+---
+Score this image.
+
+Position: Double Leg Vertical (BP6)
+Image: @Data/Images/Double Leg Vertical/IMG_1256.JPG
+
+Follow the orchestrator pipeline exactly: dispatch to the position scorer, apply common deductions, and return the final score using the output format specified in the orchestrator skill. Use the scoring orchestrator @.claude/skills/scoring-orchestrator/SKILL.md
+---
+Score this image.
+
+Position: Double Leg Vertical (BP6)
+Image: @Data/Images/Double Leg Vertical/IMG_1257.JPG
+
+Follow the orchestrator pipeline exactly: dispatch to the position scorer, apply common deductions, and return the final score using the output format specified in the orchestrator skill. Use the scoring orchestrator @.claude/skills/scoring-orchestrator/SKILL.md
+---
+Score this image.
+
+Position: Double Leg Vertical (BP6)
+Image: @Data/Images/Double Leg Vertical/IMG_1260.JPG
+
+Follow the orchestrator pipeline exactly: dispatch to the position scorer, apply common deductions, and return the final score using the output format specified in the orchestrator skill. Use the scoring orchestrator @.claude/skills/scoring-orchestrator/SKILL.md
+---
+Score this image.
+
+Position: Double Leg Vertical (BP6)
+Image: @Data/Images/Double Leg Vertical/IMG_1261.JPG
+
+Follow the orchestrator pipeline exactly: dispatch to the position scorer, apply common deductions, and return the final score using the output format specified in the orchestrator skill. Use the scoring orchestrator @.claude/skills/scoring-orchestrator/SKILL.md
+---
+Score this image.
+
+Position: Double Leg Vertical (BP6)
+Image: @Data/Images/Double Leg Vertical/IMG_1265.JPG
+
+Follow the orchestrator pipeline exactly: dispatch to the position scorer, apply common deductions, and return the final score using the output format specified in the orchestrator skill. Use the scoring orchestrator @.claude/skills/scoring-orchestrator/SKILL.md
+---
+Score this image.
+
+Position: Double Leg Vertical (BP6)
+Image: @Data/Images/Double Leg Vertical/IMG_1287.JPG
+
+Follow the orchestrator pipeline exactly: dispatch to the position scorer, apply common deductions, and return the final score using the output format specified in the orchestrator skill. Use the scoring orchestrator @.claude/skills/scoring-orchestrator/SKILL.md
+---
+Score this image.
+
+Position: Double Leg Vertical (BP6)
+Image: @Data/Images/Double Leg Vertical/IMG_1289.JPG
+
+Follow the orchestrator pipeline exactly: dispatch to the position scorer, apply common deductions, and return the final score using the output format specified in the orchestrator skill. Use the scoring orchestrator @.claude/skills/scoring-orchestrator/SKILL.md
+---
+Score this image.
+
+Position: Double Leg Vertical (BP6)
+Image: @Data/Images/Double Leg Vertical/IMG_1292.JPG
+
+Follow the orchestrator pipeline exactly: dispatch to the position scorer, apply common deductions, and return the final score using the output format specified in the orchestrator skill. Use the scoring orchestrator @.claude/skills/scoring-orchestrator/SKILL.md
+---
+Score this image.
+
+Position: Double Leg Vertical (BP6)
+Image: @Data/Images/Double Leg Vertical/IMG_1294.JPG
+
+Follow the orchestrator pipeline exactly: dispatch to the position scorer, apply common deductions, and return the final score using the output format specified in the orchestrator skill. Use the scoring orchestrator @.claude/skills/scoring-orchestrator/SKILL.md
+---
+Score this image.
+
+Position: Double Leg Vertical (BP6)
+Image: @Data/Images/Double Leg Vertical/IMG_1296.JPG
+
+Follow the orchestrator pipeline exactly: dispatch to the position scorer, apply common deductions, and return the final score using the output format specified in the orchestrator skill. Use the scoring orchestrator @.claude/skills/scoring-orchestrator/SKILL.md
+---
+Score this image.
+
+Position: Double Leg Vertical (BP6)
+Image: @Data/Images/Double Leg Vertical/IMG_1298.JPG
+
+Follow the orchestrator pipeline exactly: dispatch to the position scorer, apply common deductions, and return the final score using the output format specified in the orchestrator skill. Use the scoring orchestrator @.claude/skills/scoring-orchestrator/SKILL.md
+---
+Score this image.
+
+Position: Double Leg Vertical (BP6)
+Image: @Data/Images/Double Leg Vertical/IMG_1300.JPG
+
+Follow the orchestrator pipeline exactly: dispatch to the position scorer, apply common deductions, and return the final score using the output format specified in the orchestrator skill. Use the scoring orchestrator @.claude/skills/scoring-orchestrator/SKILL.md
+---
+Score this image.
+
+Position: Double Leg Vertical (BP6)
+Image: @Data/Images/Double Leg Vertical/IMG_1443.JPG
+
+Follow the orchestrator pipeline exactly: dispatch to the position scorer, apply common deductions, and return the final score using the output format specified in the orchestrator skill. Use the scoring orchestrator @.claude/skills/scoring-orchestrator/SKILL.md
+---
+Score this image.
+
+Position: Double Leg Vertical (BP6)
+Image: @Data/Images/Double Leg Vertical/IMG_1448.JPG
+
+Follow the orchestrator pipeline exactly: dispatch to the position scorer, apply common deductions, and return the final score using the output format specified in the orchestrator skill. Use the scoring orchestrator @.claude/skills/scoring-orchestrator/SKILL.md
+---
+Score this image.
+
+Position: Double Leg Vertical (BP6)
+Image: @Data/Images/Double Leg Vertical/IMG_1449.JPG
+
+Follow the orchestrator pipeline exactly: dispatch to the position scorer, apply common deductions, and return the final score using the output format specified in the orchestrator skill. Use the scoring orchestrator @.claude/skills/scoring-orchestrator/SKILL.md
+---
+Score this image.
+
+Position: Double Leg Vertical (BP6)
+Image: @Data/Images/Double Leg Vertical/IMG_1451.JPG
+
+Follow the orchestrator pipeline exactly: dispatch to the position scorer, apply common deductions, and return the final score using the output format specified in the orchestrator skill. Use the scoring orchestrator @.claude/skills/scoring-orchestrator/SKILL.md
+---
+Score this image.
+
+Position: Double Leg Vertical (BP6)
+Image: @Data/Images/Double Leg Vertical/IMG_1453.JPG
+
+Follow the orchestrator pipeline exactly: dispatch to the position scorer, apply common deductions, and return the final score using the output format specified in the orchestrator skill. Use the scoring orchestrator @.claude/skills/scoring-orchestrator/SKILL.md
+---
+Score this image.
+
+Position: Fishtail (BP8)
+Image: @Data/Images/Fishtail/IMG_1322.JPG
+
+Follow the orchestrator pipeline exactly: dispatch to the position scorer, apply common deductions, and return the final score using the output format specified in the orchestrator skill. Use the scoring orchestrator @.claude/skills/scoring-orchestrator/SKILL.md
+---
+Score this image.
+
+Position: Fishtail (BP8)
+Image: @Data/Images/Fishtail/IMG_1325.JPG
+
+Follow the orchestrator pipeline exactly: dispatch to the position scorer, apply common deductions, and return the final score using the output format specified in the orchestrator skill. Use the scoring orchestrator @.claude/skills/scoring-orchestrator/SKILL.md
+---
+Score this image.
+
+Position: Fishtail (BP8)
+Image: @Data/Images/Fishtail/IMG_1329.JPG
+
+Follow the orchestrator pipeline exactly: dispatch to the position scorer, apply common deductions, and return the final score using the output format specified in the orchestrator skill. Use the scoring orchestrator @.claude/skills/scoring-orchestrator/SKILL.md
+---
+Score this image.
+
+Position: Fishtail (BP8)
+Image: @Data/Images/Fishtail/IMG_1330.JPG
+
+Follow the orchestrator pipeline exactly: dispatch to the position scorer, apply common deductions, and return the final score using the output format specified in the orchestrator skill. Use the scoring orchestrator @.claude/skills/scoring-orchestrator/SKILL.md
+---
+Score this image.
+
+Position: Fishtail (BP8)
+Image: @Data/Images/Fishtail/IMG_1332.JPG
+
+Follow the orchestrator pipeline exactly: dispatch to the position scorer, apply common deductions, and return the final score using the output format specified in the orchestrator skill. Use the scoring orchestrator @.claude/skills/scoring-orchestrator/SKILL.md
+---
+Score this image.
+
+Position: Fishtail (BP8)
+Image: @Data/Images/Fishtail/IMG_1335.JPG
+
+Follow the orchestrator pipeline exactly: dispatch to the position scorer, apply common deductions, and return the final score using the output format specified in the orchestrator skill. Use the scoring orchestrator @.claude/skills/scoring-orchestrator/SKILL.md
+---
+Score this image.
+
+Position: Fishtail (BP8)
+Image: @Data/Images/Fishtail/IMG_1337.JPG
+
+Follow the orchestrator pipeline exactly: dispatch to the position scorer, apply common deductions, and return the final score using the output format specified in the orchestrator skill. Use the scoring orchestrator @.claude/skills/scoring-orchestrator/SKILL.md
+---
+Score this image.
+
+Position: Fishtail (BP8)
+Image: @Data/Images/Fishtail/IMG_1345.JPG
+
+Follow the orchestrator pipeline exactly: dispatch to the position scorer, apply common deductions, and return the final score using the output format specified in the orchestrator skill. Use the scoring orchestrator @.claude/skills/scoring-orchestrator/SKILL.md
+---
+Score this image.
+
+Position: Fishtail (BP8)
+Image: @Data/Images/Fishtail/IMG_1348.JPG
+
+Follow the orchestrator pipeline exactly: dispatch to the position scorer, apply common deductions, and return the final score using the output format specified in the orchestrator skill. Use the scoring orchestrator @.claude/skills/scoring-orchestrator/SKILL.md
+---
+Score this image.
+
+Position: Fishtail (BP8)
+Image: @Data/Images/Fishtail/IMG_1351.JPG
+
+Follow the orchestrator pipeline exactly: dispatch to the position scorer, apply common deductions, and return the final score using the output format specified in the orchestrator skill. Use the scoring orchestrator @.claude/skills/scoring-orchestrator/SKILL.md
+---
+Score this image.
+
+Position: Fishtail (BP8)
+Image: @Data/Images/Fishtail/IMG_1353.JPG
+
+Follow the orchestrator pipeline exactly: dispatch to the position scorer, apply common deductions, and return the final score using the output format specified in the orchestrator skill. Use the scoring orchestrator @.claude/skills/scoring-orchestrator/SKILL.md
+---
+Score this image.
+
+Position: Fishtail (BP8)
+Image: @Data/Images/Fishtail/IMG_1358.JPG
+
+Follow the orchestrator pipeline exactly: dispatch to the position scorer, apply common deductions, and return the final score using the output format specified in the orchestrator skill. Use the scoring orchestrator @.claude/skills/scoring-orchestrator/SKILL.md
+---
+Score this image.
+
+Position: Fishtail (BP8)
+Image: @Data/Images/Fishtail/IMG_1477.JPG
+
+Follow the orchestrator pipeline exactly: dispatch to the position scorer, apply common deductions, and return the final score using the output format specified in the orchestrator skill. Use the scoring orchestrator @.claude/skills/scoring-orchestrator/SKILL.md
+---
+Score this image.
+
+Position: Fishtail (BP8)
+Image: @Data/Images/Fishtail/IMG_1479.JPG
+
+Follow the orchestrator pipeline exactly: dispatch to the position scorer, apply common deductions, and return the final score using the output format specified in the orchestrator skill. Use the scoring orchestrator @.claude/skills/scoring-orchestrator/SKILL.md
+---
+Score this image.
+
+Position: Fishtail (BP8)
+Image: @Data/Images/Fishtail/IMG_1480.JPG
+
+Follow the orchestrator pipeline exactly: dispatch to the position scorer, apply common deductions, and return the final score using the output format specified in the orchestrator skill. Use the scoring orchestrator @.claude/skills/scoring-orchestrator/SKILL.md
+---
+Score this image.
+
+Position: Fishtail (BP8)
+Image: @Data/Images/Fishtail/IMG_1482.JPG
+
+Follow the orchestrator pipeline exactly: dispatch to the position scorer, apply common deductions, and return the final score using the output format specified in the orchestrator skill. Use the scoring orchestrator @.claude/skills/scoring-orchestrator/SKILL.md
+---
+Score this image.
+
+Position: Fishtail (BP8)
+Image: @Data/Images/Fishtail/IMG_1484.JPG
+
+Follow the orchestrator pipeline exactly: dispatch to the position scorer, apply common deductions, and return the final score using the output format specified in the orchestrator skill. Use the scoring orchestrator @.claude/skills/scoring-orchestrator/SKILL.md
+---
+Score this image.
+
+Position: Fishtail (BP8)
+Image: @Data/Images/Fishtail/IMG_1486.JPG
+
+Follow the orchestrator pipeline exactly: dispatch to the position scorer, apply common deductions, and return the final score using the output format specified in the orchestrator skill. Use the scoring orchestrator @.claude/skills/scoring-orchestrator/SKILL.md
+---
+Score this image.
+
+Position: Fishtail (BP8)
+Image: @Data/Images/Fishtail/IMG_1487.JPG
+
+Follow the orchestrator pipeline exactly: dispatch to the position scorer, apply common deductions, and return the final score using the output format specified in the orchestrator skill. Use the scoring orchestrator @.claude/skills/scoring-orchestrator/SKILL.md
+---
+Score this image.
+
+Position: Fishtail (BP8)
+Image: @Data/Images/Fishtail/IMG_1488.JPG
+
+Follow the orchestrator pipeline exactly: dispatch to the position scorer, apply common deductions, and return the final score using the output format specified in the orchestrator skill. Use the scoring orchestrator @.claude/skills/scoring-orchestrator/SKILL.md
+---
+Score this image.
+
+Position: Knight (BP17)
+Image: @Data/Images/Knight/IMG_1364.JPG
+
+Follow the orchestrator pipeline exactly: dispatch to the position scorer, apply common deductions, and return the final score using the output format specified in the orchestrator skill. Use the scoring orchestrator @.claude/skills/scoring-orchestrator/SKILL.md
+---
+Score this image.
+
+Position: Knight (BP17)
+Image: @Data/Images/Knight/IMG_1365.JPG
+
+Follow the orchestrator pipeline exactly: dispatch to the position scorer, apply common deductions, and return the final score using the output format specified in the orchestrator skill. Use the scoring orchestrator @.claude/skills/scoring-orchestrator/SKILL.md
+---
+Score this image.
+
+Position: Knight (BP17)
+Image: @Data/Images/Knight/IMG_1370.JPG
+
+Follow the orchestrator pipeline exactly: dispatch to the position scorer, apply common deductions, and return the final score using the output format specified in the orchestrator skill. Use the scoring orchestrator @.claude/skills/scoring-orchestrator/SKILL.md
+---
+Score this image.
+
+Position: Knight (BP17)
+Image: @Data/Images/Knight/IMG_1376.JPG
+
+Follow the orchestrator pipeline exactly: dispatch to the position scorer, apply common deductions, and return the final score using the output format specified in the orchestrator skill. Use the scoring orchestrator @.claude/skills/scoring-orchestrator/SKILL.md
+---
+Score this image.
+
+Position: Knight (BP17)
+Image: @Data/Images/Knight/IMG_1377.JPG
+
+Follow the orchestrator pipeline exactly: dispatch to the position scorer, apply common deductions, and return the final score using the output format specified in the orchestrator skill. Use the scoring orchestrator @.claude/skills/scoring-orchestrator/SKILL.md
+---
+Score this image.
+
+Position: Knight (BP17)
+Image: @Data/Images/Knight/IMG_1380.JPG
+
+Follow the orchestrator pipeline exactly: dispatch to the position scorer, apply common deductions, and return the final score using the output format specified in the orchestrator skill. Use the scoring orchestrator @.claude/skills/scoring-orchestrator/SKILL.md
+---
+Score this image.
+
+Position: Knight (BP17)
+Image: @Data/Images/Knight/IMG_1382.JPG
+
+Follow the orchestrator pipeline exactly: dispatch to the position scorer, apply common deductions, and return the final score using the output format specified in the orchestrator skill. Use the scoring orchestrator @.claude/skills/scoring-orchestrator/SKILL.md
+---
+Score this image.
+
+Position: Knight (BP17)
+Image: @Data/Images/Knight/IMG_1386.JPG
+
+Follow the orchestrator pipeline exactly: dispatch to the position scorer, apply common deductions, and return the final score using the output format specified in the orchestrator skill. Use the scoring orchestrator @.claude/skills/scoring-orchestrator/SKILL.md
+---
+Score this image.
+
+Position: Knight (BP17)
+Image: @Data/Images/Knight/IMG_1402.JPG
+
+Follow the orchestrator pipeline exactly: dispatch to the position scorer, apply common deductions, and return the final score using the output format specified in the orchestrator skill. Use the scoring orchestrator @.claude/skills/scoring-orchestrator/SKILL.md
+---
+Score this image.
+
+Position: Knight (BP17)
+Image: @Data/Images/Knight/IMG_1410.JPG
+
+Follow the orchestrator pipeline exactly: dispatch to the position scorer, apply common deductions, and return the final score using the output format specified in the orchestrator skill. Use the scoring orchestrator @.claude/skills/scoring-orchestrator/SKILL.md
+---
+Score this image.
+
+Position: Knight (BP17)
+Image: @Data/Images/Knight/IMG_1414.JPG
+
+Follow the orchestrator pipeline exactly: dispatch to the position scorer, apply common deductions, and return the final score using the output format specified in the orchestrator skill. Use the scoring orchestrator @.claude/skills/scoring-orchestrator/SKILL.md
+---
+Score this image.
+
+Position: Knight (BP17)
+Image: @Data/Images/Knight/IMG_1415.JPG
+
+Follow the orchestrator pipeline exactly: dispatch to the position scorer, apply common deductions, and return the final score using the output format specified in the orchestrator skill. Use the scoring orchestrator @.claude/skills/scoring-orchestrator/SKILL.md
+---
+Score this image.
+
+Position: Knight (BP17)
+Image: @Data/Images/Knight/IMG_1417.JPG
+
+Follow the orchestrator pipeline exactly: dispatch to the position scorer, apply common deductions, and return the final score using the output format specified in the orchestrator skill. Use the scoring orchestrator @.claude/skills/scoring-orchestrator/SKILL.md
+---
+Score this image.
+
+Position: Knight (BP17)
+Image: @Data/Images/Knight/IMG_1492.JPG
+
+Follow the orchestrator pipeline exactly: dispatch to the position scorer, apply common deductions, and return the final score using the output format specified in the orchestrator skill. Use the scoring orchestrator @.claude/skills/scoring-orchestrator/SKILL.md
+---
+Score this image.
+
+Position: Knight (BP17)
+Image: @Data/Images/Knight/IMG_1495.JPG
+
+Follow the orchestrator pipeline exactly: dispatch to the position scorer, apply common deductions, and return the final score using the output format specified in the orchestrator skill. Use the scoring orchestrator @.claude/skills/scoring-orchestrator/SKILL.md
+---
+Score this image.
+
+Position: Knight (BP17)
+Image: @Data/Images/Knight/IMG_1499.JPG
+
+Follow the orchestrator pipeline exactly: dispatch to the position scorer, apply common deductions, and return the final score using the output format specified in the orchestrator skill. Use the scoring orchestrator @.claude/skills/scoring-orchestrator/SKILL.md
+---
+Score this image.
+
+Position: Knight (BP17)
+Image: @Data/Images/Knight/IMG_1501.JPG
+
+Follow the orchestrator pipeline exactly: dispatch to the position scorer, apply common deductions, and return the final score using the output format specified in the orchestrator skill. Use the scoring orchestrator @.claude/skills/scoring-orchestrator/SKILL.md
+---
+Score this image.
+
+Position: Knight (BP17)
+Image: @Data/Images/Knight/IMG_1505.JPG
+
+Follow the orchestrator pipeline exactly: dispatch to the position scorer, apply common deductions, and return the final score using the output format specified in the orchestrator skill. Use the scoring orchestrator @.claude/skills/scoring-orchestrator/SKILL.md
+---
+Score this image.
+
+Position: Knight (BP17)
+Image: @Data/Images/Knight/IMG_1506.JPG
+
+Follow the orchestrator pipeline exactly: dispatch to the position scorer, apply common deductions, and return the final score using the output format specified in the orchestrator skill. Use the scoring orchestrator @.claude/skills/scoring-orchestrator/SKILL.md
