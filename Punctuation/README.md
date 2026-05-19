@@ -17,14 +17,14 @@ Punctuation/
 ├── README.md
 ├── .claude/
 │   └── skills/
-│       ├── scoring-orchestrator/               # Entrada del sistema — coordina el pipeline
-│       ├── scoring-common-deductions/          # Catálogo centralizado de deducciones D1..D5
-│       ├── scoring-bp06-double-leg-vertical/   # Scorer para BP6
-│       ├── scoring-bp08-fishtail/              # Scorer para BP8
-│       ├── scoring-bp14c-bent-knee-vertical/   # Scorer para BP14c
-│       ├── scoring-bp14d-bent-knee-surface-arch/ # Scorer para BP14d
-│       └── scoring-bp17-knight/                # Scorer para BP17
-├── references/                                 # Cartas oficiales de alturas y deducciones
+│       ├── scoring-orchestrator/                           # Entrada del sistema — coordina el pipeline
+│       ├── scoring-common-deductions/                      # Catálogo centralizado de deducciones D1..D5
+│       ├── scoring-bp06-double-leg-vertical/               # Scorer para BP6
+│       ├── scoring-bp08-fishtail/                          # Scorer para BP8
+│       ├── scoring-bp14c-bent-knee-vertical/               # Scorer para BP14c
+│       ├── scoring-bp14d-bent-knee-surface-arch/           # Scorer para BP14d
+│       └── scoring-bp17-knight/                            # Scorer para BP17
+├── references/                                             # Tablas oficiales de alturas y deducciones
 │   ├── Fishtail_punctuation.png
 │   ├── Bent_knee_vertical_punctuation.png
 │   ├── Knight_punctuation.png
@@ -32,17 +32,17 @@ Punctuation/
 │   ├── Bent_knee_surface_arch_punctuation.png
 │   └── Deductions.png
 ├── scripts/
-│   ├── score_image.py       # Genera el prompt canónico para una imagen individual
-│   ├── score_batch.py       # Genera prompts en lote desde un Excel de entrada
-│   └── evaluate_scores.py   # Compara predicciones del modelo con puntuaciones del juez
+│   ├── score_image.py                                      # Genera el prompt canónico para una imagen individual
+│   ├── score_batch.py                                      # Genera prompts en lote desde un Excel de entrada
+│   └── evaluate_scores.py                                  # Compara predicciones del modelo con puntuaciones del juez
 ├── data/
-│   ├── subset_puntuation.xlsx        # Lista de imágenes a puntuar (POSITION, IMAGE)
-│   ├── subset_puntuation_juez1.xlsx  # Ground truth — puntuaciones reales del juez
-│   └── prompts_generated.txt         # Prompts generados por score_batch.py
+│   ├── subset_puntuation.xlsx                              # Lista de imágenes a puntuar (POSITION, IMAGE)
+│   ├── subset_puntuation_juez1.xlsx                        # Ground truth — puntuaciones reales del juez
+│   └── prompts_generated.txt                               # Prompts generados por score_batch.py
 └── results/
-    ├── subset_puntuation_generated.xlsx  # Puntuaciones emitidas por el modelo
-    ├── score_evaluation.json             # Métricas de evaluación (JSON estructurado)
-    └── score_report.html                 # Informe visual interactivo
+    ├── subset_puntuation_generated.xlsx                    # Puntuaciones emitidas por el modelo
+    ├── score_evaluation.json                               # Métricas de evaluación (JSON estructurado)
+    └── score_report.html                                   # Informe visual interactivo
 ```
 
 ---
@@ -59,10 +59,10 @@ Módulo centralizado con el catálogo completo de deducciones D1–D5, derivado 
 
 | ID  | Concepto                                         | Escala                                                     |
 |-----|--------------------------------------------------|------------------------------------------------------------|
-| D1  | Desviación del eje de la pierna vertical         | 0° → 0 · 1–15° → −0.2 · 15–30° → −0.5 · >30° → −1.0      |
-| D2  | Extensión de rodilla (pierna de referencia)      | 180° → 0 · 170° → −0.1 · 150° → −0.3 · 120° → −0.6 · <120° → −1.0 |
-| D3  | Extensión del pie (por pie visible)              | pointed → 0 · relajado → −0.1 · cocked → −0.2 · flat → −0.3 |
-| D4  | Línea del tronco (solo posiciones rectas)        | recto → 0 · leve → −0.1 · moderado → −0.3 · pronunciado → −0.6 |
+| D1  | Desviación del eje de la pierna vertical         | 0° → 0 / 1–15° → −0.2 / 15–30° → −0.5 / >30° → −1.0      |
+| D2  | Extensión de rodilla (pierna de referencia)      | 180° → 0 / 170° → −0.1 / 150° → −0.3 / 120° → −0.6 / <120° → −1.0 |
+| D3  | Extensión del pie (por pie visible)              | pointed → 0 / relajado → −0.1 / cocked → −0.2 / flat → −0.3 |
+| D4  | Línea del tronco (solo posiciones rectas)        | recto → 0 / leve → −0.1 / moderado → −0.3 / pronunciado → −0.6 |
 | D5  | Pierna partner (posiciones con split: BP8, BP14c, BP14d, BP17) | misma escala que D1 |
 
 En las posiciones con arco (BP14d, BP17), el arco es la forma esperada y **no se penaliza**; en cambio, su ausencia se penaliza bajo D4.
