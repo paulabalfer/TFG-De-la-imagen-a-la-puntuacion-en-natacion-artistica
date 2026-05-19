@@ -33,12 +33,17 @@ TFG_repo/
 ├── Fine-tunning de vLLM pequeño/                          # Enfoque Clasificación 3: fine-tuning LoRA de vLLM
 │   ├── Fine_tuning_SmolVLM_500M.ipynb
 │   └── smolvlm_lora_natacion/                             
-└── Sistema basado en skills con vLLMs/                    # Enfoque Clasificación 4: clasificación por skills sin entrenamiento
+├── Sistema basado en skills con vLLMs/                    # Enfoque Clasificación 4: clasificación por skills sin entrenamiento
+│   ├── data/
+│   ├── splits/
+│   ├── results/
+│   ├── scripts/
+│   └── .agents/skills/
+└── Punctuation/                                           # Módulo de puntuación automática de ejecución técnica
     ├── data/
-    ├── splits/
     ├── results/
     ├── scripts/
-    └── .agents/skills/
+    └── references/
 ```
 
 ---
@@ -83,6 +88,10 @@ Adaptación de **`HuggingFaceTB/SmolVLM-500M-Instruct`** a la tarea mediante LoR
 ### `Sistema basado en skills con vLLMs/` — Clasificación por skills sin entrenamiento
 
 Sistema basado en **prompts estructurados como skills** para LLMs de visión, sin ningún entrenamiento ni fine-tuning. Alcanza un **99,38 % de accuracy** sobre 6 000 imágenes. La skill orquestadora evalúa cada imagen contra las 5 posiciones en paralelo y aplica reglas de agregación para emitir la clase.
+
+### `Punctuation/` — Puntuación automática de ejecución técnica
+
+Sistema de evaluación automática de la **calidad de ejecución** de las posiciones clasificadas, utilizando LLMs de visión con prompts estructurados. Genera una puntuación técnica para cada imagen sin entrenamiento, siguiendo criterios inspirados en el reglamento de World Aquatics.
 
 ---
 
