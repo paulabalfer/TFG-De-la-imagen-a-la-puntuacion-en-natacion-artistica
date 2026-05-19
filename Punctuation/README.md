@@ -17,14 +17,14 @@ Punctuation/
 ├── README.md
 ├── .claude/
 │   └── skills/
-│       ├── scoring-orchestrator/                           # Entrada del sistema — coordina el pipeline
-│       ├── scoring-common-deductions/                      # Catálogo centralizado de deducciones D1..D5
-│       ├── scoring-bp06-double-leg-vertical/               # Scorer para BP6
-│       ├── scoring-bp08-fishtail/                          # Scorer para BP8
-│       ├── scoring-bp14c-bent-knee-vertical/               # Scorer para BP14c
-│       ├── scoring-bp14d-bent-knee-surface-arch/           # Scorer para BP14d
-│       └── scoring-bp17-knight/                            # Scorer para BP17
-├── references/                                             # Tablas oficiales de alturas y deducciones
+│       ├── scoring-orchestrator/SKILL.md                    # Entrada del sistema — coordina el pipeline
+│       ├── scoring-common-deductions/SKILL.md               # Catálogo centralizado de deducciones D1..D5
+│       ├── scoring-bp06-double-leg-vertical/SKILL.md        # Scorer para BP6
+│       ├── scoring-bp08-fishtail/SKILL.md                   # Scorer para BP8
+│       ├── scoring-bp14c-bent-knee-vertical/SKILL.md        # Scorer para BP14c
+│       ├── scoring-bp14d-bent-knee-surface-arch/SKILL.md    # Scorer para BP14d
+│       └── scoring-bp17-knight/SKILL.md                     # Scorer para BP17
+├── references/                                              # Tablas oficiales de alturas y deducciones
 │   ├── Fishtail_punctuation.png
 │   ├── Bent_knee_vertical_punctuation.png
 │   ├── Knight_punctuation.png
@@ -32,17 +32,17 @@ Punctuation/
 │   ├── Bent_knee_surface_arch_punctuation.png
 │   └── Deductions.png
 ├── scripts/
-│   ├── score_image.py                                      # Genera el prompt canónico para una imagen individual
-│   ├── score_batch.py                                      # Genera prompts en lote desde un Excel de entrada
-│   └── evaluate_scores.py                                  # Compara predicciones del modelo con puntuaciones del juez
+│   ├── score_image.py                                       # Genera el prompt canónico para una imagen individual
+│   ├── score_batch.py                                       # Genera prompts en lote desde un Excel de entrada
+│   └── evaluate_scores.py                                   # Compara predicciones del modelo con puntuaciones del juez
 ├── data/
-│   ├── subset_puntuation.xlsx                              # Lista de imágenes a puntuar (POSITION, IMAGE)
-│   ├── subset_puntuation_juez1.xlsx                        # Ground truth — puntuaciones reales del juez
-│   └── prompts_generated.txt                               # Prompts generados por score_batch.py
+│   ├── subset_puntuation.xlsx                               # Lista de imágenes a puntuar (POSITION, IMAGE)
+│   ├── subset_puntuation_juez1.xlsx                         # Ground truth — puntuaciones reales del juez
+│   └── prompts_generated.txt                                # Prompts generados por score_batch.py
 └── results/
-    ├── subset_puntuation_generated.xlsx                    # Puntuaciones emitidas por el modelo
-    ├── score_evaluation.json                               # Métricas de evaluación (JSON estructurado)
-    └── score_report.html                                   # Informe visual interactivo
+    ├── subset_puntuation_generated.xlsx                     # Puntuaciones emitidas por el modelo
+    ├── score_evaluation.json                                # Métricas de evaluación (JSON estructurado)
+    └── score_report.html                                    # Informe visual interactivo
 ```
 
 ---
