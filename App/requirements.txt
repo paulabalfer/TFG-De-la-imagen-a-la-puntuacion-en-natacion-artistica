@@ -1,0 +1,19 @@
+# Natación Artística — App dependencies
+# Install with:  pip install -r requirements.txt
+
+# UI
+gradio>=4.20.0
+
+# Classification (SmolVLM + LoRA)
+torch>=2.1.0
+transformers>=4.40.0
+peft>=0.10.0
+Pillow>=10.0.0
+numpy>=1.24.0
+
+# Scoring (Anthropic API)
+anthropic>=0.25.0
+
+# Optional: GPU acceleration (uncomment if you have CUDA 12.x)
+# --index-url https://download.pytorch.org/whl/cu121
+# torch>=2.1.0+cu121
