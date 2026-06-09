@@ -84,10 +84,10 @@ def main() -> int:
     parser.add_argument("--generated", type=Path,
                         default=ROOT / "results" / "subset_puntuation_generated.xlsx")
     parser.add_argument("--judge", type=Path,
-                        default=ROOT / "data" / "subset_puntuation_juez1.xlsx")
+                        default=ROOT / "data" / "subset_puntuation_expert.xlsx")
     parser.add_argument("--output-dir", type=Path, default=ROOT / "results")
-    parser.add_argument("--tolerance", type=float, default=0.5,
-                        help="Half-width of the acceptance band (default 0.5)")
+    parser.add_argument("--tolerance", type=float, default=1,
+                        help="Half-width of the acceptance band (default 1)")
     args = parser.parse_args()
 
     tol = args.tolerance
