@@ -10,6 +10,7 @@ Reads:
 Writes:
   results/score_evaluation.json
   results/score_report.html
+  results/score_scatter.png
 
 Usage:
     python evaluate_scores.py [--generated PATH] [--judge PATH] [--output-dir DIR] [--tolerance FLOAT]
@@ -24,6 +25,11 @@ from datetime import datetime
 from pathlib import Path
 
 import openpyxl
+import matplotlib
+matplotlib.use("Agg")
+import matplotlib.pyplot as plt
+
+import numpy as np
 
 HERE = Path(__file__).resolve().parent
 ROOT = HERE.parent
@@ -196,9 +202,63 @@ def main() -> int:
     html_path = args.output_dir / "score_report.html"
     html_path.write_text(html, encoding="utf-8")
 
-    print(f"\nJSON  -> {json_path}")
-    print(f"HTML  -> {html_path}")
+    # ── Scatter plot ──────────────────────────────────────────────────────────
+    scatter_path = args.output_dir / "score_scatter.png"
+    _build_scatter(results_list, tol, scatter_path)
+
+    print(f"\nJSON    -> {json_path}")
+    print(f"HTML    -> {html_path}")
+    print(f"Scatter -> {scatter_path}")
     return 0
+
+
+def _build_scatter(results_list: list[dict], tol: float, out_path: Path) -> None:
+    COLORS = {
+        "Double Leg Vertical":             "#1f77b4",
+        "Fishtail":                        "#2ca02c",
+        "Bent Knee Vertical":              "#ff7f0e",
+        "Bent Knee Surface Arch Position": "#d62728",
+        "Knight":                          "#9467bd",
+    }
+
+    judge_scores = np.array([r["judge_score"]     for r in results_list])
+    gen_scores   = np.array([r["generated_score"] for r in results_list])
+
+    fig, ax = plt.subplots(figsize=(7, 7))
+
+    lo = min(judge_scores.min(), gen_scores.min()) - 0.5
+    hi = max(judge_scores.max(), gen_scores.max()) + 0.5
+    diag = np.array([lo, hi])
+
+    # Tolerance band
+    ax.fill_between(diag, diag - tol, diag + tol, color="#aaaaaa", alpha=0.2,
+                    zorder=1, label=f"±{tol} tolerance band")
+
+    # Perfect-agreement diagonal
+    ax.plot(diag, diag, color="#333333", linewidth=1.5, linestyle="--",
+            zorder=2, label="Perfect agreement")
+
+    # Scatter points coloured by position
+    for pos, color in COLORS.items():
+        idx = [i for i, r in enumerate(results_list) if r["position"] == pos]
+        if not idx:
+            continue
+        ax.scatter(judge_scores[idx], gen_scores[idx],
+                   color=color, s=55, alpha=0.85, edgecolors="white",
+                   linewidths=0.5, zorder=3, label=SHORT.get(pos, pos))
+
+    ax.set_xlim(lo, hi)
+    ax.set_ylim(lo, hi)
+    ax.set_aspect("equal")
+    ax.set_xlabel("Expert score", fontsize=12)
+    ax.set_ylabel("Generated score", fontsize=12)
+    ax.set_title("Expert vs Generated Scores", fontsize=14, pad=12)
+    ax.grid(True, linestyle=":", color="#cccccc", linewidth=0.7)
+    ax.legend(fontsize=9, loc="upper left", framealpha=0.9)
+
+    fig.tight_layout()
+    fig.savefig(out_path, dpi=150, bbox_inches="tight")
+    plt.close(fig)
 
 
 def _build_html(results_list, pos_stats, overall_accuracy, correct, total, tol) -> str:
