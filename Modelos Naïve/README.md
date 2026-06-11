@@ -53,8 +53,10 @@ Extensión del enfoque anterior que combina **múltiples descripciones por clase
 Enriquece las descripciones textuales de CLIP con **imágenes de referencia** verificadas de cada clase (extraídas del reglamento), incorporando información visual directa como ejemplos few-shot.
 
 - **Paradigma**: few-shot visual, sin reentrenamiento del modelo base.
-- **Entrada**: imagen a clasificar + imágenes de referencia por clase + definiciones textuales.
+- **Entrada**: imagen a clasificar + una imagen de referencia por clase + definiciones textuales.
 - **Motivación**: estudiar si añadir ejemplos visuales explícitos mejora la discriminación en clases confusas.
+
+> **Nota:** Las imágenes de referencia no se incluyen en el repositorio; este enfoque requiere disponer de ellas para ejecutarse.
 
 ---
 
@@ -62,9 +64,11 @@ Enriquece las descripciones textuales de CLIP con **imágenes de referencia** ve
 
 Aplicación de **Gradient-weighted Class Activation Mapping (Grad-CAM)** sobre el modelo CLIP para visualizar las regiones de la imagen que mayor influencia tienen en cada predicción.
 
-- **Entrada**: imágenes originales (no aumentadas) — 5 muestras representativas por posición.
+- **Entrada**: imágenes originales (no aumentadas), 5 muestras representativas por posición.
 - **Salida**: mapas de calor superpuestos sobre las imágenes originales.
 - **Motivación**: aportar explicabilidad al sistema e identificar si el modelo atiende a las regiones corporales relevantes (posición de piernas, arco de espalda) o a artefactos del fondo.
+
+> **Nota:** Este análisis requiere las imágenes originales, no incluidas en el repositorio.
 
 ---
 

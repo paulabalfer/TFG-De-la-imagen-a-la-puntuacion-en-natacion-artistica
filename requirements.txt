@@ -34,6 +34,7 @@ pyparsing==3.3.2
 
 # --- Utilidades ---
 tqdm==4.67.3
+openpyxl>=3.1.0
 six==1.17.0
 python-dateutil==2.9.0.post0
 tzdata==2025.3

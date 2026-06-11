@@ -14,13 +14,10 @@ Este proyecto compara distintos enfoques de clasificación automática de **5 po
 TFG_repo/
 ├── README.md
 ├── requirements.txt                                       # Dependencias pip del entorno
-├── Data/                                                  # Dataset, referencias e índices de imágenes
+├── Data/                                                  # Índices del dataset y documentación
 │   ├── Data_process.ipynb                                 
 │   ├── synchronized_swimming.csv                          
-│   ├── synchronized_swimming_aug.csv                     
-│   ├── Images/                                            
-│   ├── Augmented/                                         
-│   └── references/                                        # Material de referencia visual
+│   └── synchronized_swimming_aug.csv                     
 ├── Modelos Naïve/                                         # Enfoque Clasificación 1: modelos sobre imagen completa
 │   └── Modelos_por_análisis_visual_completo.ipynb
 ├── Modelo preentrenado basado en coordenadas/             # Enfoque Clasificación 2: clasificación por keypoints
@@ -109,6 +106,12 @@ pip install -r requirements.txt
 > **Nota:** Si se dispone de GPU, consultar las instrucciones de instalación de [PyTorch con CUDA](https://pytorch.org/get-started/locally/) y [TensorFlow con GPU](https://www.tensorflow.org/install/pip) para sustituir los paquetes CPU por sus versiones aceleradas.
 
 Cada directorio es independiente y autocontenido; consultar su `README.md` para las instrucciones de ejecución específicas.
+
+---
+
+## Privacidad e imágenes del dataset
+
+Las imágenes de entrenamiento y evaluación muestran deportistas que podrían ser identificables. Por este motivo, **las imágenes no se incluyen en este repositorio**. El código, los scripts, los notebooks y los ficheros de índice CSV están disponibles de forma abierta; el acceso a las imágenes podrá valorarse bajo petición justificada, indicando el uso previsto y con las medidas de protección de datos correspondientes.
 
 ---
 

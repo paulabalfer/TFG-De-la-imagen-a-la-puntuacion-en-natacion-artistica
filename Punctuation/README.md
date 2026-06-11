@@ -143,8 +143,8 @@ Notes:           Clean Knight with minimal deductions; the arch is well-defined.
 Genera el prompt canónico para enviar a Claude con una imagen y una posición conocida. La lógica de puntuación reside en los skills; este script es solo un driver de entrada.
 
 ```bash
-python scripts/score_image.py ../../Data/Images/Fishtail/001.jpg Fishtail
-python scripts/score_image.py ../../Data/Images/Knight/IMG_1364.JPG BP17
+python scripts/score_image.py <ruta/a/imagen.jpg> Fishtail
+python scripts/score_image.py <ruta/a/imagen.jpg> BP17
 ```
 
 Acepta tanto el nombre completo de la posición como el código BP.
@@ -205,7 +205,7 @@ Los otros módulos del TFG abordan la **clasificación** de la posición. Este m
 ### Puntuar una imagen individual
 
 ```bash
-python scripts/score_image.py ../../Data/Images/Fishtail/IMG_001.jpg Fishtail
+python scripts/score_image.py <ruta/a/imagen.jpg> Fishtail
 ```
 
 El script imprime el prompt a copiar en Claude con la imagen adjunta.

@@ -94,7 +94,7 @@ El script `split_random.py` lee `data/all_files.txt` y divide las imágenes en l
 
 - **Entrada**: `data/all_files.txt` con todos los nombres de imagen.
 - **Salida**: ficheros `splits/batch_01.txt` … `splits/batch_NN.txt`.
-- **Parámetro clave**: `IMAGES_PER_FILE = 250`.
+- **Parámetros clave**: `IMAGES_PER_FILE = 250`, `RANDOM_SEED = 42` (garantiza reproducibilidad de la partición).
 
 ---
 

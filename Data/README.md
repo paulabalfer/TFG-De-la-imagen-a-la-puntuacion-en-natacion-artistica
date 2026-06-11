@@ -12,23 +12,10 @@ Data/
 ├── synchronized_swimming.csv                     # Índice del dataset original (263 imágenes)
 ├── synchronized_swimming_aug.csv                 # Índice del dataset aumentado (6 575 imágenes)
 ├── Figures-Manual-2022-2025-ALL.pdf              # Manual oficial de figuras de World Aquatics
-├── JUDGES SUPPORT_Height Chart Jan 2025.pdf      # Material de apoyo para jueces
-├── Images/                                       # Imágenes originales por clase
-│   ├── Bent Knee Surface Arch Position/          # 39 imágenes
-│   ├── Bent Knee Vertical/                       # 52 imágenes
-│   ├── Double Leg Vertical/                      # 50 imágenes
-│   ├── Fishtail/                                 # 59 imágenes
-│   └── Knight/                                   # 63 imágenes
-├── Augmented/                                    # Imágenes generadas por data augmentation
-│   ├── Bent Knee Surface Arch Position/          # 975 imágenes
-│   ├── Bent Knee Vertical/                       # 1 300 imágenes
-│   ├── Double Leg Vertical/                      # 1 250 imágenes
-│   ├── Fishtail/                                 # 1 475 imágenes
-│   └── Knight/                                   # 1 575 imágenes
-└── references/                                   # Material de referencia visual
-    ├── positions/                                # 1 fotografía de referencia por clase
-    └── punctuation/                              # Diagramas de puntuación y deducciones
+└── JUDGES SUPPORT_Height Chart Jan 2025.pdf      # Material de apoyo para jueces
 ```
+
+> **Nota:** Las imágenes del dataset (`Images/`, `Augmented/`) no se incluyen en este repositorio por motivos de privacidad. Su acceso puede solicitarse de forma justificada.
 
 ---
 
@@ -57,8 +44,8 @@ Ambos ficheros siguen el mismo esquema de dos columnas:
 | `filepath` | Ruta relativa a la imagen desde la raíz del repositorio |
 | `label` | Nombre de la clase (coincide con el nombre del subdirectorio) |
 
-- **`synchronized_swimming.csv`** — lista las imágenes originales de `Images/`.
-- **`synchronized_swimming_aug.csv`** — lista las imágenes aumentadas de `Augmented/`.
+- **`synchronized_swimming.csv`** — lista las 263 imágenes originales con su etiqueta de clase.
+- **`synchronized_swimming_aug.csv`** — lista las 6 575 imágenes aumentadas con su etiqueta de clase.
 
 Estos índices son consumidos directamente por los notebooks del proyecto para cargar y particionar los datos sin depender de la estructura de directorios en tiempo de ejecución.
 
@@ -98,23 +85,6 @@ Las imágenes aumentadas se nombran siguiendo el patrón `IMG_<id>_aug<n>.jpg`, 
 
 ## Material de referencia
 
-### `references/positions/`
-
-Contiene una fotografía de referencia por clase (5 imágenes JPG), utilizadas como ejemplos few-shot en el enfoque CLIP del directorio [`Modelos Naïve/`](../Modelos\ Naïve/README.md).
-
-### `references/punctuation/`
-
-Contiene 6 diagramas PNG con los criterios de puntuación y deducción por posición, extraídos del reglamento oficial:
-
-| Fichero | Contenido |
-|---|---|
-| `Double_leg_vertical_punctuation.png` | Criterios BP6 |
-| `Fishtail_punctuation.png` | Criterios BP8 |
-| `Bent_knee_vertical_punctuation.png` | Criterios BP14c |
-| `Bent_knee_surface_arch_punctuation.png` | Criterios BP14d |
-| `Knight_punctuation.png` | Criterios BP17 |
-| `Deductions.png` | Tabla general de deducciones |
-
 ### PDFs de documentación
 
 - **`Figures-Manual-2022-2025-ALL.pdf`** — Manual oficial de figuras de World Aquatics (2022–2025). Define las especificaciones biomecánicas de cada posición y es la fuente primaria de los criterios de clasificación.
@@ -147,4 +117,4 @@ El notebook es autocontenido. Ejecutar las celdas **en orden de arriba a abajo**
 3. **Etapa 2** — Data augmentation (25 variantes por imagen) y escritura en `Augmented/`
 4. Generación de `synchronized_swimming_aug.csv` con el índice del dataset aumentado
 
-> **Nota**: la augmentation de 263 imágenes a 6 575 puede tardar varios minutos. Las imágenes originales deben estar presentes en `Images/` antes de ejecutar.
+> **Nota**: la augmentation de 263 imágenes a 6 575 puede tardar varios minutos. Las imágenes originales deben estar disponibles en `Images/` antes de ejecutar (no incluidas en el repositorio; ver nota de privacidad arriba).

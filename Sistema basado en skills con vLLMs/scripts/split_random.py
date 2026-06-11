@@ -4,7 +4,8 @@ import math
 
 INPUT_FILE = "data/all_files.txt"
 IMAGES_PER_FILE = 250
-OUTPUT_DIR = "splits2"
+OUTPUT_DIR = "splits"
+RANDOM_SEED = 42
 
 os.makedirs(OUTPUT_DIR, exist_ok=True)
 
@@ -14,6 +15,7 @@ with open(INPUT_FILE, "r") as f:
 total_images = len(all_images)
 print(f"Total images in pool: {total_images}")
 
+random.seed(RANDOM_SEED)
 random.shuffle(all_images)
 
 num_files = math.ceil(total_images / IMAGES_PER_FILE)
