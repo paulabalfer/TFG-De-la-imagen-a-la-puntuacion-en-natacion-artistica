@@ -36,11 +36,16 @@ TFG_repo/
 │   ├── results/
 │   ├── scripts/
 │   └── .agents/skills/
-└── Punctuation/                                           # Módulo de puntuación automática de ejecución técnica
-    ├── data/
-    ├── results/
-    ├── scripts/
-    └── references/
+├── Punctuation/                                           # Módulo de puntuación automática de ejecución técnica
+│   ├── data/
+│   ├── results/
+│   ├── scripts/
+│   └── references/
+└── App/                                                   # Interfaz web integrada (clasificación + puntuación)
+    ├── app.py
+    ├── classifier.py
+    ├── scorer.py
+    └── requirements.txt
 ```
 
 ---
@@ -89,6 +94,22 @@ Sistema basado en **prompts estructurados como skills** para LLMs de visión, si
 ### `Punctuation/` — Puntuación automática de ejecución técnica
 
 Sistema de evaluación automática de la **calidad de ejecución** de las posiciones clasificadas, utilizando LLMs de visión con prompts estructurados. Genera una puntuación técnica para cada imagen sin entrenamiento, siguiendo criterios inspirados en el reglamento de World Aquatics.
+
+---
+
+### `App/` — Interfaz web integrada
+
+Aplicación **Gradio** que combina los módulos de clasificación y puntuación en una única interfaz interactiva. El pipeline completo es:
+
+1. El usuario sube una fotografía de una nadadora.
+2. **`classifier.py`** clasifica la posición localmente usando SmolVLM-500M + LoRA (92 % accuracy, sin API externa).
+3. **`scorer.py`** puntúa la ejecución técnica mediante la Anthropic API (Claude) con el sistema de skills de `Punctuation/` (paso opcional; requiere API key).
+
+La interfaz muestra la posición detectada con su confianza, la distribución de probabilidades sobre las 5 clases, el informe de puntuación y la tabla oficial de alturas de referencia de World Aquatics.
+
+```bash
+python App/app.py   # abre http://127.0.0.1:7860
+```
 
 ---
 
