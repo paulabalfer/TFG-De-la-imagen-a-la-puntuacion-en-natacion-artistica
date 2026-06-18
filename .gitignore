@@ -1,5 +1,8 @@
 # ── Claude Code ───────────────────────────────────────────────────────────────
 .claude/
+!Punctuation/.claude/
+!Punctuation/.claude/skills/
+!Punctuation/.claude/skills/**
 
 # ── Entorno virtual Python ────────────────────────────────────────────────────
 TFG_ENV/
