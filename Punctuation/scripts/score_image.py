@@ -4,7 +4,7 @@ score_image.py — Entry point to score a single artistic-swimming image
 against a KNOWN position, using the `scoring-orchestrator` skill.
 
 This script is a thin driver. The real scoring logic lives in the
-Claude skills under `.claude/skills/`. This file:
+Claude skills under `.agents/skills_punctuation/`. This file:
 
   1. Validates inputs (image path + position label).
   2. Prints the canonical prompt to send to Claude so the orchestrator
@@ -57,14 +57,16 @@ def resolve_position(raw: str) -> str:
 def build_prompt(image_path: Path, code: str) -> str:
     name, skill, chart = POSITION_LABELS[code]
     chart_path = REFERENCES / chart
+    orchestrator_ref = "@.agents/skills_punctuation/scoring-orchestrator/SKILL.md"
+    scorer_ref = f"@.agents/skills_punctuation/{skill}/SKILL.md"
     return (
         f"Use the `scoring-orchestrator` skill to score this image.\n\n"
-        f"Image:       {image_path}\n"
-        f"Position:    {name} ({code})\n"
-        f"Scorer:      {skill}\n"
+        f"Image:        {image_path}\n"
+        f"Position:     {name} ({code})\n"
+        f"Scorer skill: {scorer_ref}\n"
         f"Height chart: {chart_path}\n\n"
-        f"Dispatch to the scorer, apply scoring-common-deductions, and return "
-        f"the final 0–10 score in the orchestrator's output format."
+        f"Follow {orchestrator_ref}: dispatch to the scorer, apply scoring-common-deductions, "
+        f"and return the final 0–10 score in the orchestrator's output format."
     )
 
 

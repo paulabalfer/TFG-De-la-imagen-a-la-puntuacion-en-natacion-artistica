@@ -105,6 +105,6 @@ http://127.0.0.1:7860
 ## Dependencias externas necesarias
 
 - **Adaptador LoRA**: `Fine-tunning de vLLM pequeño/smolvlm_lora_natacion/mejor_checkpoint` y `adaptador_lora_final` deben estar presentes (generados al ejecutar el notebook de fine-tuning).
-- **Skills de puntuación**: `Punctuation/.claude/skills/` debe contener las carpetas de skills correspondientes.
+- **Skills de puntuación**: `.agents/skills_punctuation/` (raíz del repositorio) debe contener las carpetas de skills correspondientes.
 - **Tablas de referencia**: `Punctuation/references/` debe contener las imágenes PNG de las tablas oficiales de World Aquatics.
 - **Anthropic API key**: necesaria únicamente para la puntuación; la clasificación funciona sin ella.

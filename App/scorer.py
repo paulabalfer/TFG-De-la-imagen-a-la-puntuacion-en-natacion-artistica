@@ -18,7 +18,7 @@ from PIL import Image
 # Paths relative to this file
 _APP_DIR = Path(__file__).parent
 _REPO_ROOT = _APP_DIR.parent
-_SKILLS_DIR = _REPO_ROOT / "Punctuation" / ".claude" / "skills"
+_SKILLS_DIR = _REPO_ROOT / ".agents" / "skills_punctuation"
 _CHARTS_DIR = _REPO_ROOT / "Punctuation" / "references"
 
 # Per-position metadata: code, skill folder, height chart filename

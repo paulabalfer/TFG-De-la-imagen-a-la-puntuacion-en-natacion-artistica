@@ -30,14 +30,6 @@ Sistema basado en skills con vLLMs/
 │   ├── merge_results.py                                 # Une las predicciones de todos los lotes
 │   ├── generate_ground_truth.py                         # Genera el ground truth para las imágenes evaluadas
 │   └── compute_accuracy_and_report.py                   # Calcula métricas y genera el informe HTML
-└── .agents/
-    └── skills/
-        ├── natacion-classifier/SKILL.md                 # Orquestador — evalúa las 5 posiciones y decide la clase
-        ├── natacion-bp06-double-leg-vertical/SKILL.md
-        ├── natacion-bp08-fishtail/SKILL.md
-        ├── natacion-bp14c-bent-knee-vertical/SKILL.md
-        ├── natacion-bp14d-bent-knee-surface-arch/SKILL.md
-        └── natacion-bp17-knight/SKILL.md
 ```
 
 ---
@@ -143,7 +135,7 @@ Genera los ficheros `splits/batch_XX.txt` (hasta 250 imágenes cada uno).
 Desde el directorio del proyecto, lanzar la skill para cada lote:
 
 ```
-Classify all images in @splits/batch_01.txt based on the skill @.agents/skills/natacion-classifier/SKILL.md . 
+Classify all images in @splits/batch_01.txt based on the skill @.agents/skills_classification/natacion-classifier/SKILL.md . 
 Save the images on @results/splits/ . Do not evaluate or modify any existing file; just classify the images.
 ```
 

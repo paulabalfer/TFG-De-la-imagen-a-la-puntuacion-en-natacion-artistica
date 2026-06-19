@@ -46,7 +46,7 @@ POSITION_MAP: dict[str, tuple[str, str, str]] = {
 
 def _build_user_message(bp_code: str, position_name: str, image_name: str) -> str:
     image_ref = f"@Data/Images/{position_name}/{image_name}"
-    skill_ref = "@.claude/skills/scoring-orchestrator/SKILL.md"
+    skill_ref = "@.agents/skills_punctuation/scoring-orchestrator/SKILL.md"
     return (
         f"Score this image.\n\n"
         f"Position: {position_name} ({bp_code})\n"

@@ -12,18 +12,11 @@ donde `height_score` se lee en la carta de alturas propia de cada posición y la
 
 ## Contenido
 
+Las skills residen en el directorio externo compartido de la raíz del repositorio: `.agents/skills_punctuation/`.
+
 ```
 Punctuation/
 ├── README.md
-├── .claude/
-│   └── skills/
-│       ├── scoring-orchestrator/SKILL.md                    # Entrada del sistema — coordina el pipeline
-│       ├── scoring-common-deductions/SKILL.md               # Catálogo centralizado de deducciones D1..D5
-│       ├── scoring-bp06-double-leg-vertical/SKILL.md        # Scorer para BP6
-│       ├── scoring-bp08-fishtail/SKILL.md                   # Scorer para BP8
-│       ├── scoring-bp14c-bent-knee-vertical/SKILL.md        # Scorer para BP14c
-│       ├── scoring-bp14d-bent-knee-surface-arch/SKILL.md    # Scorer para BP14d
-│       └── scoring-bp17-knight/SKILL.md                     # Scorer para BP17
 ├── references/                                              # Tablas oficiales de alturas y deducciones
 │   ├── Fishtail_punctuation.png
 │   ├── Bent_knee_vertical_punctuation.png
@@ -233,6 +226,6 @@ Abre `results/score_report.html` en el navegador para el informe visual completo
 ## Modelo y herramientas
 
 - **Modelo**: Claude Sonnet con visión multimodal (sin fine-tuning, sin entrenamiento).
-- **Invocación**: skills de Claude Code cargadas desde `.claude/skills/`.
+- **Invocación**: skills cargadas desde `.agents/skills_punctuation/` (directorio externo en la raíz del repositorio).
 - **Cartas de referencia**: copiadas en `references/` para que el orquestador las abra con la tool `Read` sin dependencias cruzadas entre carpetas.
 - **Limitación principal**: la estimación de ángulos es heurística (bandas), no medición exacta por keypoints. El siguiente paso natural sería integrar un detector de pose (MediaPipe, OpenPose) que inyecte ángulos calculados en el prompt, convirtiendo las bandas de D1 en valores exactos.
