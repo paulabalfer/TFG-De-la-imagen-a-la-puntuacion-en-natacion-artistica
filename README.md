@@ -1,4 +1,4 @@
-# TFG: Automatización de la Identificación de Posiciones de Natación Artística
+# De la Imagen a la Puntuación: Clasificación y Evaluación técnica de posiciones básicas en Natación Artística mediante modelos multimodales
 
 > Trabajo de Fin de Grado
 
