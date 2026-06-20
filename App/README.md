@@ -20,7 +20,7 @@ App/
 
 ### Etapa 1 — Clasificación local (SmolVLM-500M + LoRA)
 
-El módulo `classifier.py` carga el adaptador LoRA entrenado (directorio `Fine-tunning de vLLM pequeño/smolvlm_lora_natacion/mejor_checkpoint`) sobre el modelo base `HuggingFaceTB/SmolVLM-500M-Instruct`.
+El módulo `classifier.py` carga el adaptador LoRA entrenado (directorio `Fine-tuning de vLLM pequeño/smolvlm_lora_natacion/mejor_checkpoint`) sobre el modelo base `HuggingFaceTB/SmolVLM-500M-Instruct`.
 
 - **Entrada**: imagen PIL de la nadadora (cualquier tamaño; se normaliza internamente).
 - **Mecanismo**: pregunta de elección múltiple con 5 opciones (S, V, D, F, K); se evalúan los logits de las letras de respuesta en la última posición del generador, sin generación libre de texto.
@@ -40,7 +40,7 @@ El módulo `classifier.py` carga el adaptador LoRA entrenado (directorio `Fine-t
 
 ### Etapa 2 — Puntuación automática (Claude API)
 
-El módulo `scorer.py` llama a la **Anthropic API** con el mismo sistema de skills estructuradas desarrollado en `Punctuation/`. El prompt de sistema combina tres skills:
+El módulo `scorer.py` llama a la **Anthropic API** con el mismo sistema de skills estructuradas desarrollado en `Puntuación/`. El prompt de sistema combina tres skills:
 
 1. `scoring-orchestrator` — pipeline general de evaluación y formato de salida.
 2. `scoring-common-deductions` — tablas de deducciones comunes D1–D5.
@@ -104,7 +104,7 @@ http://127.0.0.1:7860
 
 ## Dependencias externas necesarias
 
-- **Adaptador LoRA**: `Fine-tunning de vLLM pequeño/smolvlm_lora_natacion/mejor_checkpoint` y `adaptador_lora_final` deben estar presentes (generados al ejecutar el notebook de fine-tuning).
+- **Adaptador LoRA**: `Fine-tuning de vLLM pequeño/smolvlm_lora_natacion/mejor_checkpoint` y `adaptador_lora_final` deben estar presentes (generados al ejecutar el notebook de fine-tuning).
 - **Skills de puntuación**: `.agents/skills_punctuation/` (raíz del repositorio) debe contener las carpetas de skills correspondientes.
-- **Tablas de referencia**: `Punctuation/references/` debe contener las imágenes PNG de las tablas oficiales de World Aquatics.
+- **Tablas de referencia**: `Data/references/scoring/` debe contener las imágenes PNG de las tablas oficiales de World Aquatics.
 - **Anthropic API key**: necesaria únicamente para la puntuación; la clasificación funciona sin ella.

@@ -12,7 +12,21 @@ Data/
 ├── synchronized_swimming.csv                     # Índice del dataset original (263 imágenes)
 ├── synchronized_swimming_aug.csv                 # Índice del dataset aumentado (6 575 imágenes)
 ├── Figures-Manual-2022-2025-ALL.pdf              # Manual oficial de figuras de World Aquatics
-└── JUDGES SUPPORT_Height Chart Jan 2025.pdf      # Material de apoyo para jueces
+├── JUDGES SUPPORT_Height Chart Jan 2025.pdf      # Material de apoyo para jueces
+└── references/                                   # Imágenes de referencia visual compartidas por todos los módulos
+    ├── positions/                                # Foto canónica de cada posición (clasificación)
+    │   ├── Bent Knee Surface Arch Position.jpg
+    │   ├── Bent Knee Vertical.jpg
+    │   ├── Double Leg Vertical.jpg
+    │   ├── Fishtail.jpg
+    │   └── Knight.jpg
+    └── scoring/                                  # Tablas oficiales de alturas y deducciones (puntuación)
+        ├── Bent_knee_surface_arch_punctuation.png
+        ├── Bent_knee_vertical_punctuation.png
+        ├── Deductions.png
+        ├── Double_leg_vertical_punctuation.png
+        ├── Fishtail_punctuation.png
+        └── Knight_punctuation.png
 ```
 
 > **Nota:** Las imágenes del dataset (`Images/`, `Augmented/`) no se incluyen en este repositorio por motivos de privacidad. Su acceso puede solicitarse de forma justificada.
@@ -89,6 +103,13 @@ Las imágenes aumentadas se nombran siguiendo el patrón `IMG_<id>_aug<n>.jpg`, 
 
 - **`Figures-Manual-2022-2025-ALL.pdf`** — Manual oficial de figuras de World Aquatics (2022–2025). Define las especificaciones biomecánicas de cada posición y es la fuente primaria de los criterios de clasificación.
 - **`JUDGES SUPPORT_Height Chart Jan 2025.pdf`** — Material de apoyo para jueces con tabla de alturas y referencia visual de posiciones.
+
+### Imágenes de referencia (`references/`)
+
+Imágenes de referencia visual compartidas por todos los módulos del proyecto. Se centralizan aquí para evitar duplicados entre directorios.
+
+- **`references/positions/`** — Una fotografía canónica por posición, usada como ejemplo de referencia en los prompts de clasificación (módulo `Sistema basado en skills con vLLMs/`).
+- **`references/scoring/`** — Tablas oficiales de alturas de World Aquatics en formato PNG, una por posición más la tabla de deducciones comunes. Las consume el módulo de puntuación (`Puntuación/`) y la app (`App/scorer.py`) para enviarlas junto a la fotografía de la nadadora al modelo de visión.
 
 ---
 

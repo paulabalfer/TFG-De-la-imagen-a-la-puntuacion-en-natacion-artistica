@@ -43,7 +43,7 @@ TFG_repo/
 │   ├── pose_classifier_scaler.pkl                         
 │   ├── label_encoder.pkl                                  
 │   └── classification_results.pkl                         
-├── Fine-tunning de vLLM pequeño/                          # Enfoque Clasificación 3: fine-tuning LoRA de vLLM
+├── Fine-tuning de vLLM pequeño/                           # Enfoque Clasificación 3: fine-tuning LoRA de vLLM
 │   ├── Fine_tuning_SmolVLM_500M.ipynb
 │   └── smolvlm_lora_natacion/                             
 ├── Sistema basado en skills con vLLMs/                    # Enfoque Clasificación 4: clasificación por skills sin entrenamiento
@@ -51,11 +51,10 @@ TFG_repo/
 │   ├── splits/
 │   ├── results/
 │   └── scripts/
-├── Punctuation/                                           # Módulo de puntuación automática de ejecución técnica
+├── Puntuación/                                            # Módulo de puntuación automática de ejecución técnica
 │   ├── data/
 │   ├── results/
-│   ├── scripts/
-│   └── references/
+│   └── scripts/
 └── App/                                                   # Interfaz web integrada (clasificación + puntuación)
     ├── app.py
     ├── classifier.py
@@ -96,7 +95,7 @@ Pipeline alternativo basado en **estimación de poses**: extracción de 33 landm
 
 ---
 
-### `Fine-tunning de vLLM pequeño/` — Fine-tuning LoRA de SmolVLM-500M
+### `Fine-tuning de vLLM pequeño/` — Fine-tuning LoRA de SmolVLM-500M
 
 Adaptación de **`HuggingFaceTB/SmolVLM-500M-Instruct`** a la tarea mediante LoRA, actualizando solo ~0,22 % de los parámetros. La clasificación se resuelve por logits de elección múltiple, sin generación libre de texto.
 
@@ -106,7 +105,7 @@ Adaptación de **`HuggingFaceTB/SmolVLM-500M-Instruct`** a la tarea mediante LoR
 
 Sistema basado en **prompts estructurados como skills** para LLMs de visión, sin ningún entrenamiento ni fine-tuning. Alcanza un **99,38 % de accuracy** sobre 6 000 imágenes. La skill orquestadora evalúa cada imagen contra las 5 posiciones en paralelo y aplica reglas de agregación para emitir la clase.
 
-### `Punctuation/` — Puntuación automática de ejecución técnica
+### `Puntuación/` — Puntuación automática de ejecución técnica
 
 Sistema de evaluación automática de la **calidad de ejecución** de las posiciones clasificadas, utilizando LLMs de visión con prompts estructurados. Genera una puntuación técnica para cada imagen sin entrenamiento, siguiendo criterios inspirados en el reglamento de World Aquatics.
 
@@ -118,7 +117,7 @@ Aplicación **Gradio** que combina los módulos de clasificación y puntuación 
 
 1. El usuario sube una fotografía de una nadadora.
 2. **`classifier.py`** clasifica la posición localmente usando SmolVLM-500M + LoRA (92 % accuracy, sin API externa).
-3. **`scorer.py`** puntúa la ejecución técnica mediante la Anthropic API (Claude) con el sistema de skills de `Punctuation/` (paso opcional; requiere API key).
+3. **`scorer.py`** puntúa la ejecución técnica mediante la Anthropic API (Claude) con el sistema de skills de `Puntuación/` (paso opcional; requiere API key).
 
 La interfaz muestra la posición detectada con su confianza, la distribución de probabilidades sobre las 5 clases, el informe de puntuación y la tabla oficial de alturas de referencia de World Aquatics.
 

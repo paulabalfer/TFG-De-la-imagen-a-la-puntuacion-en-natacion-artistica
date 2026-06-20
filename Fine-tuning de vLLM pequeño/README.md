@@ -7,7 +7,7 @@ Directorio que implementa la clasificación de posiciones de natación artístic
 ## Contenido
 
 ```
-Fine-tunning de vLLM pequeño/
+Fine-tuning de vLLM pequeño/
 ├── Fine_tuning_SmolVLM_500M.ipynb     # Notebook con el pipeline completo
 └── smolvlm_lora_natacion/             # Artefactos generados tras el entrenamiento
     ├── mejor_checkpoint/              # Pesos LoRA del mejor epoch según val_acc
@@ -134,13 +134,13 @@ Los enfoques previos (CNN, CLIP, MediaPipe) requieren o bien un dataset grande p
 Desde la raíz del repositorio:
 
 ```bash
-jupyter notebook "Fine-tunning de vLLM pequeño/Fine_tuning_SmolVLM_500M.ipynb"
+jupyter notebook "Fine-tuning de vLLM pequeño/Fine_tuning_SmolVLM_500M.ipynb"
 ```
 
 O con JupyterLab:
 
 ```bash
-jupyter lab "Fine-tunning de vLLM pequeño/Fine_tuning_SmolVLM_500M.ipynb"
+jupyter lab "Fine-tuning de vLLM pequeño/Fine_tuning_SmolVLM_500M.ipynb"
 ```
 
 ### Orden de ejecución

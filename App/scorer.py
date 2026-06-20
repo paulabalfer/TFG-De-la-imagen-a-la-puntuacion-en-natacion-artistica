@@ -19,7 +19,7 @@ from PIL import Image
 _APP_DIR = Path(__file__).parent
 _REPO_ROOT = _APP_DIR.parent
 _SKILLS_DIR = _REPO_ROOT / ".agents" / "skills_punctuation"
-_CHARTS_DIR = _REPO_ROOT / "Punctuation" / "references"
+_CHARTS_DIR = _REPO_ROOT / "Data" / "references" / "scoring"
 
 # Per-position metadata: code, skill folder, height chart filename
 POSITION_META: dict[str, dict[str, str]] = {

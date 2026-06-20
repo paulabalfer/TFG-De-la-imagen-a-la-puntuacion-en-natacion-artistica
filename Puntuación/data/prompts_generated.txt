@@ -1,0 +1,827 @@
+Use the `scoring-orchestrator` skill to score this image.
+
+Image:        @Data/Images/Bent Knee Surface Arch Position/IMG_1388.JPG
+Position:     Bent Knee Surface Arch Position (BP14d)
+Scorer skill: @.agents/skills_punctuation/scoring-bp14d-bent-knee-surface-arch/SKILL.md
+Height chart: @Data/references/scoring/Bent_knee_surface_arch_punctuation.png
+
+Follow @.agents/skills_punctuation/scoring-orchestrator/SKILL.md: dispatch to the scorer, apply scoring-common-deductions, and return the final 0–10 score in the orchestrator's output format.
+---
+Use the `scoring-orchestrator` skill to score this image.
+
+Image:        @Data/Images/Bent Knee Surface Arch Position/IMG_1395.JPG
+Position:     Bent Knee Surface Arch Position (BP14d)
+Scorer skill: @.agents/skills_punctuation/scoring-bp14d-bent-knee-surface-arch/SKILL.md
+Height chart: @Data/references/scoring/Bent_knee_surface_arch_punctuation.png
+
+Follow @.agents/skills_punctuation/scoring-orchestrator/SKILL.md: dispatch to the scorer, apply scoring-common-deductions, and return the final 0–10 score in the orchestrator's output format.
+---
+Use the `scoring-orchestrator` skill to score this image.
+
+Image:        @Data/Images/Bent Knee Surface Arch Position/IMG_1398.JPG
+Position:     Bent Knee Surface Arch Position (BP14d)
+Scorer skill: @.agents/skills_punctuation/scoring-bp14d-bent-knee-surface-arch/SKILL.md
+Height chart: @Data/references/scoring/Bent_knee_surface_arch_punctuation.png
+
+Follow @.agents/skills_punctuation/scoring-orchestrator/SKILL.md: dispatch to the scorer, apply scoring-common-deductions, and return the final 0–10 score in the orchestrator's output format.
+---
+Use the `scoring-orchestrator` skill to score this image.
+
+Image:        @Data/Images/Bent Knee Surface Arch Position/IMG_1400.JPG
+Position:     Bent Knee Surface Arch Position (BP14d)
+Scorer skill: @.agents/skills_punctuation/scoring-bp14d-bent-knee-surface-arch/SKILL.md
+Height chart: @Data/references/scoring/Bent_knee_surface_arch_punctuation.png
+
+Follow @.agents/skills_punctuation/scoring-orchestrator/SKILL.md: dispatch to the scorer, apply scoring-common-deductions, and return the final 0–10 score in the orchestrator's output format.
+---
+Use the `scoring-orchestrator` skill to score this image.
+
+Image:        @Data/Images/Bent Knee Surface Arch Position/IMG_1425.JPG
+Position:     Bent Knee Surface Arch Position (BP14d)
+Scorer skill: @.agents/skills_punctuation/scoring-bp14d-bent-knee-surface-arch/SKILL.md
+Height chart: @Data/references/scoring/Bent_knee_surface_arch_punctuation.png
+
+Follow @.agents/skills_punctuation/scoring-orchestrator/SKILL.md: dispatch to the scorer, apply scoring-common-deductions, and return the final 0–10 score in the orchestrator's output format.
+---
+Use the `scoring-orchestrator` skill to score this image.
+
+Image:        @Data/Images/Bent Knee Surface Arch Position/IMG_1427.JPG
+Position:     Bent Knee Surface Arch Position (BP14d)
+Scorer skill: @.agents/skills_punctuation/scoring-bp14d-bent-knee-surface-arch/SKILL.md
+Height chart: @Data/references/scoring/Bent_knee_surface_arch_punctuation.png
+
+Follow @.agents/skills_punctuation/scoring-orchestrator/SKILL.md: dispatch to the scorer, apply scoring-common-deductions, and return the final 0–10 score in the orchestrator's output format.
+---
+Use the `scoring-orchestrator` skill to score this image.
+
+Image:        @Data/Images/Bent Knee Surface Arch Position/IMG_1430.JPG
+Position:     Bent Knee Surface Arch Position (BP14d)
+Scorer skill: @.agents/skills_punctuation/scoring-bp14d-bent-knee-surface-arch/SKILL.md
+Height chart: @Data/references/scoring/Bent_knee_surface_arch_punctuation.png
+
+Follow @.agents/skills_punctuation/scoring-orchestrator/SKILL.md: dispatch to the scorer, apply scoring-common-deductions, and return the final 0–10 score in the orchestrator's output format.
+---
+Use the `scoring-orchestrator` skill to score this image.
+
+Image:        @Data/Images/Bent Knee Surface Arch Position/IMG_1433.JPG
+Position:     Bent Knee Surface Arch Position (BP14d)
+Scorer skill: @.agents/skills_punctuation/scoring-bp14d-bent-knee-surface-arch/SKILL.md
+Height chart: @Data/references/scoring/Bent_knee_surface_arch_punctuation.png
+
+Follow @.agents/skills_punctuation/scoring-orchestrator/SKILL.md: dispatch to the scorer, apply scoring-common-deductions, and return the final 0–10 score in the orchestrator's output format.
+---
+Use the `scoring-orchestrator` skill to score this image.
+
+Image:        @Data/Images/Bent Knee Surface Arch Position/IMG_1434.JPG
+Position:     Bent Knee Surface Arch Position (BP14d)
+Scorer skill: @.agents/skills_punctuation/scoring-bp14d-bent-knee-surface-arch/SKILL.md
+Height chart: @Data/references/scoring/Bent_knee_surface_arch_punctuation.png
+
+Follow @.agents/skills_punctuation/scoring-orchestrator/SKILL.md: dispatch to the scorer, apply scoring-common-deductions, and return the final 0–10 score in the orchestrator's output format.
+---
+Use the `scoring-orchestrator` skill to score this image.
+
+Image:        @Data/Images/Bent Knee Surface Arch Position/IMG_1436.JPG
+Position:     Bent Knee Surface Arch Position (BP14d)
+Scorer skill: @.agents/skills_punctuation/scoring-bp14d-bent-knee-surface-arch/SKILL.md
+Height chart: @Data/references/scoring/Bent_knee_surface_arch_punctuation.png
+
+Follow @.agents/skills_punctuation/scoring-orchestrator/SKILL.md: dispatch to the scorer, apply scoring-common-deductions, and return the final 0–10 score in the orchestrator's output format.
+---
+Use the `scoring-orchestrator` skill to score this image.
+
+Image:        @Data/Images/Bent Knee Surface Arch Position/IMG_1514.JPG
+Position:     Bent Knee Surface Arch Position (BP14d)
+Scorer skill: @.agents/skills_punctuation/scoring-bp14d-bent-knee-surface-arch/SKILL.md
+Height chart: @Data/references/scoring/Bent_knee_surface_arch_punctuation.png
+
+Follow @.agents/skills_punctuation/scoring-orchestrator/SKILL.md: dispatch to the scorer, apply scoring-common-deductions, and return the final 0–10 score in the orchestrator's output format.
+---
+Use the `scoring-orchestrator` skill to score this image.
+
+Image:        @Data/Images/Bent Knee Surface Arch Position/IMG_1519.JPG
+Position:     Bent Knee Surface Arch Position (BP14d)
+Scorer skill: @.agents/skills_punctuation/scoring-bp14d-bent-knee-surface-arch/SKILL.md
+Height chart: @Data/references/scoring/Bent_knee_surface_arch_punctuation.png
+
+Follow @.agents/skills_punctuation/scoring-orchestrator/SKILL.md: dispatch to the scorer, apply scoring-common-deductions, and return the final 0–10 score in the orchestrator's output format.
+---
+Use the `scoring-orchestrator` skill to score this image.
+
+Image:        @Data/Images/Bent Knee Surface Arch Position/IMG_1520.JPG
+Position:     Bent Knee Surface Arch Position (BP14d)
+Scorer skill: @.agents/skills_punctuation/scoring-bp14d-bent-knee-surface-arch/SKILL.md
+Height chart: @Data/references/scoring/Bent_knee_surface_arch_punctuation.png
+
+Follow @.agents/skills_punctuation/scoring-orchestrator/SKILL.md: dispatch to the scorer, apply scoring-common-deductions, and return the final 0–10 score in the orchestrator's output format.
+---
+Use the `scoring-orchestrator` skill to score this image.
+
+Image:        @Data/Images/Bent Knee Surface Arch Position/IMG_1523.JPG
+Position:     Bent Knee Surface Arch Position (BP14d)
+Scorer skill: @.agents/skills_punctuation/scoring-bp14d-bent-knee-surface-arch/SKILL.md
+Height chart: @Data/references/scoring/Bent_knee_surface_arch_punctuation.png
+
+Follow @.agents/skills_punctuation/scoring-orchestrator/SKILL.md: dispatch to the scorer, apply scoring-common-deductions, and return the final 0–10 score in the orchestrator's output format.
+---
+Use the `scoring-orchestrator` skill to score this image.
+
+Image:        @Data/Images/Bent Knee Vertical/IMG_1266.JPG
+Position:     Bent Knee Vertical (BP14c)
+Scorer skill: @.agents/skills_punctuation/scoring-bp14c-bent-knee-vertical/SKILL.md
+Height chart: @Data/references/scoring/Bent_knee_vertical_punctuation.png
+
+Follow @.agents/skills_punctuation/scoring-orchestrator/SKILL.md: dispatch to the scorer, apply scoring-common-deductions, and return the final 0–10 score in the orchestrator's output format.
+---
+Use the `scoring-orchestrator` skill to score this image.
+
+Image:        @Data/Images/Bent Knee Vertical/IMG_1268.JPG
+Position:     Bent Knee Vertical (BP14c)
+Scorer skill: @.agents/skills_punctuation/scoring-bp14c-bent-knee-vertical/SKILL.md
+Height chart: @Data/references/scoring/Bent_knee_vertical_punctuation.png
+
+Follow @.agents/skills_punctuation/scoring-orchestrator/SKILL.md: dispatch to the scorer, apply scoring-common-deductions, and return the final 0–10 score in the orchestrator's output format.
+---
+Use the `scoring-orchestrator` skill to score this image.
+
+Image:        @Data/Images/Bent Knee Vertical/IMG_1269.JPG
+Position:     Bent Knee Vertical (BP14c)
+Scorer skill: @.agents/skills_punctuation/scoring-bp14c-bent-knee-vertical/SKILL.md
+Height chart: @Data/references/scoring/Bent_knee_vertical_punctuation.png
+
+Follow @.agents/skills_punctuation/scoring-orchestrator/SKILL.md: dispatch to the scorer, apply scoring-common-deductions, and return the final 0–10 score in the orchestrator's output format.
+---
+Use the `scoring-orchestrator` skill to score this image.
+
+Image:        @Data/Images/Bent Knee Vertical/IMG_1271.JPG
+Position:     Bent Knee Vertical (BP14c)
+Scorer skill: @.agents/skills_punctuation/scoring-bp14c-bent-knee-vertical/SKILL.md
+Height chart: @Data/references/scoring/Bent_knee_vertical_punctuation.png
+
+Follow @.agents/skills_punctuation/scoring-orchestrator/SKILL.md: dispatch to the scorer, apply scoring-common-deductions, and return the final 0–10 score in the orchestrator's output format.
+---
+Use the `scoring-orchestrator` skill to score this image.
+
+Image:        @Data/Images/Bent Knee Vertical/IMG_1274.JPG
+Position:     Bent Knee Vertical (BP14c)
+Scorer skill: @.agents/skills_punctuation/scoring-bp14c-bent-knee-vertical/SKILL.md
+Height chart: @Data/references/scoring/Bent_knee_vertical_punctuation.png
+
+Follow @.agents/skills_punctuation/scoring-orchestrator/SKILL.md: dispatch to the scorer, apply scoring-common-deductions, and return the final 0–10 score in the orchestrator's output format.
+---
+Use the `scoring-orchestrator` skill to score this image.
+
+Image:        @Data/Images/Bent Knee Vertical/IMG_1278.JPG
+Position:     Bent Knee Vertical (BP14c)
+Scorer skill: @.agents/skills_punctuation/scoring-bp14c-bent-knee-vertical/SKILL.md
+Height chart: @Data/references/scoring/Bent_knee_vertical_punctuation.png
+
+Follow @.agents/skills_punctuation/scoring-orchestrator/SKILL.md: dispatch to the scorer, apply scoring-common-deductions, and return the final 0–10 score in the orchestrator's output format.
+---
+Use the `scoring-orchestrator` skill to score this image.
+
+Image:        @Data/Images/Bent Knee Vertical/IMG_1279.JPG
+Position:     Bent Knee Vertical (BP14c)
+Scorer skill: @.agents/skills_punctuation/scoring-bp14c-bent-knee-vertical/SKILL.md
+Height chart: @Data/references/scoring/Bent_knee_vertical_punctuation.png
+
+Follow @.agents/skills_punctuation/scoring-orchestrator/SKILL.md: dispatch to the scorer, apply scoring-common-deductions, and return the final 0–10 score in the orchestrator's output format.
+---
+Use the `scoring-orchestrator` skill to score this image.
+
+Image:        @Data/Images/Bent Knee Vertical/IMG_1281.JPG
+Position:     Bent Knee Vertical (BP14c)
+Scorer skill: @.agents/skills_punctuation/scoring-bp14c-bent-knee-vertical/SKILL.md
+Height chart: @Data/references/scoring/Bent_knee_vertical_punctuation.png
+
+Follow @.agents/skills_punctuation/scoring-orchestrator/SKILL.md: dispatch to the scorer, apply scoring-common-deductions, and return the final 0–10 score in the orchestrator's output format.
+---
+Use the `scoring-orchestrator` skill to score this image.
+
+Image:        @Data/Images/Bent Knee Vertical/IMG_1304.JPG
+Position:     Bent Knee Vertical (BP14c)
+Scorer skill: @.agents/skills_punctuation/scoring-bp14c-bent-knee-vertical/SKILL.md
+Height chart: @Data/references/scoring/Bent_knee_vertical_punctuation.png
+
+Follow @.agents/skills_punctuation/scoring-orchestrator/SKILL.md: dispatch to the scorer, apply scoring-common-deductions, and return the final 0–10 score in the orchestrator's output format.
+---
+Use the `scoring-orchestrator` skill to score this image.
+
+Image:        @Data/Images/Bent Knee Vertical/IMG_1306.JPG
+Position:     Bent Knee Vertical (BP14c)
+Scorer skill: @.agents/skills_punctuation/scoring-bp14c-bent-knee-vertical/SKILL.md
+Height chart: @Data/references/scoring/Bent_knee_vertical_punctuation.png
+
+Follow @.agents/skills_punctuation/scoring-orchestrator/SKILL.md: dispatch to the scorer, apply scoring-common-deductions, and return the final 0–10 score in the orchestrator's output format.
+---
+Use the `scoring-orchestrator` skill to score this image.
+
+Image:        @Data/Images/Bent Knee Vertical/IMG_1311.JPG
+Position:     Bent Knee Vertical (BP14c)
+Scorer skill: @.agents/skills_punctuation/scoring-bp14c-bent-knee-vertical/SKILL.md
+Height chart: @Data/references/scoring/Bent_knee_vertical_punctuation.png
+
+Follow @.agents/skills_punctuation/scoring-orchestrator/SKILL.md: dispatch to the scorer, apply scoring-common-deductions, and return the final 0–10 score in the orchestrator's output format.
+---
+Use the `scoring-orchestrator` skill to score this image.
+
+Image:        @Data/Images/Bent Knee Vertical/IMG_1313.JPG
+Position:     Bent Knee Vertical (BP14c)
+Scorer skill: @.agents/skills_punctuation/scoring-bp14c-bent-knee-vertical/SKILL.md
+Height chart: @Data/references/scoring/Bent_knee_vertical_punctuation.png
+
+Follow @.agents/skills_punctuation/scoring-orchestrator/SKILL.md: dispatch to the scorer, apply scoring-common-deductions, and return the final 0–10 score in the orchestrator's output format.
+---
+Use the `scoring-orchestrator` skill to score this image.
+
+Image:        @Data/Images/Bent Knee Vertical/IMG_1316.JPG
+Position:     Bent Knee Vertical (BP14c)
+Scorer skill: @.agents/skills_punctuation/scoring-bp14c-bent-knee-vertical/SKILL.md
+Height chart: @Data/references/scoring/Bent_knee_vertical_punctuation.png
+
+Follow @.agents/skills_punctuation/scoring-orchestrator/SKILL.md: dispatch to the scorer, apply scoring-common-deductions, and return the final 0–10 score in the orchestrator's output format.
+---
+Use the `scoring-orchestrator` skill to score this image.
+
+Image:        @Data/Images/Bent Knee Vertical/IMG_1319.JPG
+Position:     Bent Knee Vertical (BP14c)
+Scorer skill: @.agents/skills_punctuation/scoring-bp14c-bent-knee-vertical/SKILL.md
+Height chart: @Data/references/scoring/Bent_knee_vertical_punctuation.png
+
+Follow @.agents/skills_punctuation/scoring-orchestrator/SKILL.md: dispatch to the scorer, apply scoring-common-deductions, and return the final 0–10 score in the orchestrator's output format.
+---
+Use the `scoring-orchestrator` skill to score this image.
+
+Image:        @Data/Images/Bent Knee Vertical/IMG_1458.JPG
+Position:     Bent Knee Vertical (BP14c)
+Scorer skill: @.agents/skills_punctuation/scoring-bp14c-bent-knee-vertical/SKILL.md
+Height chart: @Data/references/scoring/Bent_knee_vertical_punctuation.png
+
+Follow @.agents/skills_punctuation/scoring-orchestrator/SKILL.md: dispatch to the scorer, apply scoring-common-deductions, and return the final 0–10 score in the orchestrator's output format.
+---
+Use the `scoring-orchestrator` skill to score this image.
+
+Image:        @Data/Images/Bent Knee Vertical/IMG_1459.JPG
+Position:     Bent Knee Vertical (BP14c)
+Scorer skill: @.agents/skills_punctuation/scoring-bp14c-bent-knee-vertical/SKILL.md
+Height chart: @Data/references/scoring/Bent_knee_vertical_punctuation.png
+
+Follow @.agents/skills_punctuation/scoring-orchestrator/SKILL.md: dispatch to the scorer, apply scoring-common-deductions, and return the final 0–10 score in the orchestrator's output format.
+---
+Use the `scoring-orchestrator` skill to score this image.
+
+Image:        @Data/Images/Bent Knee Vertical/IMG_1463.JPG
+Position:     Bent Knee Vertical (BP14c)
+Scorer skill: @.agents/skills_punctuation/scoring-bp14c-bent-knee-vertical/SKILL.md
+Height chart: @Data/references/scoring/Bent_knee_vertical_punctuation.png
+
+Follow @.agents/skills_punctuation/scoring-orchestrator/SKILL.md: dispatch to the scorer, apply scoring-common-deductions, and return the final 0–10 score in the orchestrator's output format.
+---
+Use the `scoring-orchestrator` skill to score this image.
+
+Image:        @Data/Images/Bent Knee Vertical/IMG_1464.JPG
+Position:     Bent Knee Vertical (BP14c)
+Scorer skill: @.agents/skills_punctuation/scoring-bp14c-bent-knee-vertical/SKILL.md
+Height chart: @Data/references/scoring/Bent_knee_vertical_punctuation.png
+
+Follow @.agents/skills_punctuation/scoring-orchestrator/SKILL.md: dispatch to the scorer, apply scoring-common-deductions, and return the final 0–10 score in the orchestrator's output format.
+---
+Use the `scoring-orchestrator` skill to score this image.
+
+Image:        @Data/Images/Bent Knee Vertical/IMG_1467.JPG
+Position:     Bent Knee Vertical (BP14c)
+Scorer skill: @.agents/skills_punctuation/scoring-bp14c-bent-knee-vertical/SKILL.md
+Height chart: @Data/references/scoring/Bent_knee_vertical_punctuation.png
+
+Follow @.agents/skills_punctuation/scoring-orchestrator/SKILL.md: dispatch to the scorer, apply scoring-common-deductions, and return the final 0–10 score in the orchestrator's output format.
+---
+Use the `scoring-orchestrator` skill to score this image.
+
+Image:        @Data/Images/Double Leg Vertical/IMG_1250.JPG
+Position:     Double Leg Vertical (BP6)
+Scorer skill: @.agents/skills_punctuation/scoring-bp06-double-leg-vertical/SKILL.md
+Height chart: @Data/references/scoring/Double_leg_vertical_punctuation.png
+
+Follow @.agents/skills_punctuation/scoring-orchestrator/SKILL.md: dispatch to the scorer, apply scoring-common-deductions, and return the final 0–10 score in the orchestrator's output format.
+---
+Use the `scoring-orchestrator` skill to score this image.
+
+Image:        @Data/Images/Double Leg Vertical/IMG_1251.JPG
+Position:     Double Leg Vertical (BP6)
+Scorer skill: @.agents/skills_punctuation/scoring-bp06-double-leg-vertical/SKILL.md
+Height chart: @Data/references/scoring/Double_leg_vertical_punctuation.png
+
+Follow @.agents/skills_punctuation/scoring-orchestrator/SKILL.md: dispatch to the scorer, apply scoring-common-deductions, and return the final 0–10 score in the orchestrator's output format.
+---
+Use the `scoring-orchestrator` skill to score this image.
+
+Image:        @Data/Images/Double Leg Vertical/IMG_1253.JPG
+Position:     Double Leg Vertical (BP6)
+Scorer skill: @.agents/skills_punctuation/scoring-bp06-double-leg-vertical/SKILL.md
+Height chart: @Data/references/scoring/Double_leg_vertical_punctuation.png
+
+Follow @.agents/skills_punctuation/scoring-orchestrator/SKILL.md: dispatch to the scorer, apply scoring-common-deductions, and return the final 0–10 score in the orchestrator's output format.
+---
+Use the `scoring-orchestrator` skill to score this image.
+
+Image:        @Data/Images/Double Leg Vertical/IMG_1256.JPG
+Position:     Double Leg Vertical (BP6)
+Scorer skill: @.agents/skills_punctuation/scoring-bp06-double-leg-vertical/SKILL.md
+Height chart: @Data/references/scoring/Double_leg_vertical_punctuation.png
+
+Follow @.agents/skills_punctuation/scoring-orchestrator/SKILL.md: dispatch to the scorer, apply scoring-common-deductions, and return the final 0–10 score in the orchestrator's output format.
+---
+Use the `scoring-orchestrator` skill to score this image.
+
+Image:        @Data/Images/Double Leg Vertical/IMG_1257.JPG
+Position:     Double Leg Vertical (BP6)
+Scorer skill: @.agents/skills_punctuation/scoring-bp06-double-leg-vertical/SKILL.md
+Height chart: @Data/references/scoring/Double_leg_vertical_punctuation.png
+
+Follow @.agents/skills_punctuation/scoring-orchestrator/SKILL.md: dispatch to the scorer, apply scoring-common-deductions, and return the final 0–10 score in the orchestrator's output format.
+---
+Use the `scoring-orchestrator` skill to score this image.
+
+Image:        @Data/Images/Double Leg Vertical/IMG_1260.JPG
+Position:     Double Leg Vertical (BP6)
+Scorer skill: @.agents/skills_punctuation/scoring-bp06-double-leg-vertical/SKILL.md
+Height chart: @Data/references/scoring/Double_leg_vertical_punctuation.png
+
+Follow @.agents/skills_punctuation/scoring-orchestrator/SKILL.md: dispatch to the scorer, apply scoring-common-deductions, and return the final 0–10 score in the orchestrator's output format.
+---
+Use the `scoring-orchestrator` skill to score this image.
+
+Image:        @Data/Images/Double Leg Vertical/IMG_1261.JPG
+Position:     Double Leg Vertical (BP6)
+Scorer skill: @.agents/skills_punctuation/scoring-bp06-double-leg-vertical/SKILL.md
+Height chart: @Data/references/scoring/Double_leg_vertical_punctuation.png
+
+Follow @.agents/skills_punctuation/scoring-orchestrator/SKILL.md: dispatch to the scorer, apply scoring-common-deductions, and return the final 0–10 score in the orchestrator's output format.
+---
+Use the `scoring-orchestrator` skill to score this image.
+
+Image:        @Data/Images/Double Leg Vertical/IMG_1265.JPG
+Position:     Double Leg Vertical (BP6)
+Scorer skill: @.agents/skills_punctuation/scoring-bp06-double-leg-vertical/SKILL.md
+Height chart: @Data/references/scoring/Double_leg_vertical_punctuation.png
+
+Follow @.agents/skills_punctuation/scoring-orchestrator/SKILL.md: dispatch to the scorer, apply scoring-common-deductions, and return the final 0–10 score in the orchestrator's output format.
+---
+Use the `scoring-orchestrator` skill to score this image.
+
+Image:        @Data/Images/Double Leg Vertical/IMG_1287.JPG
+Position:     Double Leg Vertical (BP6)
+Scorer skill: @.agents/skills_punctuation/scoring-bp06-double-leg-vertical/SKILL.md
+Height chart: @Data/references/scoring/Double_leg_vertical_punctuation.png
+
+Follow @.agents/skills_punctuation/scoring-orchestrator/SKILL.md: dispatch to the scorer, apply scoring-common-deductions, and return the final 0–10 score in the orchestrator's output format.
+---
+Use the `scoring-orchestrator` skill to score this image.
+
+Image:        @Data/Images/Double Leg Vertical/IMG_1289.JPG
+Position:     Double Leg Vertical (BP6)
+Scorer skill: @.agents/skills_punctuation/scoring-bp06-double-leg-vertical/SKILL.md
+Height chart: @Data/references/scoring/Double_leg_vertical_punctuation.png
+
+Follow @.agents/skills_punctuation/scoring-orchestrator/SKILL.md: dispatch to the scorer, apply scoring-common-deductions, and return the final 0–10 score in the orchestrator's output format.
+---
+Use the `scoring-orchestrator` skill to score this image.
+
+Image:        @Data/Images/Double Leg Vertical/IMG_1292.JPG
+Position:     Double Leg Vertical (BP6)
+Scorer skill: @.agents/skills_punctuation/scoring-bp06-double-leg-vertical/SKILL.md
+Height chart: @Data/references/scoring/Double_leg_vertical_punctuation.png
+
+Follow @.agents/skills_punctuation/scoring-orchestrator/SKILL.md: dispatch to the scorer, apply scoring-common-deductions, and return the final 0–10 score in the orchestrator's output format.
+---
+Use the `scoring-orchestrator` skill to score this image.
+
+Image:        @Data/Images/Double Leg Vertical/IMG_1294.JPG
+Position:     Double Leg Vertical (BP6)
+Scorer skill: @.agents/skills_punctuation/scoring-bp06-double-leg-vertical/SKILL.md
+Height chart: @Data/references/scoring/Double_leg_vertical_punctuation.png
+
+Follow @.agents/skills_punctuation/scoring-orchestrator/SKILL.md: dispatch to the scorer, apply scoring-common-deductions, and return the final 0–10 score in the orchestrator's output format.
+---
+Use the `scoring-orchestrator` skill to score this image.
+
+Image:        @Data/Images/Double Leg Vertical/IMG_1296.JPG
+Position:     Double Leg Vertical (BP6)
+Scorer skill: @.agents/skills_punctuation/scoring-bp06-double-leg-vertical/SKILL.md
+Height chart: @Data/references/scoring/Double_leg_vertical_punctuation.png
+
+Follow @.agents/skills_punctuation/scoring-orchestrator/SKILL.md: dispatch to the scorer, apply scoring-common-deductions, and return the final 0–10 score in the orchestrator's output format.
+---
+Use the `scoring-orchestrator` skill to score this image.
+
+Image:        @Data/Images/Double Leg Vertical/IMG_1298.JPG
+Position:     Double Leg Vertical (BP6)
+Scorer skill: @.agents/skills_punctuation/scoring-bp06-double-leg-vertical/SKILL.md
+Height chart: @Data/references/scoring/Double_leg_vertical_punctuation.png
+
+Follow @.agents/skills_punctuation/scoring-orchestrator/SKILL.md: dispatch to the scorer, apply scoring-common-deductions, and return the final 0–10 score in the orchestrator's output format.
+---
+Use the `scoring-orchestrator` skill to score this image.
+
+Image:        @Data/Images/Double Leg Vertical/IMG_1300.JPG
+Position:     Double Leg Vertical (BP6)
+Scorer skill: @.agents/skills_punctuation/scoring-bp06-double-leg-vertical/SKILL.md
+Height chart: @Data/references/scoring/Double_leg_vertical_punctuation.png
+
+Follow @.agents/skills_punctuation/scoring-orchestrator/SKILL.md: dispatch to the scorer, apply scoring-common-deductions, and return the final 0–10 score in the orchestrator's output format.
+---
+Use the `scoring-orchestrator` skill to score this image.
+
+Image:        @Data/Images/Double Leg Vertical/IMG_1443.JPG
+Position:     Double Leg Vertical (BP6)
+Scorer skill: @.agents/skills_punctuation/scoring-bp06-double-leg-vertical/SKILL.md
+Height chart: @Data/references/scoring/Double_leg_vertical_punctuation.png
+
+Follow @.agents/skills_punctuation/scoring-orchestrator/SKILL.md: dispatch to the scorer, apply scoring-common-deductions, and return the final 0–10 score in the orchestrator's output format.
+---
+Use the `scoring-orchestrator` skill to score this image.
+
+Image:        @Data/Images/Double Leg Vertical/IMG_1448.JPG
+Position:     Double Leg Vertical (BP6)
+Scorer skill: @.agents/skills_punctuation/scoring-bp06-double-leg-vertical/SKILL.md
+Height chart: @Data/references/scoring/Double_leg_vertical_punctuation.png
+
+Follow @.agents/skills_punctuation/scoring-orchestrator/SKILL.md: dispatch to the scorer, apply scoring-common-deductions, and return the final 0–10 score in the orchestrator's output format.
+---
+Use the `scoring-orchestrator` skill to score this image.
+
+Image:        @Data/Images/Double Leg Vertical/IMG_1449.JPG
+Position:     Double Leg Vertical (BP6)
+Scorer skill: @.agents/skills_punctuation/scoring-bp06-double-leg-vertical/SKILL.md
+Height chart: @Data/references/scoring/Double_leg_vertical_punctuation.png
+
+Follow @.agents/skills_punctuation/scoring-orchestrator/SKILL.md: dispatch to the scorer, apply scoring-common-deductions, and return the final 0–10 score in the orchestrator's output format.
+---
+Use the `scoring-orchestrator` skill to score this image.
+
+Image:        @Data/Images/Double Leg Vertical/IMG_1451.JPG
+Position:     Double Leg Vertical (BP6)
+Scorer skill: @.agents/skills_punctuation/scoring-bp06-double-leg-vertical/SKILL.md
+Height chart: @Data/references/scoring/Double_leg_vertical_punctuation.png
+
+Follow @.agents/skills_punctuation/scoring-orchestrator/SKILL.md: dispatch to the scorer, apply scoring-common-deductions, and return the final 0–10 score in the orchestrator's output format.
+---
+Use the `scoring-orchestrator` skill to score this image.
+
+Image:        @Data/Images/Double Leg Vertical/IMG_1453.JPG
+Position:     Double Leg Vertical (BP6)
+Scorer skill: @.agents/skills_punctuation/scoring-bp06-double-leg-vertical/SKILL.md
+Height chart: @Data/references/scoring/Double_leg_vertical_punctuation.png
+
+Follow @.agents/skills_punctuation/scoring-orchestrator/SKILL.md: dispatch to the scorer, apply scoring-common-deductions, and return the final 0–10 score in the orchestrator's output format.
+---
+Use the `scoring-orchestrator` skill to score this image.
+
+Image:        @Data/Images/Fishtail/IMG_1322.JPG
+Position:     Fishtail (BP8)
+Scorer skill: @.agents/skills_punctuation/scoring-bp08-fishtail/SKILL.md
+Height chart: @Data/references/scoring/Fishtail_punctuation.png
+
+Follow @.agents/skills_punctuation/scoring-orchestrator/SKILL.md: dispatch to the scorer, apply scoring-common-deductions, and return the final 0–10 score in the orchestrator's output format.
+---
+Use the `scoring-orchestrator` skill to score this image.
+
+Image:        @Data/Images/Fishtail/IMG_1325.JPG
+Position:     Fishtail (BP8)
+Scorer skill: @.agents/skills_punctuation/scoring-bp08-fishtail/SKILL.md
+Height chart: @Data/references/scoring/Fishtail_punctuation.png
+
+Follow @.agents/skills_punctuation/scoring-orchestrator/SKILL.md: dispatch to the scorer, apply scoring-common-deductions, and return the final 0–10 score in the orchestrator's output format.
+---
+Use the `scoring-orchestrator` skill to score this image.
+
+Image:        @Data/Images/Fishtail/IMG_1329.JPG
+Position:     Fishtail (BP8)
+Scorer skill: @.agents/skills_punctuation/scoring-bp08-fishtail/SKILL.md
+Height chart: @Data/references/scoring/Fishtail_punctuation.png
+
+Follow @.agents/skills_punctuation/scoring-orchestrator/SKILL.md: dispatch to the scorer, apply scoring-common-deductions, and return the final 0–10 score in the orchestrator's output format.
+---
+Use the `scoring-orchestrator` skill to score this image.
+
+Image:        @Data/Images/Fishtail/IMG_1330.JPG
+Position:     Fishtail (BP8)
+Scorer skill: @.agents/skills_punctuation/scoring-bp08-fishtail/SKILL.md
+Height chart: @Data/references/scoring/Fishtail_punctuation.png
+
+Follow @.agents/skills_punctuation/scoring-orchestrator/SKILL.md: dispatch to the scorer, apply scoring-common-deductions, and return the final 0–10 score in the orchestrator's output format.
+---
+Use the `scoring-orchestrator` skill to score this image.
+
+Image:        @Data/Images/Fishtail/IMG_1332.JPG
+Position:     Fishtail (BP8)
+Scorer skill: @.agents/skills_punctuation/scoring-bp08-fishtail/SKILL.md
+Height chart: @Data/references/scoring/Fishtail_punctuation.png
+
+Follow @.agents/skills_punctuation/scoring-orchestrator/SKILL.md: dispatch to the scorer, apply scoring-common-deductions, and return the final 0–10 score in the orchestrator's output format.
+---
+Use the `scoring-orchestrator` skill to score this image.
+
+Image:        @Data/Images/Fishtail/IMG_1335.JPG
+Position:     Fishtail (BP8)
+Scorer skill: @.agents/skills_punctuation/scoring-bp08-fishtail/SKILL.md
+Height chart: @Data/references/scoring/Fishtail_punctuation.png
+
+Follow @.agents/skills_punctuation/scoring-orchestrator/SKILL.md: dispatch to the scorer, apply scoring-common-deductions, and return the final 0–10 score in the orchestrator's output format.
+---
+Use the `scoring-orchestrator` skill to score this image.
+
+Image:        @Data/Images/Fishtail/IMG_1337.JPG
+Position:     Fishtail (BP8)
+Scorer skill: @.agents/skills_punctuation/scoring-bp08-fishtail/SKILL.md
+Height chart: @Data/references/scoring/Fishtail_punctuation.png
+
+Follow @.agents/skills_punctuation/scoring-orchestrator/SKILL.md: dispatch to the scorer, apply scoring-common-deductions, and return the final 0–10 score in the orchestrator's output format.
+---
+Use the `scoring-orchestrator` skill to score this image.
+
+Image:        @Data/Images/Fishtail/IMG_1345.JPG
+Position:     Fishtail (BP8)
+Scorer skill: @.agents/skills_punctuation/scoring-bp08-fishtail/SKILL.md
+Height chart: @Data/references/scoring/Fishtail_punctuation.png
+
+Follow @.agents/skills_punctuation/scoring-orchestrator/SKILL.md: dispatch to the scorer, apply scoring-common-deductions, and return the final 0–10 score in the orchestrator's output format.
+---
+Use the `scoring-orchestrator` skill to score this image.
+
+Image:        @Data/Images/Fishtail/IMG_1348.JPG
+Position:     Fishtail (BP8)
+Scorer skill: @.agents/skills_punctuation/scoring-bp08-fishtail/SKILL.md
+Height chart: @Data/references/scoring/Fishtail_punctuation.png
+
+Follow @.agents/skills_punctuation/scoring-orchestrator/SKILL.md: dispatch to the scorer, apply scoring-common-deductions, and return the final 0–10 score in the orchestrator's output format.
+---
+Use the `scoring-orchestrator` skill to score this image.
+
+Image:        @Data/Images/Fishtail/IMG_1351.JPG
+Position:     Fishtail (BP8)
+Scorer skill: @.agents/skills_punctuation/scoring-bp08-fishtail/SKILL.md
+Height chart: @Data/references/scoring/Fishtail_punctuation.png
+
+Follow @.agents/skills_punctuation/scoring-orchestrator/SKILL.md: dispatch to the scorer, apply scoring-common-deductions, and return the final 0–10 score in the orchestrator's output format.
+---
+Use the `scoring-orchestrator` skill to score this image.
+
+Image:        @Data/Images/Fishtail/IMG_1353.JPG
+Position:     Fishtail (BP8)
+Scorer skill: @.agents/skills_punctuation/scoring-bp08-fishtail/SKILL.md
+Height chart: @Data/references/scoring/Fishtail_punctuation.png
+
+Follow @.agents/skills_punctuation/scoring-orchestrator/SKILL.md: dispatch to the scorer, apply scoring-common-deductions, and return the final 0–10 score in the orchestrator's output format.
+---
+Use the `scoring-orchestrator` skill to score this image.
+
+Image:        @Data/Images/Fishtail/IMG_1358.JPG
+Position:     Fishtail (BP8)
+Scorer skill: @.agents/skills_punctuation/scoring-bp08-fishtail/SKILL.md
+Height chart: @Data/references/scoring/Fishtail_punctuation.png
+
+Follow @.agents/skills_punctuation/scoring-orchestrator/SKILL.md: dispatch to the scorer, apply scoring-common-deductions, and return the final 0–10 score in the orchestrator's output format.
+---
+Use the `scoring-orchestrator` skill to score this image.
+
+Image:        @Data/Images/Fishtail/IMG_1477.JPG
+Position:     Fishtail (BP8)
+Scorer skill: @.agents/skills_punctuation/scoring-bp08-fishtail/SKILL.md
+Height chart: @Data/references/scoring/Fishtail_punctuation.png
+
+Follow @.agents/skills_punctuation/scoring-orchestrator/SKILL.md: dispatch to the scorer, apply scoring-common-deductions, and return the final 0–10 score in the orchestrator's output format.
+---
+Use the `scoring-orchestrator` skill to score this image.
+
+Image:        @Data/Images/Fishtail/IMG_1479.JPG
+Position:     Fishtail (BP8)
+Scorer skill: @.agents/skills_punctuation/scoring-bp08-fishtail/SKILL.md
+Height chart: @Data/references/scoring/Fishtail_punctuation.png
+
+Follow @.agents/skills_punctuation/scoring-orchestrator/SKILL.md: dispatch to the scorer, apply scoring-common-deductions, and return the final 0–10 score in the orchestrator's output format.
+---
+Use the `scoring-orchestrator` skill to score this image.
+
+Image:        @Data/Images/Fishtail/IMG_1480.JPG
+Position:     Fishtail (BP8)
+Scorer skill: @.agents/skills_punctuation/scoring-bp08-fishtail/SKILL.md
+Height chart: @Data/references/scoring/Fishtail_punctuation.png
+
+Follow @.agents/skills_punctuation/scoring-orchestrator/SKILL.md: dispatch to the scorer, apply scoring-common-deductions, and return the final 0–10 score in the orchestrator's output format.
+---
+Use the `scoring-orchestrator` skill to score this image.
+
+Image:        @Data/Images/Fishtail/IMG_1482.JPG
+Position:     Fishtail (BP8)
+Scorer skill: @.agents/skills_punctuation/scoring-bp08-fishtail/SKILL.md
+Height chart: @Data/references/scoring/Fishtail_punctuation.png
+
+Follow @.agents/skills_punctuation/scoring-orchestrator/SKILL.md: dispatch to the scorer, apply scoring-common-deductions, and return the final 0–10 score in the orchestrator's output format.
+---
+Use the `scoring-orchestrator` skill to score this image.
+
+Image:        @Data/Images/Fishtail/IMG_1484.JPG
+Position:     Fishtail (BP8)
+Scorer skill: @.agents/skills_punctuation/scoring-bp08-fishtail/SKILL.md
+Height chart: @Data/references/scoring/Fishtail_punctuation.png
+
+Follow @.agents/skills_punctuation/scoring-orchestrator/SKILL.md: dispatch to the scorer, apply scoring-common-deductions, and return the final 0–10 score in the orchestrator's output format.
+---
+Use the `scoring-orchestrator` skill to score this image.
+
+Image:        @Data/Images/Fishtail/IMG_1486.JPG
+Position:     Fishtail (BP8)
+Scorer skill: @.agents/skills_punctuation/scoring-bp08-fishtail/SKILL.md
+Height chart: @Data/references/scoring/Fishtail_punctuation.png
+
+Follow @.agents/skills_punctuation/scoring-orchestrator/SKILL.md: dispatch to the scorer, apply scoring-common-deductions, and return the final 0–10 score in the orchestrator's output format.
+---
+Use the `scoring-orchestrator` skill to score this image.
+
+Image:        @Data/Images/Fishtail/IMG_1487.JPG
+Position:     Fishtail (BP8)
+Scorer skill: @.agents/skills_punctuation/scoring-bp08-fishtail/SKILL.md
+Height chart: @Data/references/scoring/Fishtail_punctuation.png
+
+Follow @.agents/skills_punctuation/scoring-orchestrator/SKILL.md: dispatch to the scorer, apply scoring-common-deductions, and return the final 0–10 score in the orchestrator's output format.
+---
+Use the `scoring-orchestrator` skill to score this image.
+
+Image:        @Data/Images/Fishtail/IMG_1488.JPG
+Position:     Fishtail (BP8)
+Scorer skill: @.agents/skills_punctuation/scoring-bp08-fishtail/SKILL.md
+Height chart: @Data/references/scoring/Fishtail_punctuation.png
+
+Follow @.agents/skills_punctuation/scoring-orchestrator/SKILL.md: dispatch to the scorer, apply scoring-common-deductions, and return the final 0–10 score in the orchestrator's output format.
+---
+Use the `scoring-orchestrator` skill to score this image.
+
+Image:        @Data/Images/Knight/IMG_1364.JPG
+Position:     Knight (BP17)
+Scorer skill: @.agents/skills_punctuation/scoring-bp17-knight/SKILL.md
+Height chart: @Data/references/scoring/Knight_punctuation.png
+
+Follow @.agents/skills_punctuation/scoring-orchestrator/SKILL.md: dispatch to the scorer, apply scoring-common-deductions, and return the final 0–10 score in the orchestrator's output format.
+---
+Use the `scoring-orchestrator` skill to score this image.
+
+Image:        @Data/Images/Knight/IMG_1365.JPG
+Position:     Knight (BP17)
+Scorer skill: @.agents/skills_punctuation/scoring-bp17-knight/SKILL.md
+Height chart: @Data/references/scoring/Knight_punctuation.png
+
+Follow @.agents/skills_punctuation/scoring-orchestrator/SKILL.md: dispatch to the scorer, apply scoring-common-deductions, and return the final 0–10 score in the orchestrator's output format.
+---
+Use the `scoring-orchestrator` skill to score this image.
+
+Image:        @Data/Images/Knight/IMG_1370.JPG
+Position:     Knight (BP17)
+Scorer skill: @.agents/skills_punctuation/scoring-bp17-knight/SKILL.md
+Height chart: @Data/references/scoring/Knight_punctuation.png
+
+Follow @.agents/skills_punctuation/scoring-orchestrator/SKILL.md: dispatch to the scorer, apply scoring-common-deductions, and return the final 0–10 score in the orchestrator's output format.
+---
+Use the `scoring-orchestrator` skill to score this image.
+
+Image:        @Data/Images/Knight/IMG_1376.JPG
+Position:     Knight (BP17)
+Scorer skill: @.agents/skills_punctuation/scoring-bp17-knight/SKILL.md
+Height chart: @Data/references/scoring/Knight_punctuation.png
+
+Follow @.agents/skills_punctuation/scoring-orchestrator/SKILL.md: dispatch to the scorer, apply scoring-common-deductions, and return the final 0–10 score in the orchestrator's output format.
+---
+Use the `scoring-orchestrator` skill to score this image.
+
+Image:        @Data/Images/Knight/IMG_1377.JPG
+Position:     Knight (BP17)
+Scorer skill: @.agents/skills_punctuation/scoring-bp17-knight/SKILL.md
+Height chart: @Data/references/scoring/Knight_punctuation.png
+
+Follow @.agents/skills_punctuation/scoring-orchestrator/SKILL.md: dispatch to the scorer, apply scoring-common-deductions, and return the final 0–10 score in the orchestrator's output format.
+---
+Use the `scoring-orchestrator` skill to score this image.
+
+Image:        @Data/Images/Knight/IMG_1380.JPG
+Position:     Knight (BP17)
+Scorer skill: @.agents/skills_punctuation/scoring-bp17-knight/SKILL.md
+Height chart: @Data/references/scoring/Knight_punctuation.png
+
+Follow @.agents/skills_punctuation/scoring-orchestrator/SKILL.md: dispatch to the scorer, apply scoring-common-deductions, and return the final 0–10 score in the orchestrator's output format.
+---
+Use the `scoring-orchestrator` skill to score this image.
+
+Image:        @Data/Images/Knight/IMG_1382.JPG
+Position:     Knight (BP17)
+Scorer skill: @.agents/skills_punctuation/scoring-bp17-knight/SKILL.md
+Height chart: @Data/references/scoring/Knight_punctuation.png
+
+Follow @.agents/skills_punctuation/scoring-orchestrator/SKILL.md: dispatch to the scorer, apply scoring-common-deductions, and return the final 0–10 score in the orchestrator's output format.
+---
+Use the `scoring-orchestrator` skill to score this image.
+
+Image:        @Data/Images/Knight/IMG_1386.JPG
+Position:     Knight (BP17)
+Scorer skill: @.agents/skills_punctuation/scoring-bp17-knight/SKILL.md
+Height chart: @Data/references/scoring/Knight_punctuation.png
+
+Follow @.agents/skills_punctuation/scoring-orchestrator/SKILL.md: dispatch to the scorer, apply scoring-common-deductions, and return the final 0–10 score in the orchestrator's output format.
+---
+Use the `scoring-orchestrator` skill to score this image.
+
+Image:        @Data/Images/Knight/IMG_1402.JPG
+Position:     Knight (BP17)
+Scorer skill: @.agents/skills_punctuation/scoring-bp17-knight/SKILL.md
+Height chart: @Data/references/scoring/Knight_punctuation.png
+
+Follow @.agents/skills_punctuation/scoring-orchestrator/SKILL.md: dispatch to the scorer, apply scoring-common-deductions, and return the final 0–10 score in the orchestrator's output format.
+---
+Use the `scoring-orchestrator` skill to score this image.
+
+Image:        @Data/Images/Knight/IMG_1410.JPG
+Position:     Knight (BP17)
+Scorer skill: @.agents/skills_punctuation/scoring-bp17-knight/SKILL.md
+Height chart: @Data/references/scoring/Knight_punctuation.png
+
+Follow @.agents/skills_punctuation/scoring-orchestrator/SKILL.md: dispatch to the scorer, apply scoring-common-deductions, and return the final 0–10 score in the orchestrator's output format.
+---
+Use the `scoring-orchestrator` skill to score this image.
+
+Image:        @Data/Images/Knight/IMG_1414.JPG
+Position:     Knight (BP17)
+Scorer skill: @.agents/skills_punctuation/scoring-bp17-knight/SKILL.md
+Height chart: @Data/references/scoring/Knight_punctuation.png
+
+Follow @.agents/skills_punctuation/scoring-orchestrator/SKILL.md: dispatch to the scorer, apply scoring-common-deductions, and return the final 0–10 score in the orchestrator's output format.
+---
+Use the `scoring-orchestrator` skill to score this image.
+
+Image:        @Data/Images/Knight/IMG_1415.JPG
+Position:     Knight (BP17)
+Scorer skill: @.agents/skills_punctuation/scoring-bp17-knight/SKILL.md
+Height chart: @Data/references/scoring/Knight_punctuation.png
+
+Follow @.agents/skills_punctuation/scoring-orchestrator/SKILL.md: dispatch to the scorer, apply scoring-common-deductions, and return the final 0–10 score in the orchestrator's output format.
+---
+Use the `scoring-orchestrator` skill to score this image.
+
+Image:        @Data/Images/Knight/IMG_1417.JPG
+Position:     Knight (BP17)
+Scorer skill: @.agents/skills_punctuation/scoring-bp17-knight/SKILL.md
+Height chart: @Data/references/scoring/Knight_punctuation.png
+
+Follow @.agents/skills_punctuation/scoring-orchestrator/SKILL.md: dispatch to the scorer, apply scoring-common-deductions, and return the final 0–10 score in the orchestrator's output format.
+---
+Use the `scoring-orchestrator` skill to score this image.
+
+Image:        @Data/Images/Knight/IMG_1492.JPG
+Position:     Knight (BP17)
+Scorer skill: @.agents/skills_punctuation/scoring-bp17-knight/SKILL.md
+Height chart: @Data/references/scoring/Knight_punctuation.png
+
+Follow @.agents/skills_punctuation/scoring-orchestrator/SKILL.md: dispatch to the scorer, apply scoring-common-deductions, and return the final 0–10 score in the orchestrator's output format.
+---
+Use the `scoring-orchestrator` skill to score this image.
+
+Image:        @Data/Images/Knight/IMG_1495.JPG
+Position:     Knight (BP17)
+Scorer skill: @.agents/skills_punctuation/scoring-bp17-knight/SKILL.md
+Height chart: @Data/references/scoring/Knight_punctuation.png
+
+Follow @.agents/skills_punctuation/scoring-orchestrator/SKILL.md: dispatch to the scorer, apply scoring-common-deductions, and return the final 0–10 score in the orchestrator's output format.
+---
+Use the `scoring-orchestrator` skill to score this image.
+
+Image:        @Data/Images/Knight/IMG_1499.JPG
+Position:     Knight (BP17)
+Scorer skill: @.agents/skills_punctuation/scoring-bp17-knight/SKILL.md
+Height chart: @Data/references/scoring/Knight_punctuation.png
+
+Follow @.agents/skills_punctuation/scoring-orchestrator/SKILL.md: dispatch to the scorer, apply scoring-common-deductions, and return the final 0–10 score in the orchestrator's output format.
+---
+Use the `scoring-orchestrator` skill to score this image.
+
+Image:        @Data/Images/Knight/IMG_1501.JPG
+Position:     Knight (BP17)
+Scorer skill: @.agents/skills_punctuation/scoring-bp17-knight/SKILL.md
+Height chart: @Data/references/scoring/Knight_punctuation.png
+
+Follow @.agents/skills_punctuation/scoring-orchestrator/SKILL.md: dispatch to the scorer, apply scoring-common-deductions, and return the final 0–10 score in the orchestrator's output format.
+---
+Use the `scoring-orchestrator` skill to score this image.
+
+Image:        @Data/Images/Knight/IMG_1505.JPG
+Position:     Knight (BP17)
+Scorer skill: @.agents/skills_punctuation/scoring-bp17-knight/SKILL.md
+Height chart: @Data/references/scoring/Knight_punctuation.png
+
+Follow @.agents/skills_punctuation/scoring-orchestrator/SKILL.md: dispatch to the scorer, apply scoring-common-deductions, and return the final 0–10 score in the orchestrator's output format.
+---
+Use the `scoring-orchestrator` skill to score this image.
+
+Image:        @Data/Images/Knight/IMG_1506.JPG
+Position:     Knight (BP17)
+Scorer skill: @.agents/skills_punctuation/scoring-bp17-knight/SKILL.md
+Height chart: @Data/references/scoring/Knight_punctuation.png
+
+Follow @.agents/skills_punctuation/scoring-orchestrator/SKILL.md: dispatch to the scorer, apply scoring-common-deductions, and return the final 0–10 score in the orchestrator's output format.

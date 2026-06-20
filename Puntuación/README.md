@@ -1,4 +1,4 @@
-# Punctuation — Sistema de puntuación de posiciones de natación artística
+# Puntuación — Sistema de puntuación de posiciones de natación artística
 
 Directorio que implementa la **puntuación automática** de las 5 posiciones básicas de natación artística mediante **Claude Sonnet como modelo de visión**, sin entrenamiento, con el conocimiento experto codificado como *skills* de Claude Code. A diferencia del módulo de clasificación, este sistema **asume que la posición ya es conocida** — su único trabajo es emitir una puntuación 0–10 siguiendo la metodología oficial de World Aquatics:
 
@@ -15,15 +15,8 @@ donde `height_score` se lee en la carta de alturas propia de cada posición y la
 Las skills residen en el directorio externo compartido de la raíz del repositorio: `.agents/skills_punctuation/`.
 
 ```
-Punctuation/
+Puntuación/
 ├── README.md
-├── references/                                              # Tablas oficiales de alturas y deducciones
-│   ├── Fishtail_punctuation.png
-│   ├── Bent_knee_vertical_punctuation.png
-│   ├── Knight_punctuation.png
-│   ├── Double_leg_vertical_punctuation.png
-│   ├── Bent_knee_surface_arch_punctuation.png
-│   └── Deductions.png
 ├── scripts/
 │   ├── score_image.py                                       # Genera el prompt canónico para una imagen individual
 │   ├── score_batch.py                                       # Genera prompts en lote desde un Excel de entrada
@@ -227,5 +220,5 @@ Abre `results/score_report.html` en el navegador para el informe visual completo
 
 - **Modelo**: Claude Sonnet con visión multimodal (sin fine-tuning, sin entrenamiento).
 - **Invocación**: skills cargadas desde `.agents/skills_punctuation/` (directorio externo en la raíz del repositorio).
-- **Cartas de referencia**: copiadas en `references/` para que el orquestador las abra con la tool `Read` sin dependencias cruzadas entre carpetas.
+- **Cartas de referencia**: ubicadas en `Data/references/scoring/` (raíz del repositorio), compartidas con el módulo App.
 - **Limitación principal**: la estimación de ángulos es heurística (bandas), no medición exacta por keypoints. El siguiente paso natural sería integrar un detector de pose (MediaPipe, OpenPose) que inyecte ángulos calculados en el prompt, convirtiendo las bandas de D1 en valores exactos.

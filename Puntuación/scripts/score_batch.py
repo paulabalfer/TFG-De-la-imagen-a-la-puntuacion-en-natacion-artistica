@@ -20,22 +20,22 @@ ROOT = HERE.parent
 
 IMAGES_ROOT_DEFAULT = ROOT.parent / "Data" / "Images"
 
-# normalised position name → (BP code, skill folder, canonical folder name)
-POSITION_MAP: dict[str, tuple[str, str, str]] = {
+# normalised position name → (BP code, skill folder, canonical folder name, height chart filename)
+POSITION_MAP: dict[str, tuple[str, str, str, str]] = {
     "bent knee surface arch position": (
-        "BP14d", "scoring-bp14d-bent-knee-surface-arch", "Bent Knee Surface Arch Position"
+        "BP14d", "scoring-bp14d-bent-knee-surface-arch", "Bent Knee Surface Arch Position", "Bent_knee_surface_arch_punctuation.png"
     ),
     "bent knee vertical": (
-        "BP14c", "scoring-bp14c-bent-knee-vertical", "Bent Knee Vertical"
+        "BP14c", "scoring-bp14c-bent-knee-vertical", "Bent Knee Vertical", "Bent_knee_vertical_punctuation.png"
     ),
     "double leg vertical": (
-        "BP6",  "scoring-bp06-double-leg-vertical",  "Double Leg Vertical"
+        "BP6",  "scoring-bp06-double-leg-vertical",  "Double Leg Vertical", "Double_leg_vertical_punctuation.png"
     ),
     "fishtail": (
-        "BP8",  "scoring-bp08-fishtail",             "Fishtail"
+        "BP8",  "scoring-bp08-fishtail",             "Fishtail", "Fishtail_punctuation.png"
     ),
     "knight": (
-        "BP17", "scoring-bp17-knight",               "Knight"
+        "BP17", "scoring-bp17-knight",               "Knight", "Knight_punctuation.png"
     ),
 }
 
@@ -44,17 +44,19 @@ POSITION_MAP: dict[str, tuple[str, str, str]] = {
 
 
 
-def _build_user_message(bp_code: str, position_name: str, image_name: str) -> str:
+def _build_user_message(bp_code: str, position_name: str, skill_folder: str, chart: str, image_name: str) -> str:
     image_ref = f"@Data/Images/{position_name}/{image_name}"
-    skill_ref = "@.agents/skills_punctuation/scoring-orchestrator/SKILL.md"
+    chart_ref = f"@Data/references/scoring/{chart}"
+    orchestrator_ref = "@.agents/skills_punctuation/scoring-orchestrator/SKILL.md"
+    scorer_ref = f"@.agents/skills_punctuation/{skill_folder}/SKILL.md"
     return (
-        f"Score this image.\n\n"
-        f"Position: {position_name} ({bp_code})\n"
-        f"Image: {image_ref}\n\n"
-        f"Follow the orchestrator pipeline exactly: dispatch to the position scorer, "
-        f"apply common deductions, and return the final score using the output format "
-        f"specified in the orchestrator skill. "
-        f"Use the scoring orchestrator {skill_ref}"
+        f"Use the `scoring-orchestrator` skill to score this image.\n\n"
+        f"Image:        {image_ref}\n"
+        f"Position:     {position_name} ({bp_code})\n"
+        f"Scorer skill: {scorer_ref}\n"
+        f"Height chart: {chart_ref}\n\n"
+        f"Follow {orchestrator_ref}: dispatch to the scorer, apply scoring-common-deductions, "
+        f"and return the final 0–10 score in the orchestrator's output format."
     )
 
 
@@ -115,7 +117,7 @@ def main() -> int:
             skipped += 1
             continue
 
-        bp_code, _, position_name = entry
+        bp_code, skill_folder, position_name, chart = entry
         image_path = args.images_root / position_name / image_name
 
         if not image_path.exists():
@@ -123,7 +125,7 @@ def main() -> int:
             skipped += 1
             continue
 
-        blocks.append(_build_user_message(bp_code, position_name, image_name))
+        blocks.append(_build_user_message(bp_code, position_name, skill_folder, chart, image_name))
         print(f"[{i:3}/{total}] OK — {image_name} ({position_name})")
 
     args.output.parent.mkdir(parents=True, exist_ok=True)

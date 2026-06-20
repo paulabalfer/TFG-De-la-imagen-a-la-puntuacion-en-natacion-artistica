@@ -30,7 +30,7 @@ from pathlib import Path
 
 HERE = Path(__file__).resolve().parent
 ROOT = HERE.parent
-REFERENCES = ROOT / "references"
+REFERENCES = ROOT.parent / "Data"/ "references" / "scoring"
 AUGMENTED = ROOT.parent / "Data" / "Images"
 
 POSITION_LABELS = {

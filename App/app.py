@@ -20,8 +20,8 @@ from PIL import Image
 # Resolve paths relative to this file so the app works from any working directory
 _APP_DIR = Path(__file__).parent
 _REPO_ROOT = _APP_DIR.parent
-_ADAPTER_BEST = _REPO_ROOT / "Fine-tunning de vLLM pequeño" / "smolvlm_lora_natacion" / "mejor_checkpoint"
-_ADAPTER_PROC = _REPO_ROOT / "Fine-tunning de vLLM pequeño" / "smolvlm_lora_natacion" / "adaptador_lora_final"
+_ADAPTER_BEST = _REPO_ROOT / "Fine-tuning de vLLM pequeño" / "smolvlm_lora_natacion" / "mejor_checkpoint"
+_ADAPTER_PROC = _REPO_ROOT / "Fine-tuning de vLLM pequeño" / "smolvlm_lora_natacion" / "adaptador_lora_final"
 
 sys.path.insert(0, str(_APP_DIR))
 from classifier import SmolVLMClassifier
