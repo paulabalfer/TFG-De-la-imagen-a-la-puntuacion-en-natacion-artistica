@@ -16,20 +16,7 @@ TFG_repo/
 ├── requirements.txt                                       # Dependencias pip del entorno
 ├── .agents/                                               # Skills externas compartidas por todos los módulos
 │   ├── skills_classification/                             # Skills de clasificación (Sistema basado en skills con vLLMs)
-│   │   ├── natacion-classifier/SKILL.md
-│   │   ├── natacion-bp06-double-leg-vertical/SKILL.md
-│   │   ├── natacion-bp08-fishtail/SKILL.md
-│   │   ├── natacion-bp14c-bent-knee-vertical/SKILL.md
-│   │   ├── natacion-bp14d-bent-knee-surface-arch/SKILL.md
-│   │   └── natacion-bp17-knight/SKILL.md
 │   └── skills_punctuation/                                # Skills de puntuación (Punctuation + App)
-│       ├── scoring-orchestrator/SKILL.md
-│       ├── scoring-common-deductions/SKILL.md
-│       ├── scoring-bp06-double-leg-vertical/SKILL.md
-│       ├── scoring-bp08-fishtail/SKILL.md
-│       ├── scoring-bp14c-bent-knee-vertical/SKILL.md
-│       ├── scoring-bp14d-bent-knee-surface-arch/SKILL.md
-│       └── scoring-bp17-knight/SKILL.md
 ├── Data/                                                  # Índices del dataset y documentación
 │   ├── Data_process.ipynb                                 
 │   ├── synchronized_swimming.csv                          
