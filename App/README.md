@@ -71,7 +71,7 @@ La app espera encontrar los siguientes recursos en la raíz del repositorio:
 | Configuración del procesador | `Fine-tuning de vLLM pequeño/smolvlm_lora_natacion/adaptador_lora_final/` | Clasificación (obligatorio) |
 | Skills de puntuación | `.agents/skills_punctuation/` | Puntuación (obligatorio si se usa API key) |
 | Tablas de alturas PNG | `Data/references/scoring/` | Puntuación (obligatorio si se usa API key) |
-| Imágenes de ejemplo | `Data/Images/` | Ejemplos rápidos en la interfaz (opcional) |
+| Imágenes de ejemplo | *(no incluidas — ver nota de privacidad)* | Ejemplos rápidos en la interfaz (opcional) |
 
 ---
 

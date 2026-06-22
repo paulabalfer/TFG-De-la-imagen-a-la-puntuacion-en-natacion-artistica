@@ -116,6 +116,15 @@ python App/app.py   # abre http://127.0.0.1:7860
 
 ## Instalación
 
+### 0. Requisito previo: Python 3.11
+
+Por dependencias del proyecto, es necesario trabajar con **Python 3.11** para que todas las librerías sean compatibles. Si no lo tienes instalado:
+
+1. **Descarga Python 3.11** desde [https://www.python.org/downloads/release/python-3119/](https://www.python.org/downloads/release/python-3119/) (busca *"Windows installer (64-bit)"*, o el apropiado para tu equipo).
+2. **Instálalo** marcando la opción **"Add python.exe to PATH"** — aunque ya tengas otra versión de Python, Windows permite tener varias instaladas a la vez (cada una con su propio launcher), por lo que no interfiere con instalaciones previas.
+
+### 1. Clonar e instalar dependencias
+
 ```bash
 # 1. Clonar el repositorio
 git clone <URL-del-repositorio>
