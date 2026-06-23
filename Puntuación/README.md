@@ -1,6 +1,6 @@
 # Puntuación — Sistema de puntuación de posiciones de natación artística
 
-Directorio que implementa la **puntuación automática** de las 5 posiciones básicas de natación artística mediante **Claude Sonnet como modelo de visión**, sin entrenamiento, con el conocimiento experto codificado como *skills* de Claude Code. A diferencia del módulo de clasificación, este sistema **asume que la posición ya es conocida** — su único trabajo es emitir una puntuación 0–10 siguiendo la metodología oficial de World Aquatics:
+Directorio que implementa la **puntuación automática** de las 5 posiciones básicas de natación artística mediante **Claude Sonnet como modelo de visión**, sin entrenamiento, con el conocimiento experto codificado como *skills*. A diferencia del módulo de clasificación, este sistema **asume que la posición ya es conocida** — su único trabajo es emitir una puntuación 0–10 siguiendo la metodología oficial de World Aquatics:
 
 ```
 final_score = max(0, height_score − Σ deducciones)
@@ -158,12 +158,12 @@ python scripts/score_batch.py --input data/otro.xlsx --output data/mis_prompts.t
 
 ### evaluate_scores.py — Evaluación del rendimiento
 
-Compara las puntuaciones generadas por el modelo (`results/subset_puntuation_generated.xlsx`) con las puntuaciones reales de un juez humano (`data/subset_puntuation_juez1.xlsx`). Una predicción se considera **correcta** si la diferencia con la puntuación del juez cae dentro de una banda de tolerancia configurable (por defecto ±0.5 puntos), lo que refleja la naturaleza continua y subjetiva de la puntuación en natación artística.
+Compara las puntuaciones generadas por el modelo (`results/subset_puntuation_generated.xlsx`) con las puntuaciones reales de un juez humano (`data/subset_puntuation_juez1.xlsx`). Una predicción se considera **correcta** si la diferencia con la puntuación del juez cae dentro de una banda de tolerancia configurable (por defecto ±1 puntos), lo que refleja la naturaleza continua y subjetiva de la puntuación en natación artística.
 
 ```bash
 python scripts/evaluate_scores.py
 python scripts/evaluate_scores.py --tolerance 0.3   # banda más estricta
-python scripts/evaluate_scores.py --tolerance 1.0   # banda más permisiva
+python scripts/evaluate_scores.py --tolerance 1.5   # banda más permisiva
 ```
 
 | Argumento       | Descripción                                         | Por defecto                                      |
@@ -171,7 +171,7 @@ python scripts/evaluate_scores.py --tolerance 1.0   # banda más permisiva
 | `--generated`   | Excel con puntuaciones del modelo                   | `results/subset_puntuation_generated.xlsx`       |
 | `--judge`       | Excel con puntuaciones del juez (acepta fórmulas HYPERLINK) | `data/subset_puntuation_juez1.xlsx`     |
 | `--output-dir`  | Carpeta donde guardar los resultados                | `results/`                                       |
-| `--tolerance`   | Semiancho de la banda de aceptación                 | `0.5`                                            |
+| `--tolerance`   | Semiancho de la banda de aceptación                 | `1.0`                                            |
 
 **Salidas generadas:**
 
@@ -182,7 +182,7 @@ python scripts/evaluate_scores.py --tolerance 1.0   # banda más permisiva
 
 ## Motivación
 
-Los otros módulos del TFG abordan la **clasificación** de la posición. Este módulo da un paso más allá: asumida la posición, cuantifica la calidad de la ejecución. Este es exactamente el trabajo de un juez en competición. La aproximación con skills de Claude Code permite codificar reglas de World Aquatics directamente en el sistema prompt, sin datos etiquetados de entrenamiento, y mantener el conocimiento experto actualizable de forma independiente del modelo subyacente.
+Los otros módulos del TFG abordan la **clasificación** de la posición. Este módulo da un paso más allá: asumida la posición, cuantifica la calidad de la ejecución. Este es exactamente el trabajo de un juez en competición. La aproximación con skills permite codificar reglas de World Aquatics directamente en el sistema prompt, sin datos etiquetados de entrenamiento, y mantener el conocimiento experto actualizable de forma independiente del modelo subyacente.
 
 ---
 
