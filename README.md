@@ -2,7 +2,7 @@
 
 > Trabajo de Fin de Grado
 
-Este proyecto compara distintos enfoques de clasificación automática de **5 posiciones corporales reglamentarias de natación artística (sincronizada)**, desde modelos de aprendizaje profundo hasta sistemas basados en estimación de pose y prompts estructurados con LLMs de visión, e incluye además un módulo de **puntuación automática de la calidad de ejecución**. El dataset es propio, recogido manualmente; los experimentos cubren aprendizaje supervisado, zero-shot, few-shot, fine-tuning eficiente con LoRA, clasificación por skills sin entrenamiento y evaluación técnica automatizada.
+Este proyecto compara distintos enfoques de clasificación automática de **5 posiciones básicas de natación artística (sincronizada)**, desde modelos de aprendizaje profundo hasta sistemas basados en estimación de pose y prompts estructurados con LLMs de visión, e incluye además un módulo de **puntuación automática de la calidad de ejecución**. El dataset es propio, recogido manualmente; los experimentos cubren aprendizaje supervisado, zero-shot, few-shot, fine-tuning eficiente con LoRA, clasificación por skills sin entrenamiento y evaluación técnica automatizada.
 
 > Cada directorio dispone de su propio `README.md` con la descripción detallada del enfoque, el pipeline y las instrucciones de ejecución.
 
@@ -53,7 +53,7 @@ TFG_repo/
 
 ## Dataset y sus clases
 
-El dataset recoge **5 posiciones corporales reglamentarias** de natación artística definidas por el manual oficial de figuras de World Aquatics (2022–2025):
+El dataset recoge **5 posiciones básicas** de natación artística definidas por el manual oficial de figuras de World Aquatics (2022–2025):
 
 | Clase | Código BP | Características principales |
 |---|---|---|
@@ -90,7 +90,7 @@ Adaptación de **`HuggingFaceTB/SmolVLM-500M-Instruct`** a la tarea mediante LoR
 
 ### `Sistema basado en skills con vLLMs/` — Clasificación por skills sin entrenamiento
 
-Sistema basado en **prompts estructurados como skills** para LLMs de visión, sin ningún entrenamiento ni fine-tuning. Alcanza un **99,38 % de accuracy** sobre 6 000 imágenes. La skill orquestadora evalúa cada imagen contra las 5 posiciones en paralelo y aplica reglas de agregación para emitir la clase.
+Sistema basado en **prompts estructurados como skills** para LLMs de visión, sin ningún entrenamiento ni fine-tuning. La skill orquestadora evalúa cada imagen contra las 5 posiciones en paralelo y aplica reglas de agregación para emitir la clase.
 
 ### `Puntuación/` — Puntuación automática de ejecución técnica
 
@@ -148,5 +148,5 @@ Las imágenes de entrenamiento y evaluación muestran deportistas que podrían s
 
 ## Autor
 
-**Paula Ballesteros**  
+**Paula Ballesteros Fernández**  
 Grado en Ciencia de Datos e Inteligencia Artificial · Universidad Politécnica de Madrid
