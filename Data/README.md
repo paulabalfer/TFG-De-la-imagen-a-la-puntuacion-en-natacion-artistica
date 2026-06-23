@@ -1,6 +1,6 @@
 # Data
 
-Directorio que centraliza el dataset de natación artística utilizado en el proyecto, incluyendo las imágenes originales, las versiones aumentadas, los ficheros de índice que vinculan cada imagen con su etiqueta de clase, y el material de referencia documental.
+Directorio que centraliza el dataset de natación artística utilizado en el proyecto.
 
 ---
 
@@ -37,7 +37,7 @@ Data/
 
 ### Clases
 
-El dataset recoge **5 posiciones corporales reglamentarias** de natación artística, definidas por el manual oficial de figuras de World Aquatics:
+El dataset recoge **5 posiciones básicas** de natación artística, definidas por el manual oficial de figuras de World Aquatics:
 
 | Clase | Código BP | Características principales |
 |---|---|---|
